@@ -16,3 +16,32 @@ h1,h2 {
     font-family: 'Josefin Sans';
     src: url('assets/fonts/JosefinSans-VariableFont_wght.ttf');
 }
+
+.anta-font {
+  font-family: 'Anta', sans-serif;
+}
+
+.josefin-font {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.fs-16 {
+    font-size:16px;
+}
+
+.fs-14 {
+    font-size:14px;
+}
+
+.white {
+    color:white;
+}
+
+.blue {
+    color:#89BCD9;
+}
+
+p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
