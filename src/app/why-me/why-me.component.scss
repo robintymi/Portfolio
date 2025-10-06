@@ -1,0 +1,30 @@
+.why {
+    width:100vw;
+}
+
+.why-grid {
+  color: white;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+  align-items: center;
+  font-family: 'Josefin Sans';
+}
+
+
+.why-left {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.why-right {
+    display:flex;
+    flex-direction: column;
+
+    >img {
+        height:50px;
+        width:134px;
+        align-self: self-end;
+    }
+}
