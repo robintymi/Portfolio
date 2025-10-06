@@ -1,1 +1,62 @@
-<p>projects works!</p>
+<h1>My Projects</h1>
+<section class="projects">
+  <!-- Tabs -->
+  <nav class="tabs">
+    <button
+      *ngFor="let p of projects; let i = index"
+      class="tab"
+      [class.active]="i === active"
+      (click)="active = i"
+    >
+      {{ i + 1 }}. {{ p.title }}
+    </button>
+  </nav>
+
+  <!-- Content -->
+  <div class="content" *ngIf="projects[active] as proj">
+    <div class="left">
+      <div class="block">
+        <h3 class="block-title">
+          <span class="dot"></span>
+          About the project
+          <span class="muted">Duration: {{ proj.duration }}</span>
+        </h3>
+        <p>{{ proj.about }}</p>
+      </div>
+
+      <div class="block">
+        <h3 class="block-title">
+          <span class="dot"></span>
+          How I have organised my work process
+        </h3>
+        <p>{{ proj.process }}</p>
+      </div>
+
+      <div class="block">
+        <h3 class="block-title">
+          <span class="dot"></span>
+          My group work experience
+        </h3>
+        <p>{{ proj.experience }}</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="tech">
+        <span>Technologies</span>
+        <div class="icons">
+          <img *ngFor="let t of proj.tech" [src]="t.icon" [alt]="t.name" />
+        </div>
+      </div>
+
+      <div class="mockup">
+        <img [src]="proj.image" [alt]="proj.title" />
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" [href]="proj.live" target="_blank" rel="noopener">Live Test</a>
+        <a class="btn" [href]="proj.github" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
