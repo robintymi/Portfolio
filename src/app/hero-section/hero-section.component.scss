@@ -1,3 +1,4 @@
+
 h1 {
     color:white;
     font-family:'Anta';
@@ -21,6 +22,7 @@ h2 {
     display:flex;
     flex-direction: column;
     align-items: center;
+    position:relative;
 }
 .name-job {
     display:flex;
@@ -28,12 +30,12 @@ h2 {
     align-items: center;
 }
 
-.frontend-dev {
+.social-icons {
     display:flex;
+    position:absolute;
     flex-direction: column;
-    align-items:center;
+    right:30px;
+    top:30px;
+    gap:15px;
 
-    >img {
-        width: 56px;
-    }
 }

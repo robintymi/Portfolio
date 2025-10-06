@@ -1,47 +1,69 @@
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
-  background-color: #262E34;
+  background-color: #262e34;
 }
 
-h1,h2 {
-    margin-block-start:0;
-    margin-block-end:0;
+h1,
+h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 @font-face {
-    font-family: 'Anta';
-    src: url('assets/fonts/Anta-Regular.ttf');
+  font-family: "Anta";
+  src: url("assets/fonts/Anta-Regular.ttf");
 }
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('assets/fonts/JosefinSans-VariableFont_wght.ttf');
+  font-family: "Josefin Sans";
+  src: url("assets/fonts/JosefinSans-VariableFont_wght.ttf");
 }
 
 .anta-font {
-  font-family: 'Anta', sans-serif;
+  font-family: "Anta", sans-serif;
 }
 
 .josefin-font {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .fs-16 {
-    font-size:16px;
+  font-size: 16px;
 }
 
 .fs-14 {
-    font-size:14px;
+  font-size: 14px;
 }
 
 .white {
-    color:white;
+  color: white;
 }
 
 .blue {
-    color:#89BCD9;
+  color: #89bcd9;
 }
 
+.darkblue {
+    color:#262e34;
+}
 p {
-    margin-block-end: 0;
-    margin-block-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.frontend-dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > img {
+    width: 56px;
+  }
+}
+
+
+button, a {
+    cursor:pointer;
 }
