@@ -6,12 +6,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ReferencesComponent } from './references/references.component';
 import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeroSectionComponent, NavbarComponent, WhyMeComponent, SkillsComponent, ProjectsComponent, ContactComponent],
+  imports: [CommonModule, RouterOutlet, HeroSectionComponent, NavbarComponent, WhyMeComponent, SkillsComponent, ProjectsComponent, ReferencesComponent,ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
