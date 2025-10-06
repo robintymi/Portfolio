@@ -1,0 +1,23 @@
+.skills {
+    color:white;
+    display:flex;
+    justify-content: center;
+}
+
+.currently-learning {
+    position:relative;
+    display: inline-block;
+}
+
+.learning {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* perfekt zentriert */
+  text-align: center;
+  width: 70%;
+  color: #e7eef3;
+  font-family: "Josefin Sans", sans-serif;
+  display:flex;
+  flex-direction: column;
+}
