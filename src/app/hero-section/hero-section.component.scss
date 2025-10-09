@@ -1,41 +1,62 @@
-
 h1 {
-    color:white;
-    font-family:'Anta';
-    font-size:88px;
-    font-weight:400;
+  color: white;
+  font-family: "Anta";
+  font-size: 88px;
+  font-weight: 400;
+  margin-top: 10%;
 }
 
 h2 {
-    color:white;
-    font-family:'Josefin Sans';
-    font-size:40px;
-    font-weight:400;
+  color: white;
+  font-family: "Josefin Sans";
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .its-me {
-    display:flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
+.bg-swap {
+  position: relative;
+  height: 800px;
+}
+.my-picture {
+  height: 730px;
+  position: absolute;
+  bottom: 0;
+}
+
+.frontend-dev {
+  margin-top: 40%;
+}
 .right-side {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  > img {
+    margin-top: 50%;
+    cursor: pointer;
+  }
 }
 .name-job {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .social-icons {
-    display:flex;
-    position:absolute;
-    flex-direction: column;
-    right:30px;
-    top:30px;
-    gap:15px;
-
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  right: 0;
+  top: 10%;
+  gap: 15px;
 }
