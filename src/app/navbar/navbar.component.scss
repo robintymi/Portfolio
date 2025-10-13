@@ -1,5 +1,5 @@
 .navbar {
-    height:150px;
+    height:120px;
     background-color: #89bcd9;
     display:flex;
     justify-content: space-around;
@@ -9,16 +9,24 @@
     max-width:1440px;
 }
 
+.frontend-dev {
+    cursor:pointer;
+}
 .navs {
     display:flex;
     
     >a {
-        margin:15px;
+        margin:30px;
         text-decoration: none;
         font-size: 26px;
+        font-weight:500;
+        cursor:pointer;
     }
     >a:visited {
         color: #262e34;
+    }
+    >a:hover {
+        color:white;
     }
 }
 

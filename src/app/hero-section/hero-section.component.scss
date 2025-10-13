@@ -1,3 +1,7 @@
+section {
+  height: 100vh;
+}
+
 h1 {
   color: white;
   font-family: "Anta";
@@ -11,20 +15,49 @@ h2 {
   font-family: "Josefin Sans";
   font-size: 40px;
   font-weight: 400;
+  margin-top: 3%;
 }
 
 .its-me {
   display: flex;
   align-items: center;
   position: relative;
-  height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
 }
 
+.left-side {
+  width: 50%;
+  height: 100vh;
+}
 .bg-swap {
   position: relative;
   height: 800px;
+}
+
+.bg-img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition: opacity 0.6 ease;
+}
+
+.bg-img2 {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition: opacity 0.6 ease;
+  margin-top: 10%;
+  margin-left: 19%;
+}
+.bg-hover {
+  opacity: 0;
+}
+.left-side:hover .bg-hover {
+  opacity: 1;
+}
+.left-side:hover .bg-base {
+  opacity: 0;
 }
 .my-picture {
   height: 730px;
@@ -33,7 +66,7 @@ h2 {
 }
 
 .frontend-dev {
-  margin-top: 40%;
+  margin-top: 20%;
 }
 .right-side {
   display: flex;
@@ -41,22 +74,100 @@ h2 {
   align-items: center;
   position: relative;
   height: 100%;
+  width: 50%;
   > img {
-    margin-top: 50%;
     cursor: pointer;
+    margin-top: 30%;
   }
 }
 .name-job {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
+}
+.arrow-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-top: 40px;
+  cursor: pointer;
 }
 
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+}
+
+.arrow-hover {
+  opacity: 0;
+}
+
+.arrow-container:hover .arrow-hover {
+  opacity: 1;
+}
+
+.arrow-container:hover .arrow-base {
+  opacity: 0;
+}
 .social-icons {
   display: flex;
   position: absolute;
   flex-direction: column;
-  right: 0;
+  right: 15%;
   top: 10%;
   gap: 15px;
+}
+
+.social-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.social-icon img {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.icon-hover {
+  opacity: 0;
+}
+
+.social-icon:hover .icon-hover {
+  opacity: 1;
+}
+.social-icon:hover .icon-base {
+  opacity: 0;
+}
+.frontend-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.frontend-icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.4s ease;
+}
+
+.icon-hover {
+  opacity: 0;
+}
+
+.frontend-dev:hover .icon-hover {
+  opacity: 1;
+}
+
+.frontend-dev:hover .icon-base {
+  opacity: 0;
 }

@@ -1,25 +1,40 @@
 <section>
   <div class="its-me">
-    <div class="bg-swap">
+    <div class="left-side">
+      <div class="bg-swap">
+        <img
+          class="bg-img bg-base"
+          src="assets/img/hero-section/background-of-img.png"
+          alt=""
+        />
+        <img
+          class="bg-img2 bg-hover"
+          src="assets/img/hero-section/background-of-img-hover.png"
+          alt=""
+        />
+      </div>
       <img
-        class="bg-img bg-base"
-        src="assets/img/hero-section/background-of-img.png"
-        alt=""
-      />
-      <img
-        class="bg-img bg-hover"
-        src="assets/img/hero-section/background-of-img-hover.png"
+        class="my-picture"
+        src="assets/img/hero-section/Robin-no-background.png"
         alt=""
       />
     </div>
-    <img
-      class="my-picture"
-      src="assets/img/hero-section/Robin-no-background.png"
-      alt=""
-    />
+
     <div class="right-side">
       <div class="frontend-dev">
-        <img src="assets/img/hero-section/frontend-dev-icon.png" alt="" />
+        <div class="frontend-icon">
+          <img
+            class="icon-base"
+            src="assets/img/hero-section/frontend-dev-icon.png"
+            alt=""
+          />
+          <img
+            class="icon-hover"
+            src="assets/img/hero-section/frontend-dev-icon-hover.png"
+            alt=""
+          />
+        </div>
+
         <p class="anta-font fs-16 white">R.Erike</p>
         <p class="josefin-font fs-14 blue">developer</p>
       </div>
@@ -27,16 +42,56 @@
         <h1>Robin Erike</h1>
         <h2>FRONTEND DEVELOPER</h2>
       </div>
-      <img src="assets/img/hero-section/Arrow down.png" alt="" />
+      <div class="arrow-container" (click)="goToNavbar()">
+        <img
+          class="arrow arrow-base"
+          src="assets/img/hero-section/Arrow down.png"
+          alt=""
+        />
+        <img
+          class="arrow arrow-hover"
+          src="assets/img/hero-section/Arrow down-hover.png"
+          alt=""
+        />
+      </div>
       <div class="social-icons">
-        <a href="#">
-          <img src="assets/img/hero-section/Email button.png" alt="" />
+        <a href="#" class="social-icon">
+          <img
+            class="icon-base"
+            src="assets/img/hero-section/Email button.png"
+            alt="Email"
+          />
+          <img
+            class="icon-hover"
+            src="assets/img/hero-section/Email button-hover.png"
+            alt="Email hover"
+          />
         </a>
-        <a href="#">
-          <img src="assets/img/hero-section/Github button.png" alt="" />
+
+        <a href="#" class="social-icon">
+          <img
+            class="icon-base"
+            src="assets/img/hero-section/Github button.png"
+            alt="Github"
+          />
+          <img
+            class="icon-hover"
+            src="assets/img/hero-section/Github button hover.png"
+            alt="Github hover"
+          />
         </a>
-        <a href="#">
-          <img src="assets/img/hero-section/Linkedin button.png" alt="" />
+
+        <a href="#" class="social-icon">
+          <img
+            class="icon-base"
+            src="assets/img/hero-section/Linkedin button.png"
+            alt="LinkedIn"
+          />
+          <img
+            class="icon-hover"
+            src="assets/img/hero-section/linkedin button-hover.png"
+            alt="LinkedIn hover"
+          />
         </a>
       </div>
     </div>
