@@ -1,8 +1,8 @@
 .projects {
-  background: var(--bg);
   color: var(--text);
   padding: 32px 20px 44px;
   border-radius: 8px;
+  margin-top: 5%;
 }
 
 /* Tabs */
@@ -12,26 +12,29 @@
   flex-wrap: wrap;
   margin: 0 auto 24px;
   max-width: 1100px;
+  font-size:30px;
 }
 
 .tab {
   background: transparent;
   border: 0;
-  color: var(--muted);
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: clamp(16px, 2.2vw, 24px);
+  color: #89bcd9;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(30px, 2.2vw, 24px);
   cursor: pointer;
   padding: 8px 0;
   position: relative;
+  background-color: #262e34;
 }
 
 .tab.active {
-  color: var(--text);
+  color: white;
   font-weight: 700;
+  background-color: #2d3840;
 }
 
 .tab.active::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -14px;
   right: -14px;
@@ -50,10 +53,14 @@
   max-width: 1100px;
   margin: 0 auto;
   align-items: start;
+  background-color: #2d3840;
+  color:white;
 }
 
 /* Linke Spalte */
-.left .block + .block { margin-top: 22px; }
+.left .block + .block {
+  margin-top: 22px;
+}
 
 .block-title {
   display: flex;
@@ -115,7 +122,7 @@
   border-radius: 16px;
   overflow: hidden;
   padding: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .mockup img {
@@ -137,14 +144,23 @@
   color: var(--text);
   text-decoration: none;
   border-radius: 999px;
-  transition: transform .08s ease, background .2s ease;
+  transition: transform 0.08s ease, background 0.2s ease;
 }
 
-.btn:hover { transform: translateY(-1px); }
+.btn:hover {
+  transform: translateY(-1px);
+}
 
 .btn.primary {
   background: var(--accent);
   color: #0d1b22;
   border-color: transparent;
 }
-.btn.primary:hover { background: var(--accent-2); color: var(--text); }
+.btn.primary:hover {
+  background: var(--accent-2);
+  color: var(--text);
+}
+
+p {
+  margin-left:65px;
+}
