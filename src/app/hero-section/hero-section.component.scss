@@ -1,5 +1,5 @@
 section {
-  height: 100vh;
+  align-items: stretch;
 }
 
 h1 {
@@ -22,17 +22,19 @@ h2 {
   display: flex;
   align-items: center;
   position: relative;
-  max-width: 1440px;
+  width: min(100%, 1440px);
   margin: 0 auto;
+  padding-inline: 24px;
 }
 
 .left-side {
   width: 50%;
-  height: 100vh;
+  height: auto;
 }
 .bg-swap {
   position: relative;
-  height: 800px;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 .bg-img {
@@ -44,11 +46,10 @@ h2 {
 
 .bg-img2 {
   position: absolute;
-  inset: 0;
   object-fit: cover;
   transition: opacity 0.6 ease;
-  margin-top: 10%;
-  margin-left: 19%;
+  transform: translateX(19%);
+  bottom: -2%;
 }
 .bg-hover {
   opacity: 0;
@@ -60,9 +61,10 @@ h2 {
   opacity: 0;
 }
 .my-picture {
-  height: 730px;
   position: absolute;
   bottom: 0;
+  max-height: min(60vh, 520px);
+  height: auto;
 }
 
 .frontend-dev {
