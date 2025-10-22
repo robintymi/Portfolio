@@ -48,7 +48,7 @@ export class ProjectsComponent {
       github: 'https://github.com/you/sharkie',
     },
       {
-      title: 'CRM System aus Modul 15',
+      title: 'CRM System',
       duration: '2 weeks',
       about: 'Arcade browser game with collision physics and sprite animations.',
       process:
