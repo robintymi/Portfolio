@@ -5,31 +5,41 @@
       <p class="anta-font fs-16 white">R.Erike</p>
       <p class="josefin-font fs-14 darkblue">developer</p>
     </div>
+
     <div class="navs darkblue">
       <a href="">Why me</a>
       <a href="">Skills</a>
       <a href="">Projects</a>
       <a href="">Contact</a>
     </div>
+
     <div class="language-btns">
       <div class="EN-active">
-        <img src="assets/img/navbar/DE-inactive.png" alt="" />
-        <img src="assets/img/navbar/Ellipse DE EN.png" alt="">
-        <img src="assets/img/navbar/EN-active.png" alt="" />
+        <div
+          class="lang-option de"
+          [class.active]="currentLang === 'de'"
+          (click)="switchLang('de')"
+        >
+          <img
+            *ngIf="currentLang === 'de'"
+            src="assets/img/navbar/Ellipse DE EN.png"
+            alt="DE Ellipse"
+          />
+          <span>DE</span>
+        </div>
 
-      </div>
-      <div class="DE-hover">
-        <img src="assets/img/navbar/DE hover.png" alt="" />
-        <img src="assets/img/navbar/EN inactive .png" alt="" />
-      </div>
-      <div class="DE-active">
-        <img src="assets/img/navbar/Ellipse DE EN.png" alt="">
-        <img src="assets/img/navbar/DE active.png" alt="" />
-        <img src="assets/img/navbar/EN inactive .png" alt="" />
-      </div>
-      <div class="EN-hover">
-        <img src="assets/img/navbar/DE-inactive.png" alt="" />
-        <img src="assets/img/navbar/EN hover.png" alt="" />
+        <div
+          class="lang-option en"
+          [class.active]="currentLang === 'en'"
+          (click)="switchLang('en')"
+        >
+          <img
+            *ngIf="currentLang === 'en'"
+            src="assets/img/navbar/Ellipse DE EN.png"
+            alt="EN Ellipse"
+          />
+          <span>EN</span>
+        </div>
       </div>
     </div>
   </div>

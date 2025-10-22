@@ -1,5 +1,19 @@
-html, body { height: 100%; }
 body {
   margin: 0;
-  background-color: #262E24;
+  background-color: #262e34;
+}
+
+app-navbar {
+  display: block; /* Custom Element -> Block */
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* über allen Sektionen liegen */
+  width: 100%;
+  /* optional: Hintergrund, damit Content darunter nicht “durchscheint” */
+  background: #262e24; /* oder deine Navbar-Farbe */
+}
+
+main {
+  position: relative;
+  z-index: 0;
 }

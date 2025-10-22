@@ -1,40 +1,103 @@
+section {
+  background-color: #89bcd9;
+}
+
 .navbar {
-    height:120px;
-    background-color: #89bcd9;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family:'Josefin Sans';
-    width:100vw;
-    max-width:1440px;
+  height: 120px;
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Josefin Sans";
+  width: 100vw;
+  max-width: 1440px;
 }
 
 .frontend-dev {
-    cursor:pointer;
+  cursor: pointer;
 }
+
 .navs {
-    display:flex;
-    
-    >a {
-        margin:30px;
-        text-decoration: none;
-        font-size: 26px;
-        font-weight:500;
-        cursor:pointer;
-    }
-    >a:visited {
-        color: #262e34;
-    }
-    >a:hover {
-        color:white;
-    }
+  display: flex;
+
+  > a {
+    margin: 30px;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  > a:visited {
+    color: #262e34;
+  }
+  > a:hover {
+    color: white;
+  }
 }
 
 .language-btns {
-    >img {
-        cursor:pointer;
-        margin:5px;
-    }
+  > img {
+    cursor: pointer;
+    margin: 5px;
+  }
+}
+/* Layout & Basis */
+.EN-active {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Josefin Sans";
 }
 
+.lang-option {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
 
+.lang-option span {
+  position: relative;
+  z-index: 1;
+}
+
+.lang-option img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Aktive Sprache: nicht klick-/hoverbar */
+.lang-option.active {
+  color: white;
+  cursor: default;
+  pointer-events: none; /* <- verhindert Hover/Klick */
+}
+
+/* Inaktive Sprache: klick-/hoverbar */
+.lang-option:not(.active) {
+  cursor: pointer;
+}
+
+.lang-option:not(.active):hover {
+  color: white;
+}
+
+.lang-option:not(.active):hover img {
+  opacity: 0; /* Ellipse der INAKTIVEN ausblenden beim Hover */
+}
+
+/* Nur wenn die INAKTIVE gehovert wird:
+   -> aktive verliert Ellipse + wird schwarz */
+.EN-active:has(.lang-option:not(.active):hover) .lang-option.active {
+  color: black;
+}
+.EN-active:has(.lang-option:not(.active):hover) .lang-option.active img {
+  opacity: 0;
+}
