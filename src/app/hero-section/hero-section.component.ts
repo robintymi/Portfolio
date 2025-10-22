@@ -14,6 +14,6 @@ export class HeroSectionComponent {
   constructor(private router: Router) { }
 
   goToNavbar(): void {
-    console.log('click');
+   this.router.navigate(['/app-navbar']);
   }
 }
