@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-section',
@@ -11,9 +10,5 @@ import { Router } from '@angular/router';
 })
 export class HeroSectionComponent {
 
-  constructor(private router: Router) { }
-
-  goToNavbar(): void {
-   this.router.navigate(['/app-navbar']);
-  }
+ 
 }

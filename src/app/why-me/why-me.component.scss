@@ -1,6 +1,5 @@
 .why {
   width: 100vw;
-  height: 35vh;
 }
 
 h1 {
@@ -15,6 +14,9 @@ h1 {
 
   justify-content: center;
 }
+.why-icon {
+  height:70px;
+}
 
 .why-left {
   width: 30%;
@@ -26,6 +28,7 @@ h1 {
 }
 .open-to {
   display:flex;
+  align-items: center;
 }
 
 span {

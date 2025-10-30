@@ -1,0 +1,14 @@
+{
+  "BRAND": { "SMALL": "R.Erike", "ROLE": "developer" },
+  "HERO": {
+    "NAME": "Robin Erike",
+    "TITLE": "FRONTEND DEVELOPER"
+  },
+  "NAV": {
+    "WHY": "Why me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "LANG": { "DE": "DE", "EN": "EN" }
+}
