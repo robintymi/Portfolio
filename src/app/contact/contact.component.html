@@ -1,7 +1,11 @@
 <section>
   <div>
     <h1>Contact me</h1>
-    <a href="#hero-section"><img src="assets/img/contact/Arrow up.png" alt=""></a>
+    <div class="arrow-up" >
+      <a href="#hero-section"
+        ><img  src="assets/img/contact/Arrow up.png" alt=""
+      /></a>
+    </div>
   </div>
 
   <div class="contact">
@@ -43,13 +47,49 @@
         <textarea id="message" rows="6"></textarea>
       </div>
 
-      <div>
-        <img src="../../assets/img/contact/Check box (2).png" alt="" />
-        <label for=""
-          >I've read the privacy policy and agree and agree to the processing of
-          my data as outlined</label
-        >
-        <p class="red-notice">Please accept the privacy policy.</p>
+      <div class="checkbox-wrapper">
+        <!-- Checkbox-Bild -->
+        <img
+          [src]="
+            checkboxState === 'neutral'
+              ? 'assets/img/contact/Check box neutral.png'
+              : checkboxState === 'hover'
+              ? 'assets/img/contact/Check box hover.png'
+              : 'assets/img/contact/Check box checked.png'
+          "
+          alt="Checkbox"
+          class="checkbox-img"
+          (mouseenter)="onHover(true)"
+          (mouseleave)="onHover(false)"
+          (click)="onToggle()"
+        />
+
+        <label>
+          I've read the privacy policy and agree to the processing of my data as
+          outlined.
+        </label>
+
+        <p class="red-notice" *ngIf="!isChecked && showError">
+          Please accept the privacy policy.
+        </p>
+      </div>
+      <div class="submit-btns">
+        <!-- Inaktiver Button -->
+        <img
+          *ngIf="!isChecked"
+          src="/assets/img/contact/Button Secondary Mob.png"
+          alt="Submit (disabled)"
+          class="submit-btn disabled"
+        />
+
+        <!-- Aktiver Button -->
+        <img
+          *ngIf="isChecked"
+          src="/assets/img/contact/Button Secondary Mob (1).png"
+          alt="Submit (active)"
+          class="submit-btn active"
+          (click)="onSubmit()"
+        />
       </div>
     </form>
   </div>

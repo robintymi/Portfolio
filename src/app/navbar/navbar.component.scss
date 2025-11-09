@@ -12,6 +12,55 @@ section {
   width: 100vw;
   max-width: 1440px;
 }
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px; /* etwas Innenabstand, damit die Ellipse Platz hat */
+  margin: 30px;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 500;
+  color: #262e34;
+  transition: color 0.3s ease;
+  z-index: 0; /* eigener Stacking-Context */
+}
+
+.nav-link span {
+  position: relative;
+  z-index: 1; /* Text über der Ellipse */
+}
+
+.nav-link .ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; /* Ellipsengröße anpassen */
+  height: 50px;
+  z-index: 0;
+  opacity: 0; /* standardmäßig unsichtbar */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* klickt nicht die Ellipse, sondern der Link */
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Aktiv wie bei DE/EN: Ellipse sichtbar + Schrift weiß */
+.nav-link.active {
+  color: white !important;
+}
+.nav-link.active .ellipse {
+  opacity: 1;
+}
+
+/* Optional: beim Hover leicht einblenden, wenn nicht aktiv */
+.nav-link:hover:not(.active) .ellipse {
+  opacity: 0.7;
+}
 
 .frontend-dev {
   cursor: pointer;
@@ -36,7 +85,6 @@ section {
   }
 }
 
-
 .language-btns {
   > img {
     cursor: pointer;
@@ -47,7 +95,7 @@ section {
 .EN-active {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   font-family: "Josefin Sans";
 }
 
@@ -75,14 +123,12 @@ section {
   transition: opacity 0.3s ease;
 }
 
-/* Aktive Sprache: nicht klick-/hoverbar */
 .lang-option.active {
   color: white;
   cursor: default;
-  pointer-events: none; /* <- verhindert Hover/Klick */
+  pointer-events: none;
 }
 
-/* Inaktive Sprache: klick-/hoverbar */
 .lang-option:not(.active) {
   cursor: pointer;
 }
@@ -92,11 +138,9 @@ section {
 }
 
 .lang-option:not(.active):hover img {
-  opacity: 0; /* Ellipse der INAKTIVEN ausblenden beim Hover */
+  opacity: 0;
 }
 
-/* Nur wenn die INAKTIVE gehovert wird:
-   -> aktive verliert Ellipse + wird schwarz */
 .EN-active:has(.lang-option:not(.active):hover) .lang-option.active {
   color: black;
 }

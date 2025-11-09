@@ -1,16 +1,67 @@
 <section>
   <div class="navbar">
-    <a href="#hero-section"  class="frontend-dev">
+    <a href="#hero-section" class="frontend-dev">
       <img src="assets/img/navbar/Logo icon (1).png" />
       <p class="anta-font fs-16 white">R.Erike</p>
       <p class="josefin-font fs-14 darkblue">developer</p>
     </a>
 
     <div class="navs darkblue">
-      <a href="#why-me">Why me</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a
+        href="#why-me"
+        class="nav-link"
+        [class.active]="active === 'why-me'"
+        (click)="setActive('why-me')"
+      >
+        <img
+          class="ellipse"
+          src="/assets/img/navbar/Ellipse-active-nav.png"
+          alt=""
+        />
+        <span>Why me</span>
+      </a>
+
+      <a
+        href="#skills"
+        class="nav-link"
+        [class.active]="active === 'skills'"
+        (click)="setActive('skills')"
+      >
+        <img
+          class="ellipse"
+          src="/assets/img/navbar/Ellipse-active-nav.png"
+          alt=""
+        />
+        <span>Skills</span>
+      </a>
+
+      <a
+        href="#projects"
+        class="nav-link"
+        [class.active]="active === 'projects'"
+        (click)="setActive('projects')"
+      >
+        <img
+          class="ellipse"
+          src="/assets/img/navbar/Ellipse-active-nav.png"
+          alt=""
+        />
+        <span>Projects</span>
+      </a>
+
+      <a
+        href="#contact"
+        class="nav-link"
+        [class.active]="active === 'contact'"
+        (click)="setActive('contact')"
+      >
+        <img
+          class="ellipse"
+          src="/assets/img/navbar/Ellipse DE EN.png"
+          alt=""
+        />
+        <span>Contact</span>
+      </a>
     </div>
 
     <div class="language-btns">

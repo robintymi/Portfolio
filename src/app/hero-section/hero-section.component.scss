@@ -7,7 +7,7 @@ h1 {
   font-family: "Anta";
   font-size: 88px;
   font-weight: 400;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 h2 {
@@ -49,10 +49,11 @@ h2 {
 
 .bg-img2 {
   position: absolute;
-  object-fit: cover;
-  transition: opacity 0.6 ease;
-  transform: translateX(19%);
-  bottom: -2%;
+  inset: 0;
+  width: 85%;
+  height: 85%;
+  transform: translate(19%, 20%);
+  transition: opacity 0.6s ease;
 }
 .bg-hover {
   opacity: 0;
@@ -69,11 +70,11 @@ h2 {
   max-height: min(60vh, 520px);
   height: auto;
   z-index: 99999;
-  margin-left:100px;
+  margin-left: 100px;
 }
 
 .frontend-dev {
-  margin-top: 20%;
+  margin-top: 6%;
 }
 .right-side {
   display: flex;
@@ -124,8 +125,7 @@ h2 {
   position: absolute;
   flex-direction: column;
   right: 15%;
-  top: 10%;
-  gap: 5px;
+  top: -4%;
 }
 
 .social-icon {
@@ -144,6 +144,8 @@ h2 {
 
 .icon-hover {
   opacity: 0;
+  height:40px;
+  transform:translateX(-2.5%);
 }
 
 .social-icon:hover .icon-hover {
@@ -175,4 +177,15 @@ h2 {
 
 .frontend-dev:hover .icon-base {
   opacity: 0;
+}
+
+@media(max-width:1250px) {
+  h1 {
+    font-size:60px;
+    margin-top:6%;
+  }
+
+  h2 {
+    font-size:28px;
+  }
 }

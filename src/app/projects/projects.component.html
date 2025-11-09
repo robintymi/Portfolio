@@ -15,17 +15,17 @@
   <!-- Content -->
   <div class="content" *ngIf="projects[active] as proj">
     <div class="left">
-      <div class="block">
+      <div class="block" *ngIf="proj.about">
         <h3 class="block-title">
           <span class="dot"></span>
           <img src="assets/img/skills/bullet points.png" alt="" /> About the
           project
-          <span class="muted">Duration: {{ proj.duration }}</span>
+          <span class="muted" *ngIf="proj.duration">Duration: {{ proj.duration }}</span>
         </h3>
         <p>{{ proj.about }}</p>
       </div>
 
-      <div class="block">
+      <div class="block" *ngIf="proj.process">
         <h3 class="block-title">
           <span class="dot"></span>
           <img src="assets/img/skills/bullet points.png" /> How I have organised
@@ -34,7 +34,7 @@
         <p>{{ proj.process }}</p>
       </div>
 
-      <div class="block">
+      <div class="block" *ngIf="proj.experience">
         <h3 class="block-title">
           <span class="dot"></span>
           <img src="assets/img/skills/bullet points.png" alt="" /> My group work
@@ -56,9 +56,22 @@
         <img [src]="proj.image" [alt]="proj.title" />
       </div>
 
-      <div class="cta">
-        <img src="assets/img/skills/Button Primary Web.png" alt="">
-        <img src="assets/img/skills/Button Secondary Web.png" alt="">
+      <div class="cta" *ngIf="proj.live || proj.github">
+        <a
+          [href]="proj.live"
+          target="_blank"
+          class="btn primary"
+        >
+          <img src="assets/img/skills/Button Primary Web.png" alt=""
+        /></a>
+
+        <a
+          [href]="proj.github"
+          target="_blank"
+          class="btn primary"
+        >
+          <img src="assets/img/skills/Button Secondary Web.png" alt=""
+        /></a>
       </div>
     </div>
   </div>
