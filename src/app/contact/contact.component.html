@@ -1,15 +1,16 @@
 <section>
   <div>
     <h1>Contact me</h1>
-    <div class="arrow-up" >
-      <a href="#hero-section"
-        ><img  src="assets/img/contact/Arrow up.png" alt=""
-      /></a>
+    <div class="arrow-up">
+      <a href="#hero-section">
+        <img src="assets/img/contact/Arrow up.png" alt="arrow up" />
+      </a>
     </div>
   </div>
 
   <div class="contact">
-    <form action="">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+      <!-- Intro / Kontaktinfos -->
       <div class="role">
         <p class="my-motivation">
           I’m passionate about creating intuitive and visually appealing web
@@ -19,36 +20,83 @@
           eager to bring creativity, dedication, and fresh ideas to your team
           and help deliver impactful digital products.
         </p>
+
         <div class="contact-details">
-          <a href="" class="email"
-            ><img src="assets/img/contact/🦆 icon _email_.png" alt="" /> E-mail:
-            robinerike&#64;gmail.com
+          <a href="mailto:robinerike@gmail.com" class="email">
+            <img
+              src="assets/img/contact/🦆 icon _email_.png"
+              alt="email icon"
+            />
+            E-mail: robinerike&#64;gmail.com
           </a>
-          <a href="" class="phone"
-            ><img src="assets/img/contact/🦆 icon _phone_.png" alt="" />Tel:
-            0176 201 643 66</a
-          >
+          <a href="tel:017620164366" class="phone">
+            <img
+              src="assets/img/contact/🦆 icon _phone_.png"
+              alt="phone icon"
+            />
+            Tel: 0176 201 643 66
+          </a>
         </div>
-      </div>
-      <div>
-        <div class="name-email-flex">
-          <div class="label-flex">
-            <label for="name">Your name</label>
-            <input id="name" type="text" />
-          </div>
-          <div class="label-flex">
-            <label for="email">Your Email</label>
-            <input id="email" type="email" />
-          </div>
-        </div>
-      </div>
-      <div>
-        <label for="message">Your Message</label>
-        <textarea id="message" rows="6"></textarea>
       </div>
 
+      <!-- Name + Email -->
+      <div>
+        <div class="name-email-flex">
+          <!-- Name -->
+          <div class="label-flex">
+            <label for="name">Your name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              minlength="2"
+              [(ngModel)]="contactData.name"
+              #nameModel="ngModel"
+            />
+            <p class="error" *ngIf="nameModel.invalid && nameModel.touched">
+              Please enter your name (min. 2 characters).
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="label-flex">
+            <label for="email">Your Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              [(ngModel)]="contactData.email"
+              #emailModel="ngModel"
+            />
+            <p class="error" *ngIf="emailModel.invalid && emailModel.touched">
+              Please enter a valid email address.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          minlength="4"
+          [(ngModel)]="contactData.message"
+          #messageModel="ngModel"
+        ></textarea>
+        <p class="error" *ngIf="messageModel.invalid && messageModel.touched">
+          Please enter a message (min. 4 characters).
+        </p>
+      </div>
+
+      <!-- DSGVO Checkbox mit Bild -->
       <div class="checkbox-wrapper">
-        <!-- Checkbox-Bild -->
         <img
           [src]="
             checkboxState === 'neutral'
@@ -73,23 +121,28 @@
           Please accept the privacy policy.
         </p>
       </div>
-      <div class="submit-btns">
-        <!-- Inaktiver Button -->
-        <img
-          *ngIf="!isChecked"
-          src="/assets/img/contact/Button Secondary Mob.png"
-          alt="Submit (disabled)"
-          class="submit-btn disabled"
-        />
 
-        <!-- Aktiver Button -->
-        <img
-          *ngIf="isChecked"
-          src="/assets/img/contact/Button Secondary Mob (1).png"
-          alt="Submit (active)"
-          class="submit-btn active"
-          (click)="onSubmit()"
-        />
+      <!-- Submit -->
+      <div class="submit-btns">
+        <button
+          type="submit"
+          class="submit-btn"
+          [disabled]="!isChecked || !contactForm.valid"
+          [attr.aria-disabled]="
+            !isChecked || !contactForm.valid ? 'true' : null
+          "
+        >
+          <img
+            *ngIf="isChecked && contactForm.valid"
+            src="/assets/img/contact/Button Secondary Mob (1).png"
+            alt="Submit (active)"
+          />
+          <img
+            *ngIf="!isChecked || !contactForm.valid"
+            src="/assets/img/contact/Button Secondary Mob.png"
+            alt="Submit (disabled)"
+          />
+        </button>
       </div>
     </form>
   </div>

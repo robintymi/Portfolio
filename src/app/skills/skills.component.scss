@@ -2,15 +2,26 @@
   color: white;
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  align-items: center;
   gap: 60px;
-  height:500px;
+  margin-top: 6%;
+}
+
+.skill-set-img {
+  width: 34vw; /* 25 % der Viewport-Breite */
+  height: auto; /* behält Seitenverhältnis */
+  max-width: 100%; /* falls Container kleiner als Viewport */
+  display: block;
 }
 
 .currently-learning {
   position: relative;
-  display: inline-block;
-  width:30%;
+  display: block;
+  width: 34vw;
+  aspect-ratio: 1 / 1;
+  align-self: center;
+  cursor: pointer;
+
   > img {
     position: absolute;
     inset: 0;
@@ -45,17 +56,17 @@
   font-family: "Josefin Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  font-size:18px;
+  font-size: 18px;
   line-height: 120%;
-  font-weight:400;
-  >img {
-    height:50px;
-    width:50px;
+  font-weight: 400;
+  > img {
+    height: 50px;
+    width: 50px;
   }
 }
 
 .learning-icons {
-  display:flex;
+  display: flex;
   justify-content: center;
-  margin:20px 20px;
+  margin: 12px 12px;
 }

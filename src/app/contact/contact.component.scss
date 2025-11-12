@@ -155,6 +155,21 @@ p {
 }
 
 .arrow-up {
-  display:flex;
+  display: flex;
   justify-content: end;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+.submit-btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.submit-btn[disabled] {
+  cursor: not-allowed;
 }

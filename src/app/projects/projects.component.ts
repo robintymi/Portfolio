@@ -51,33 +51,38 @@ export class ProjectsComponent {
     },
 
     {
-      title: 'CRM System',
-      duration: '2 weeks',
-      about: 'Arcade browser game with collision physics and sprite animations.',
+      title: 'Pokedex',
+      duration: '4 weeks',
+      about:
+        'The Pokedex is a web application built with HTML, CSS, and JavaScript that interacts with the official PokéAPI to display detailed Pokémon information. Users can browse through Pokémon, view their stats, types, and images in an interactive and responsive interface.',
+
       process:
-        'Separated game loop, input controller, and rendering. Automated builds and asset pipeline.',
+        'I designed and developed the application following a modular approach. Data is fetched dynamically from the PokéAPI using asynchronous JavaScript (fetch API). I implemented pagination, loading states, and a detail view for each Pokémon. The structure is organized into reusable functions for rendering, fetching, and handling user interactions.',
+
       experience:
-        'Pair programming on physics, code reviews via PRs, short daily standups.',
+        'Throughout the project, I focused on improving my understanding of REST APIs, asynchronous JavaScript, and DOM manipulation. I practiced clean code principles and performance optimization by caching data and minimizing redundant API calls. Additionally, I refined my responsive design and accessibility techniques.',
+
       tech: [
-        { name: 'TypeScript', icon: 'assets/img/tech/typescript.svg' },
-        { name: 'HTML', icon: 'assets/img/tech/html.svg' },
-        { name: 'CSS', icon: 'assets/img/tech/css.svg' },
+        { name: 'JavaScript', icon: '/assets/img/projects/Javascript.png' },
+        { name: 'HTML', icon: '/assets/img/projects/html.png' },
+        { name: 'CSS', icon: '/assets/img/projects/css.png' },
       ],
-      image: 'assets/img/projects/sharkie.png',
-      live: 'https://example.com/sharkie',
-      github: 'https://github.com/you/sharkie',
+
+      image: '/assets/img/projects/Pokedex.png',
+      live: 'https://robin-erike.de/projects/PokedexV2',
+      github: 'https://github.com/robintymi/Pokedex-1'
     },
     {
-  title: 'Ongoing Project',
-  about:
-    'This project is currently in development. Stay tuned for updates and new features coming soon!',
-  tech: [
-    { name: 'Angular', icon: '/assets/img/projects/Angular.png' },
-    { name: 'TypeScript', icon: '/assets/img/projects/typescript.png' },
-    { name: 'Firebase', icon: '/assets/img/projects/Firebase.png' },
-  ],
-  image: '/assets/img/projects/ongoing-project.png',
-}
+      title: 'Ongoing Project',
+      about:
+        'This project is currently in development. Stay tuned for updates and new features coming soon!',
+      tech: [
+        { name: 'Angular', icon: '/assets/img/projects/Angular.png' },
+        { name: 'TypeScript', icon: '/assets/img/projects/typescript.png' },
+        { name: 'Firebase', icon: '/assets/img/projects/Firebase.png' },
+      ],
+      image: '/assets/img/projects/ongoing-project.png',
+    }
 
   ];
 }
