@@ -1,3 +1,120 @@
+section {
+  font-family: "Josefin Sans";
+}
+
 h1 {
-    font-size:32px;
+  font-size: 32px;
+  margin-bottom: 3%;
+}
+
+.refs {
+  display: flex;
+  gap: 3%;
+  max-width: 1200px;
+}
+
+.max-width {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.one-ref {
+  position: relative;
+  width: clamp(310px, 25vw, 450px); /* min, abhängig vom Viewport, max */
+  aspect-ratio: 1/1;
+}
+
+/* Bild-Wrapper */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* falls etwas übersteht */
+}
+
+/* Beide Bilder exakt gleiche Fläche */
+.image-wrapper img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+/* Hover-Bild standardmäßig unsichtbar */
+.img-hover {
+  opacity: 0;
+  visibility: hidden;
+  transform:scale(1.15);
+}
+
+/* Normalbild standardmäßig sichtbar */
+.img-normal {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover: Hover-Bild einblenden */
+.one-ref:hover .img-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover: Normalbild komplett ausblenden */
+.one-ref:hover .img-normal {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Overlay mit Text */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12%;
+  color: #fff;
+  pointer-events: none;
+  z-index: 1; /* über den Bildern */
+}
+
+/* Optionale Abdunklung unter dem Text */
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 15%;
+
+  z-index: -1;
+}
+
+.name {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-family: "Josefin Sans";
+  font-size: 28px;
+}
+
+.project {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+/* hier war ein Tippfehler: 1zpx */
+.quote {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.linked-in {
+  font-size: 16px;
+  text-decoration: underline;
+  pointer-events: auto; /* Link wieder klickbar machen */
 }

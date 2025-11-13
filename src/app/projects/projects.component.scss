@@ -53,15 +53,21 @@ section {
   z-index: -1;
 }
 
+.max-width {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap:40px;
+}
 /* 2-Spalten Layout */
 .content {
-  display: grid;
-  grid-template-columns: 3fr 2fr; /* 60/40 wie in deinem Screenshot */
   gap: clamp(24px, 4vw, 48px);
   align-items: start;
   background-color: #2d3840;
   color: white;
   padding: 30px;
+  display:flex;
+  justify-content: center;
 }
 
 /* Linke Spalte */
@@ -102,8 +108,9 @@ section {
 .right {
   display: grid;
   grid-template-rows: auto 1fr auto; /* tech / mockup / buttons */
-  gap: 12px;
-  height: 100%;
+  gap: 10%;
+  align-items: center;
+  width:40%;
 }
 
 .tech {
@@ -174,4 +181,8 @@ section {
 
 p {
   margin-left: 65px;
+}
+
+.left {
+  width:60%;
 }

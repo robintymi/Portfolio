@@ -1,2 +1,32 @@
-<h1>Need a teamplayer? Here what my colleagues said about me</h1>
-<app-one-ref></app-one-ref>
+<section>
+  <h1>Need a teamplayer? Here what my colleagues said about me</h1>
+
+  <div class="max-width">
+    <div class="refs">
+      <div class="one-ref" *ngFor="let ref of references">
+        <div class="image-wrapper">
+          <img class="img-normal" [src]="ref.image" [alt]="ref.name" />
+          <img
+            class="img-hover"
+            src="assets/img/references/Ellipse hover.png"
+            [alt]="ref.name"
+          />
+        </div>
+
+        <div class="overlay">
+          <p class="name">{{ ref.name }}</p>
+          <p class="project">{{ ref.project }}</p>
+          <p class="quote">"{{ ref.quote }}"</p>
+          <a
+            class="linked-in"
+            [href]="ref.linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn-Profil
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  http= inject(HttpClient);
   // Checkbox-UI
   checkboxState: 'neutral' | 'hover' | 'checked' = 'neutral';
   isChecked = false;
@@ -30,13 +33,35 @@ export class ContactComponent {
     this.checkboxState = this.isChecked ? 'checked' : 'neutral';
   }
 
-  onSubmit(ngForm: NgForm) {
-    this.showError = !this.isChecked;
+  mailTest = true;
 
-    if (!this.isChecked) return;                 // DSGVO-Checkbox nötig
-    if (!ngForm.valid) {                         // invalid → Fehler anzeigen
-      ngForm.control.markAllAsTouched();
-      return;
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
     }
 
     // ✅ gültig + Checkbox → senden
