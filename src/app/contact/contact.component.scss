@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   font-size: 18px;
-  margin-top: 3%;
 }
 
 a {
@@ -58,7 +57,7 @@ textarea {
 label {
   color: #89bcd9;
   font-size: 14px;
-  margin-left: 24px;
+  margin-left: 24px;  
 }
 h1 {
   font-size: 54px;
@@ -80,6 +79,7 @@ form {
   display: flex;
   justify-content: space-between;
   margin-top: 5%;
+  margin-bottom:1%;
 }
 .label-flex {
   display: flex;
@@ -103,7 +103,7 @@ p {
 
 .checkbox-wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   margin-top: 16px;
   cursor: pointer;
@@ -131,6 +131,7 @@ p {
     font-size: 14px;
   }
 }
+
 .submit-btns {
   margin-top: 40px;
   text-align: end;
@@ -154,10 +155,15 @@ p {
   }
 }
 
+.head-and-arrow {
+  position:relative;
+  margin-bottom:6%;
+}
+
 .arrow-up {
-  display: flex;
-  justify-content: end;
-  margin-right:5%;
+  position:absolute;
+  right:10%;
+  top:20%;
 }
 
 .error {
@@ -172,5 +178,14 @@ p {
   cursor: pointer;
 }
 .submit-btn[disabled] {
-  cursor: not-allowed;
+  cursor:default;
+  margin-bottom:15%;
+}
+
+.privacy-label {
+  margin-left:0 !important;
+}
+
+.priv {
+  color:#89bcd9;
 }

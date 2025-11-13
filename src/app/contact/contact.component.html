@@ -1,11 +1,21 @@
 <section>
-  <div>
+  <div class="head-and-arrow">
     <h1>Contact me</h1>
-    <div class="arrow-up">
-      <a href="#hero-section">
-        <img src="assets/img/contact/Arrow up.png" alt="arrow up" />
-      </a>
-    </div>
+    <a
+      class="arrow-up"
+      href="#hero-section"
+      (mouseenter)="arrowHover = true"
+      (mouseleave)="arrowHover = false"
+    >
+      <img
+        [src]="
+          arrowHover
+            ? 'assets/img/contact/arrow up hover.png'
+            : 'assets/img/contact/Arrow up.png'
+        "
+        alt="arrow up"
+      />
+    </a>
   </div>
 
   <div class="contact">
@@ -112,9 +122,9 @@
           (click)="onToggle()"
         />
 
-        <label>
-          I've read the privacy policy and agree to the processing of my data as
-          outlined.
+        <label class="privacy-label">
+          I've read the <a class="priv" href="#">privacy policy</a> and agree to
+          the processing of my data as outlined.
         </label>
 
         <p class="red-notice" *ngIf="!isChecked && showError">

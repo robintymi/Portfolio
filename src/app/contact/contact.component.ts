@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent {
 
+  arrowHover = false;
   http= inject(HttpClient);
   // Checkbox-UI
   checkboxState: 'neutral' | 'hover' | 'checked' = 'neutral';
