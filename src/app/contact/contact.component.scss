@@ -57,7 +57,7 @@ textarea {
 label {
   color: #89bcd9;
   font-size: 14px;
-  margin-left: 24px;  
+  margin-left: 24px;
 }
 h1 {
   font-size: 54px;
@@ -79,7 +79,7 @@ form {
   display: flex;
   justify-content: space-between;
   margin-top: 5%;
-  margin-bottom:1%;
+  margin-bottom: 1%;
 }
 .label-flex {
   display: flex;
@@ -156,14 +156,14 @@ p {
 }
 
 .head-and-arrow {
-  position:relative;
-  margin-bottom:6%;
+  position: relative;
+  margin-bottom: 6%;
 }
 
 .arrow-up {
-  position:absolute;
-  right:10%;
-  top:20%;
+  position: absolute;
+  right: 10%;
+  top: 20%;
 }
 
 .error {
@@ -176,16 +176,18 @@ p {
   border: 0;
   padding: 0;
   cursor: pointer;
+  width: 120px;
 }
+
 .submit-btn[disabled] {
-  cursor:default;
-  margin-bottom:15%;
+  cursor: default;
+  margin-bottom: 15%;
 }
 
 .privacy-label {
-  margin-left:0 !important;
+  margin-left: 0 !important;
 }
 
 .priv {
-  color:#89bcd9;
+  color: #89bcd9;
 }

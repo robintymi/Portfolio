@@ -9,5 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  githubHover = false;
+  mailHover = false;
+  linkedinHover = false;
 
 }
