@@ -20,17 +20,7 @@ export class NavbarComponent implements AfterViewInit {
   }
 
   // Methode der Klasse
-  switchLang(lang: 'en' | 'de') {
-    const langSelect = document.querySelector('.goog-te-combo') as HTMLSelectElement | null;
 
-    if (langSelect) {
-      langSelect.value = lang;
-      langSelect.dispatchEvent(new Event('change')); // Google Translate auslösen
-      this.currentLang = lang;
-    } else {
-      console.warn('Google Translate dropdown ( .goog-te-combo ) wurde nicht gefunden.');
-    }
-  }
 
   // optional: nur um zu prüfen, ob Google das Select gebaut hat
   ngAfterViewInit(): void {
