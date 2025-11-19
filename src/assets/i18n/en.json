@@ -1,14 +1,198 @@
 {
-  "BRAND": { "SMALL": "R.Erike", "ROLE": "developer" },
-  "HERO": {
-    "NAME": "Robin Erike",
-    "TITLE": "FRONTEND DEVELOPER"
+  "brand": {
+    "nameShort": "R.Erike",
+    "role": "developer"
   },
-  "NAV": {
-    "WHY": "Why me",
-    "SKILLS": "Skills",
-    "PROJECTS": "Projects",
-    "CONTACT": "Contact"
+
+  "hero": {
+    "name": "Robin Erike",
+    "title": "Frontend Developer"
   },
-  "LANG": { "DE": "DE", "EN": "EN" }
+
+  "nav": {
+    "why": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "lang": {
+    "de": "DE",
+    "en": "EN"
+  },
+
+  "why": {
+    "title": "Why me",
+
+    "item1": {
+      "prefix": "I am",
+      "text": "located in Wildau, close to Berlin",
+      "suffix": "..|"
+    },
+
+    "item2": {
+      "prefix": "I am",
+      "text": "open to work remote",
+      "suffix": "..|"
+    },
+
+    "text": "I love bringing ideas to life through clean, responsive, and user-friendly interfaces. Coding lets me combine creativity with logic — turning design concepts into interactive experiences. I enjoy solving problems, refining details, and collaborating to create seamless digital products that make people’s lives easier."
+  },
+  "skills": {
+    "title": "My Skills",
+    "currentlyLearningLabel": "I am currently learning",
+    "currentlyLearningMobile": "What I am currently learining",
+    "currentlyLearningText": "I am currently learning backend development, exploring technologies like databases, APIs, and server-side frameworks to build complete and scalable web applications."
+  },
+  "projects": {
+    "title": "My Projects",
+
+    "sections": {
+      "about": "About the project",
+      "process": "How I have organised my work process",
+      "experience": "My group work experience",
+      "technologies": "Technologies",
+      "duration": "Duration"
+    },
+
+    "items": {
+      "join": {
+        "tabTitle": "Join",
+        "duration": "7 weeks",
+        "about": "Join is a task management application inspired by the Kanban and Scrum methodologies. It allows users to create, assign, and organize tasks across different categories, manage contacts, and track project progress visually using drag-and-drop boards.",
+        "process": "We worked in a team of three using an agile workflow based on Scrum. I contributed to both the front-end logic and UI structure, writing modular, reusable JavaScript components in Visual Studio Code. We used Kanban boards to plan sprints and organize our weekly goals.",
+        "experience": "Our collaboration was based on continuous feedback, daily standups, and sprint reviews. We shared responsibilities in implementing core features such as task creation, login functionality, and contact management. Firebase was used for authentication and as a real-time database."
+      },
+
+      "elPolloLoco": {
+        "tabTitle": "El Pollo Loco",
+        "duration": "4 weeks",
+        "about": "El Pollo Loco is a 2D jump’n’run browser game developed with pure JavaScript, HTML, and CSS. The player controls a character navigating through multiple levels, avoiding or defeating enemies while collecting items. The game includes collision detection, sprite-based animations, background music, and sound effects, optimized for both desktop and mobile devices.",
+        "process": "I structured the game logic into independent modules handling rendering, character movement, collision physics, and audio control. Using object-oriented JavaScript, I implemented a clean game loop and asset management system. Animations and responsive controls were fine-tuned for mobile compatibility and smooth performance.",
+        "experience": "Working independently, I focused on creating polished gameplay, fluid animations, and immersive sound design. Through iterative testing, I balanced game mechanics and optimized performance for different screen sizes and devices."
+      },
+
+      "pokedex": {
+        "tabTitle": "Pokedex",
+        "duration": "4 weeks",
+        "about": "The Pokedex is a web application built with HTML, CSS, and JavaScript that interacts with the official PokéAPI to display detailed Pokémon information. Users can browse through Pokémon, view their stats, types, and images in an interactive and responsive interface.",
+        "process": "I designed and developed the application following a modular approach. Data is fetched dynamically from the PokéAPI using asynchronous JavaScript (fetch API). I implemented pagination, loading states, and a detail view for each Pokémon. The structure is organized into reusable functions for rendering, fetching, and handling user interactions.",
+        "experience": "Throughout the project, I focused on improving my understanding of REST APIs, asynchronous JavaScript, and DOM manipulation. I practiced clean code principles and performance optimization by caching data and minimizing redundant API calls. Additionally, I refined my responsive design and accessibility techniques."
+      },
+
+      "ongoing": {
+        "tabTitle": "Ongoing Project",
+        "about": "This project is currently in development. Stay tuned for updates and new features coming soon!"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+
+    "intro": "I’m passionate about creating intuitive and visually appealing web experiences. I’m currently looking for opportunities in frontend development where I can contribute my skills in building responsive, user-friendly interfaces and continuously grow as a developer. I’m eager to bring creativity, dedication, and fresh ideas to your team and help deliver impactful digital products.",
+
+    "details": {
+      "emailLabel": "E-mail:",
+      "phoneLabel": "Tel:"
+    },
+
+    "form": {
+      "nameLabel": "Your name",
+      "nameError": "Please enter your name (min. 2 characters).",
+
+      "emailLabel": "Your Email",
+      "emailError": "Please enter a valid email address.",
+
+      "messageLabel": "Your Message",
+      "messageError": "Please enter a message (min. 4 characters)."
+    },
+
+    "privacy": {
+      "textBeforeLink": "I've read the",
+      "link": "privacy policy",
+      "textAfterLink": "and agree to the processing of my data as outlined.",
+      "error": "Please accept the privacy policy."
+    }
+  },
+  "references": {
+    "title": "Need a teamplayer? Here's what my colleagues said about me",
+
+    "items": {
+      "comingSoon1": {
+        "name": "Coming soon",
+        "project": "DA Bubble",
+        "quote": ""
+      },
+
+      "adrianBieber": {
+        "name": "Adrian Bieber",
+        "project": "Project Join",
+        "quote": "Working with Robin on the Join project was straightforward and pleasant."
+      },
+
+      "comingSoon2": {
+        "name": "Coming soon",
+        "project": "DA Bubble",
+        "quote": "Coming soon"
+      }
+    },
+
+    "linkedin": "LinkedIn profile"
+  },
+  "footer": {
+    "legal": "Legal notice",
+    "brandSmall": "R.Erike",
+    "brandRole": "developer",
+    "copyright": "© Robin Erike 2025"
+  },
+  "legal": {
+    "title": "Legal Notice",
+
+    "imprint": {
+      "title": "Imprint",
+      "line1": "[Student names list]",
+      "line2": "[Address of the portfolio operator, e.g. one of the students]",
+      "line3": "[Postcode and city]"
+    },
+
+    "contact": {
+      "title": "Exploring the Board",
+      "email": "Email: [Email]"
+    },
+
+    "acceptance": {
+      "title": "Acceptance of terms",
+      "body": "By accessing and using this portfolio (\"Product\"), you acknowledge and agree to the following terms and conditions, as well as any policies, guidelines, or updates that may be provided to you from time to time. The listed students may update or change these terms and conditions without prior notice."
+    },
+
+    "scope": {
+      "title": "Scope and ownership of the product",
+      "body1": "This portfolio was developed as part of a student group project in a web development bootcamp at Developer Akademie GmbH. It is intended for educational purposes only and is not designed for extensive personal or business use. Therefore, we cannot guarantee constant availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+      "body2": "The visual design of this portfolio is owned by Developer Akademie GmbH. Any unauthorised use, reproduction, modification, distribution, or replication of this design is strictly prohibited."
+    },
+
+    "rights": {
+      "title": "Proprietary rights",
+      "body": "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in this portfolio, including any associated copyrighted material, trademarks, and other proprietary information."
+    },
+
+    "use": {
+      "title": "Use of the product",
+      "body": "This portfolio is intended to be used for lawful purposes only and in accordance with all applicable laws and regulations. Any use of the portfolio for illegal activities or to harass, harm, threaten, or intimidate another person is strictly prohibited. You are solely responsible for your interactions with other users of this portfolio."
+    },
+
+    "disclaimer": {
+      "title": "Disclaimer of warranties and limitation of liability",
+      "body": "This portfolio is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or Developer Akademie be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to loss of profits, goodwill, use, data, or other intangible losses, arising out of or in connection with the use or performance of this portfolio."
+    },
+
+    "indemnity": {
+      "title": "Indemnity",
+      "body": "You agree to indemnify, defend, and hold harmless the listed students, Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of this portfolio and/or your breach of this legal notice."
+    },
+
+    "questions": "For any questions or notices, please contact us at [Contact email].",
+    "dateLabel": "Date:",
+    "dateValue": "July 06, 2025"
+  }
 }

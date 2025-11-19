@@ -90,3 +90,30 @@ span {
 .lets-talk:hover .lt-base {
   opacity: 0;
 }
+
+
+@media (max-width:1000px) {
+  .why-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-left {
+    width:50%;
+    display:unset;
+    font-size:22px;
+  }
+
+  .why-right {
+    width:50%;
+    margin-top:5%;
+    font-size:22px;
+  }
+
+  .lets-talk {
+    display:none;
+  }
+
+  .why-text {
+    text-align: center;
+  }
+}

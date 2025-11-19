@@ -1,29 +1,39 @@
 <section>
-  <h1>Need a teamplayer? Here what my colleagues said about me</h1>
+  <h1>{{ "references.title" | translate }}</h1>
 
   <div class="max-width">
     <div class="refs">
       <div class="one-ref" *ngFor="let ref of references">
         <div class="image-wrapper">
-          <img class="img-normal" [src]="ref.image" [alt]="ref.name" />
+          <img class="img-normal" [src]="ref.image" alt="" />
           <img
             class="img-hover"
             src="assets/img/references/Ellipse hover.png"
-            [alt]="ref.name"
+            alt=""
           />
         </div>
 
         <div class="overlay">
-          <p class="name">{{ ref.name }}</p>
-          <p class="project">{{ ref.project }}</p>
-          <p class="quote">"{{ ref.quote }}"</p>
+          <p class="name">
+            {{ "references.items." + ref.key + ".name" | translate }}
+          </p>
+
+          <p class="project">
+            {{ "references.items." + ref.key + ".project" | translate }}
+          </p>
+
+          <p class="quote">
+            "{{ "references.items." + ref.key + ".quote" | translate }}"
+          </p>
+
           <a
             class="linked-in"
             [href]="ref.linkedin"
             target="_blank"
             rel="noopener noreferrer"
+            *ngIf="ref.linkedin"
           >
-            LinkedIn-Profil
+            {{ "references.linkedin" | translate }}
           </a>
         </div>
       </div>

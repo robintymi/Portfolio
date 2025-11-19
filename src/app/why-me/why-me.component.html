@@ -1,32 +1,33 @@
 <section class="why">
-  <h1 class="blue">Why me</h1>
+  <h1 class="blue">{{ "why.title" | translate }}</h1>
+
   <div class="why-grid">
+    <!-- LEFT -->
     <div class="why-left">
       <div class="open-to">
         <img class="why-icon" src="assets/img/why-me/icon.png" alt="" />
         <h3 class="why-headline">
-          <span>I am</span>
-          located in Wildau, close to Berlin
-          <span>..|</span>
+          <span>{{ "why.item1.prefix" | translate }}</span>
+          {{ "why.item1.text" | translate }}
+          <span>{{ "why.item1.suffix" | translate }}</span>
         </h3>
       </div>
+
       <div class="open-to">
         <img src="assets/img/why-me/Icon Remote.png" alt="" class="why-icon" />
         <h3 class="why-headline">
-          <span>I am</span>
-          open to work remote
-          <span>..|</span>
+          <span>{{ "why.item2.prefix" | translate }}</span>
+          {{ "why.item2.text" | translate }}
+          <span>{{ "why.item2.suffix" | translate }}</span>
         </h3>
       </div>
     </div>
 
+    <!-- RIGHT -->
     <div class="why-right">
       <div class="why-text">
-        I love bringing ideas to life through clean, responsive, and
-        user-friendly interfaces. Coding lets me combine creativity with logic —
-        turning design concepts into interactive experiences. I enjoy solving
-        problems, refining details, and collaborating to create seamless digital
-        products that make people’s lives easier.
+        {{ "why.text" | translate }}
+
         <a href="#contact" class="lets-talk">
           <img
             class="lt-base"

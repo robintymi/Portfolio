@@ -1,4 +1,5 @@
-<h1>My Projects</h1>
+<h1>{{ "projects.title" | translate }}</h1>
+
 <section class="projects">
   <!-- Tabs -->
   <nav class="tabs">
@@ -8,67 +9,114 @@
       [class.active]="i === active"
       (click)="active = i"
     >
-      {{ i + 1 }}. {{ p.title }}
+      {{ i + 1 }}.
+      {{ "projects.items." + p.key + ".tabTitle" | translate }}
     </button>
   </nav>
 
   <!-- Content -->
   <div class="content" *ngIf="projects[active] as proj">
+    <h2 class="project-title">
+      {{ "projects.items." + proj.key + ".tabTitle" | translate }}
+    </h2>
     <div class="max-width">
       <div class="left">
-        <div class="block" *ngIf="proj.about">
+        <!-- ABOUT -->
+        <div class="block">
           <h3 class="block-title">
             <span class="dot"></span>
-            <img src="assets/img/skills/bullet points.png" alt="" /> About the
-            project
-            <span class="muted" *ngIf="proj.duration"
-              >Duration: {{ proj.duration }}</span
-            >
+            <img src="assets/img/skills/bullet points.png" alt="" />
+            {{ "projects.sections.about" | translate }}
+            <span class="muted" *ngIf="proj.hasDuration">
+              {{ "projects.sections.duration" | translate }}:
+              {{ "projects.items." + proj.key + ".duration" | translate }}
+            </span>
           </h3>
-          <p>{{ proj.about }}</p>
+          <p>{{ "projects.items." + proj.key + ".about" | translate }}</p>
         </div>
 
-        <div class="block" *ngIf="proj.process">
+        <!-- PROCESS -->
+        <div class="block" *ngIf="proj.hasProcess">
           <h3 class="block-title">
             <span class="dot"></span>
-            <img src="assets/img/skills/bullet points.png" /> How I have
-            organised my work process
+            <img src="assets/img/skills/bullet points.png" alt="" />
+            {{ "projects.sections.process" | translate }}
           </h3>
-          <p>{{ proj.process }}</p>
+          <p>{{ "projects.items." + proj.key + ".process" | translate }}</p>
         </div>
 
-        <div class="block" *ngIf="proj.experience">
+        <!-- EXPERIENCE -->
+        <div class="block" *ngIf="proj.hasExperience">
           <h3 class="block-title">
             <span class="dot"></span>
-            <img src="assets/img/skills/bullet points.png" alt="" /> My group
-            work experience
+            <img src="assets/img/skills/bullet points.png" alt="" />
+            {{ "projects.sections.experience" | translate }}
           </h3>
-          <p>{{ proj.experience }}</p>
+          <p>{{ "projects.items." + proj.key + ".experience" | translate }}</p>
         </div>
       </div>
 
       <div class="right">
         <div class="tech">
-          <span>Technologies</span>
+          <span>{{ "projects.sections.technologies" | translate }}</span>
           <div class="icons">
             <img *ngFor="let t of proj.tech" [src]="t.icon" [alt]="t.name" />
           </div>
         </div>
+        <span class="muted" *ngIf="proj.hasDuration">
+          {{ "projects.sections.duration" | translate }}:
+          {{ "projects.items." + proj.key + ".duration" | translate }}
+        </span>
 
         <div class="mockup">
-          <img [src]="proj.image" [alt]="proj.title" />
+          <img
+            [src]="proj.image"
+            [alt]="'projects.items.' + proj.key + '.tabTitle' | translate"
+          />
         </div>
 
-        <div class="cta" *ngIf="proj.live || proj.github">
-          <a [href]="proj.live" target="_blank" class="btn primary">
-            <img src="assets/img/skills/Button Primary Web.png" alt=""
-          /></a>
+        <div class="cta desktop" *ngIf="proj.live || proj.github">
+          <a
+            [href]="proj.live"
+            target="_blank"
+            class="btn primary"
+            *ngIf="proj.live"
+          >
+            <img src="assets/img/skills/Button Primary Web.png" alt="Live" />
+          </a>
 
-          <a [href]="proj.github" target="_blank" class="btn primary">
-            <img src="assets/img/skills/Button Secondary Web.png" alt=""
-          /></a>
+          <a
+            [href]="proj.github"
+            target="_blank"
+            class="btn primary"
+            *ngIf="proj.github"
+          >
+            <img
+              src="assets/img/skills/Button Secondary Web.png"
+              alt="GitHub"
+            />
+          </a>
         </div>
       </div>
+    </div>
+    <div class="cta mobile" *ngIf="proj.live || proj.github">
+      <a
+        [href]="proj.live"
+        target="_blank"
+        class="btn primary"
+        *ngIf="proj.live"
+      >
+        <img src="assets/img/skills/Button Primary Web.png" alt="Live" />
+      </a>
+
+      <a
+        [href]="proj.github"
+        target="_blank"
+        class="btn primary"
+        *ngIf="proj.github"
+      >
+        <img src="assets/img/skills/Button Secondary Web.png" alt="GitHub" />
+      </a>
     </div>
   </div>
 </section>

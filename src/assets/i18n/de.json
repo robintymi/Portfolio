@@ -1,15 +1,197 @@
 {
-  "BRAND": { "SMALL": "R.Erike", "ROLE": "developer" },
-  "HERO": {
-    "NAME": "Robin Erike",
-    "TITLE": "FRONTEND ENTWICKLER"
+  "brand": {
+    "nameShort": "R.Erike",
+    "role": "Entwickler"
   },
-  "NAV": {
-    "WHY": "Why me",
-    "SKILLS": "Skills",
-    "PROJECTS": "Projekte",
-    "CONTACT": "Kontakt"
-  },
-  "LANG": { "DE": "DE", "EN": "EN" }
-}
 
+  "hero": {
+    "name": "Robin Erike",
+    "title": "Frontend Entwickler"
+  },
+
+  "nav": {
+    "why": "Warum ich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+
+  "lang": {
+    "de": "DE",
+    "en": "EN"
+  },
+  "why": {
+    "title": "Warum ich",
+
+    "item1": {
+      "prefix": "Ich bin",
+      "text": "in Wildau nahe Berlin",
+      "suffix": "..|"
+    },
+
+    "item2": {
+      "prefix": "Ich bin",
+      "text": "offen für Remote-Arbeit",
+      "suffix": "..|"
+    },
+
+    "text": "Ich liebe es, Ideen durch saubere, responsive und benutzerfreundliche Interfaces zum Leben zu erwecken. Programmieren verbindet für mich Kreativität mit Logik — und verwandelt Designkonzepte in interaktive Erlebnisse. Ich löse gerne Probleme, feile an Details und arbeite im Team, um digitale Produkte zu schaffen, die das Leben der Menschen einfacher machen."
+  },
+  "skills": {
+    "title": "Meine Skills",
+    "currentlyLearningLabel": "Ich lerne aktuell",
+    "currentlyLearningMobile": "Was ich aktuell lerne",
+    "currentlyLearningText": "Ich lerne derzeit Backend-Entwicklung und beschäftige mich mit Technologien wie Datenbanken, APIs und serverseitigen Frameworks, um vollständige und skalierbare Webanwendungen zu entwickeln."
+  },
+  "projects": {
+    "title": "Meine Projekte",
+
+    "sections": {
+      "about": "Über das Projekt",
+      "process": "Wie ich meinen Arbeitsprozess organisiert habe",
+      "experience": "Meine Gruppenarbeitserfahrung",
+      "technologies": "Technologien",
+      "duration": "Dauer"
+    },
+
+    "items": {
+      "join": {
+        "tabTitle": "Join",
+        "duration": "7 Wochen",
+        "about": "Join ist eine Aufgabenverwaltungs-Anwendung, inspiriert von Kanban- und Scrum-Methoden. Nutzer können Aufgaben in verschiedene Kategorien einordnen, Personen zuweisen, Kontakte verwalten und den Projektfortschritt visuell über Drag-and-drop-Boards verfolgen.",
+        "process": "Wir haben in einem Team von drei Personen mit einem agilen Workflow auf Basis von Scrum gearbeitet. Ich war sowohl an der Frontend-Logik als auch an der UI-Struktur beteiligt und habe modulare, wiederverwendbare JavaScript-Komponenten in Visual Studio Code entwickelt. Mit Kanban-Boards haben wir Sprints geplant und unsere wöchentlichen Ziele organisiert.",
+        "experience": "Unsere Zusammenarbeit basierte auf kontinuierlichem Feedback, täglichen Stand-ups und Sprint-Reviews. Wir haben uns die Verantwortung für Kernfunktionen wie Aufgabenerstellung, Login-Funktionalität und Kontaktverwaltung geteilt. Firebase wurde für die Authentifizierung und als Echtzeit-Datenbank eingesetzt."
+      },
+
+      "elPolloLoco": {
+        "tabTitle": "El Pollo Loco",
+        "duration": "4 Wochen",
+        "about": "El Pollo Loco ist ein 2D-Jump’n’Run-Browserspiel, entwickelt mit purem JavaScript, HTML und CSS. Die Spielfigur bewegt sich durch mehrere Level, weicht Gegnern aus oder besiegt sie und sammelt Items ein. Das Spiel beinhaltet Kollisionsabfragen, Sprite-Animationen, Hintergrundmusik und Soundeffekte und ist für Desktop und mobile Geräte optimiert.",
+        "process": "Ich habe die Spiellogik in unabhängige Module strukturiert, die Rendering, Charakterbewegung, Kollisionsphysik und Audio-Steuerung übernehmen. Mit objektorientiertem JavaScript habe ich eine saubere Game-Loop und ein System zum Management der Assets implementiert. Animationen und Steuerung wurden für mobile Geräte und flüssige Performance feinjustiert.",
+        "experience": "Da ich alleine an dem Projekt gearbeitet habe, lag der Fokus auf einem sauberen Gameplay, flüssigen Animationen und einem stimmigen Sounddesign. Durch iteratives Testen habe ich die Spielmechanik ausbalanciert und die Performance für verschiedene Bildschirmgrößen und Geräte optimiert."
+      },
+
+      "pokedex": {
+        "tabTitle": "Pokedex",
+        "duration": "4 Wochen",
+        "about": "Die Pokedex ist eine Webanwendung, entwickelt mit HTML, CSS und JavaScript, die über die offizielle PokéAPI detaillierte Pokémon-Informationen anzeigt. Nutzer können durch Pokémon blättern und ihre Werte, Typen und Bilder in einem interaktiven und responsiven Interface ansehen.",
+        "process": "Ich habe die Anwendung nach einem modularen Ansatz entworfen und entwickelt. Die Daten werden dynamisch über die PokéAPI mit asynchronem JavaScript (Fetch API) geladen. Ich habe Pagination, Ladezustände und eine Detailansicht für jedes Pokémon implementiert. Die Struktur ist in wiederverwendbare Funktionen für Rendering, Datenabruf und Benutzerinteraktionen aufgeteilt.",
+        "experience": "Während des Projekts habe ich mein Verständnis von REST-APIs, asynchronem JavaScript und DOM-Manipulation vertieft. Ich habe Clean-Code-Prinzipien angewendet und die Performance durch Caching und das Reduzieren unnötiger API-Calls optimiert. Zusätzlich habe ich meine Kenntnisse in Responsive Design und Accessibility verbessert."
+      },
+
+      "ongoing": {
+        "tabTitle": "Laufendes Projekt",
+        "about": "Dieses Projekt befindet sich aktuell in Entwicklung. Bald folgen weitere Updates und neue Features!"
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+
+    "intro": "Ich bin leidenschaftlich daran interessiert, intuitive und visuell ansprechende Web-Erlebnisse zu schaffen. Aktuell suche ich nach Möglichkeiten im Frontend-Development, bei denen ich meine Fähigkeiten im Aufbau von responsiven, benutzerfreundlichen Interfaces einbringen und mich als Entwickler weiterentwickeln kann. Ich freue mich darauf, Kreativität, Engagement und frische Ideen in Ihr Team einzubringen und dabei zu helfen, wirkungsvolle digitale Produkte umzusetzen.",
+
+    "details": {
+      "emailLabel": "E-Mail:",
+      "phoneLabel": "Tel:"
+    },
+
+    "form": {
+      "nameLabel": "Ihr Name",
+      "nameError": "Bitte geben Sie Ihren Namen ein (mind. 2 Zeichen).",
+
+      "emailLabel": "Ihre E-Mail",
+      "emailError": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+
+      "messageLabel": "Ihre Nachricht",
+      "messageError": "Bitte geben Sie eine Nachricht ein (mind. 4 Zeichen)."
+    },
+
+    "privacy": {
+      "textBeforeLink": "Ich habe die",
+      "link": "Datenschutzerklärung",
+      "textAfterLink": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "error": "Bitte akzeptieren Sie die Datenschutzerklärung."
+    }
+  },
+  "references": {
+    "title": "Auf der Suche nach einem Teamplayer? Das sagen meine Kollegen über mich",
+
+    "items": {
+      "comingSoon1": {
+        "name": "Bald verfügbar",
+        "project": "DA Bubble",
+        "quote": ""
+      },
+
+      "adrianBieber": {
+        "name": "Adrian Bieber",
+        "project": "Projekt Join",
+        "quote": "Die Zusammenarbeit mit Robin im Join-Projekt war unkompliziert und angenehm."
+      },
+
+      "comingSoon2": {
+        "name": "Bald verfügbar",
+        "project": "DA Bubble",
+        "quote": "Demnächst verfügbar"
+      }
+    },
+
+    "linkedin": "LinkedIn-Profil"
+  },
+  "footer": {
+    "legal": "Impressum",
+    "brandSmall": "R.Erike",
+    "brandRole": "Entwickler",
+    "copyright": "© Robin Erike 2025"
+  },
+  "legal": {
+    "title": "Rechtlicher Hinweis",
+
+    "imprint": {
+      "title": "Impressum",
+      "line1": "[Liste der Studierenden]",
+      "line2": "[Adresse des Portfolio-Betreibers, z. B. eine:r der Studierenden]",
+      "line3": "[Postleitzahl und Ort]"
+    },
+
+    "contact": {
+      "title": "Kontakt",
+      "email": "E-Mail: [E-Mail-Adresse]"
+    },
+
+    "acceptance": {
+      "title": "Akzeptanz der Bedingungen",
+      "body": "Durch den Zugriff auf und die Nutzung dieses Portfolios (\"Produkt\") erkennen Sie die folgenden Bedingungen sowie alle ergänzenden Richtlinien, Hinweise oder Aktualisierungen an und stimmen ihnen zu. Die aufgeführten Studierenden behalten sich vor, diese Bedingungen jederzeit ohne vorherige Ankündigung zu ändern oder zu aktualisieren."
+    },
+
+    "scope": {
+      "title": "Anwendungsbereich und Eigentum am Produkt",
+      "body1": "Dieses Portfolio wurde im Rahmen eines Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH erstellt. Es dient ausschließlich zu Ausbildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine Gewähr für ständige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts übernehmen.",
+      "body2": "Das visuelle Design dieses Portfolios ist Eigentum der Developer Akademie GmbH. Jede unbefugte Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Reproduktion des Designs ist strikt untersagt."
+    },
+
+    "rights": {
+      "title": "Schutzrechte",
+      "body": "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die aufgeführten Studierenden, alle Schutzrechte an diesem Portfolio, einschließlich aller urheberrechtlich geschützten Inhalte, Marken und sonstiger geschützter Informationen."
+    },
+
+    "use": {
+      "title": "Nutzung des Produkts",
+      "body": "Dieses Portfolio darf nur zu rechtmäßigen Zwecken und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jede Nutzung des Portfolios für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist streng untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern dieses Portfolios verantwortlich."
+    },
+
+    "disclaimer": {
+      "title": "Haftungsausschluss und Beschränkung der Gewährleistung",
+      "body": "Dieses Portfolio wird \"wie besehen\" und ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf stillschweigende Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden, oder die Developer Akademie für direkte oder indirekte Schäden, Neben-, Sonder- oder Folgeschäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, die sich aus der Nutzung oder der Leistung dieses Portfolios ergeben oder damit zusammenhängen."
+    },
+
+    "indemnity": {
+      "title": "Freistellung",
+      "body": "Sie erklären sich damit einverstanden, die aufgeführten Studierenden, die Developer Akademie sowie deren verbundene Unternehmen, Partner, Leitende, Geschäftsführer, Mitarbeitende und Beauftragte von sämtlichen Ansprüchen, Forderungen, Schäden, Verlusten, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, die sich aus Ihrer Nutzung dieses Portfolios und/oder einem Verstoß gegen diesen rechtlichen Hinweis ergeben."
+    },
+
+    "questions": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter [Kontakt-E-Mail].",
+    "dateLabel": "Datum:",
+    "dateValue": "06. Juli 2025"
+  }
+}

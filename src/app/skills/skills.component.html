@@ -1,7 +1,35 @@
-<h1>My Skills</h1>
+<h1>{{ "skills.title" | translate }}</h1>
+<div class="mobile">
+  <img class="skill-set-img" src="assets/img/skills/skills mobile.png" alt="" />
+  <div class="what-learning">
+    {{ "skills.currentlyLearningMobile" | translate }}
+  </div>
+  <div class="learning-by-doing">
+    <div class="learning-text">
+{{ "skills.currentlyLearningText" | translate }}
+    </div>
+    
+    <div class="mobile-ellipse">
+      <img
+        src="assets/img/skills/ellipse-mobile.png"
+        alt="learning background"
+        class="ellipse-bg"
+      />
 
+      <!-- ICONS IN DER ELLIPSE ZENTRIERT -->
+      <div class="ellipse-icons">
+        <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
+        <img src="assets/img/skills/rxjs.png" alt="RXJS" />
+      </div>
+    </div>
+  </div>
+</div>
 <div class="skills">
-  <img class="skill-set-img"src="/assets/img/skills/Skill set (1).png" alt="" />
+  <img
+    class="skill-set-img"
+    src="/assets/img/skills/Skill set (1).png"
+    alt=""
+  />
 
   <div class="currently-learning">
     <img class="cl-base" src="assets/img/skills/Ellipse 25.png" alt="Ellipse" />
@@ -12,15 +40,14 @@
     />
 
     <div class="learning">
-      I am currently learning
+      {{ "skills.currentlyLearningLabel" | translate }}
+
       <div class="learning-icons">
         <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
         <img src="assets/img/skills/rxjs.png" alt="RXJS" />
       </div>
 
-      I am currently learning backend development, exploring technologies like
-      databases, APIs, and server-side frameworks to build complete and scalable
-      web applications.
+      {{ "skills.currentlyLearningText" | translate }}
     </div>
   </div>
 </div>

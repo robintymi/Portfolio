@@ -70,3 +70,70 @@
   justify-content: center;
   margin: 12px 12px;
 }
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .skills {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+    font-family: "Josefin Sans";
+  }
+
+  .skill-set-img {
+    width: 50vw;
+  }
+  .what-learning {
+    color: #89bcd9;
+    font-size: 22px;
+    margin-top:5%;
+  }
+
+  .learning-by-doing {
+    width: 80%;
+    font-size: 22px;
+    text-align: start;
+    color: white;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+  }
+
+  .mobile-ellipse {
+    position: relative;
+    max-width: 280px;
+    width: 30%;
+  }
+
+  .mobile-ellipse .ellipse-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ellipse-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 16px;
+  }
+
+  .ellipse-icons img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .learning-text {
+    width: 60%;
+  }
+}

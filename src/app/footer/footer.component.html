@@ -1,13 +1,22 @@
 <footer>
   <div class="left-side">
-    <a class="legal-notice" href="">Legal notice</a>
-    <p>© Robin Erike 2025</p>
+    <a class="legal-notice" [routerLink]="['/legal-notice']">
+      {{ "footer.legal" | translate }}
+    </a>
+
+    <p>{{ "footer.copyright" | translate }}</p>
   </div>
 
   <div href="#hero-section" class="frontend-dev">
     <img src="assets/img/navbar/Logo icon (1).png" />
-    <p class="anta-font fs-16 white">R.Erike</p>
-    <p class="josefin-font fs-14 darkblue">developer</p>
+
+    <p class="anta-font fs-16 white">
+      {{ "footer.brandSmall" | translate }}
+    </p>
+
+    <p class="josefin-font fs-14 darkblue">
+      {{ "footer.brandRole" | translate }}
+    </p>
   </div>
 
   <div class="footer-icons">

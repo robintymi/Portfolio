@@ -1,33 +1,29 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-// <-- WICHTIG: google HIER draußen deklarieren, nicht in der Klasse
-declare var google: any;
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements AfterViewInit {
-  active = 'why-me'; // initial
-  currentLang: 'de' | 'en' = 'en';
+export class NavbarComponent {
+  active = 'why-me';
+  currentLang: 'de' | 'en' = 'en'; // <--- UI-Standard: EN
+
+  constructor(private translate: TranslateService) {
+    // i18n-Standard beim Start: EN
+    this.translate.use('en');
+  }
 
   setActive(id: string) {
     this.active = id;
   }
 
-  // Methode der Klasse
-
-
-  // optional: nur um zu prüfen, ob Google das Select gebaut hat
-  ngAfterViewInit(): void {
-    // kleine Verzögerung, bis Google sein Dropdown rendert
-    setTimeout(() => {
-      const langSelect = document.querySelector('.goog-te-combo');
-      console.log('Google Translate Select gefunden:', !!langSelect);
-    }, 1500);
+  switchLang(lang: 'de' | 'en') {
+    this.currentLang = lang;
+    this.translate.use(lang);
   }
 }

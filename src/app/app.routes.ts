@@ -1,8 +1,17 @@
-
 import { Routes } from '@angular/router';
-import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 export const routes: Routes = [
-    {path:'', component: HeroSectionComponent},
-  
+    {
+        path: '',
+        loadComponent: () =>
+            import('./home/home.component').then((m) => m.HomeComponent),
+    },
+    {
+        path: 'legal-notice',
+        loadComponent: () =>
+            import('./legal-notice/legal-notice.component').then(
+                (m) => m.LegalNoticeComponent
+            ),
+    },
+    { path: '**', redirectTo: '' },
 ];

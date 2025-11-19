@@ -57,7 +57,7 @@ section {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
-  gap:40px;
+  gap: 40px;
 }
 /* 2-Spalten Layout */
 .content {
@@ -66,7 +66,7 @@ section {
   background-color: #2d3840;
   color: white;
   padding: 30px;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -104,13 +104,12 @@ section {
   line-height: 1.5;
 }
 
-/* Rechte Spalte */
 .right {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* tech / mockup / buttons */
+  grid-template-rows: auto 1fr auto;
   gap: 10%;
   align-items: center;
-  width:40%;
+  width: 40%;
 }
 
 .tech {
@@ -184,5 +183,51 @@ p {
 }
 
 .left {
-  width:60%;
+  width: 60%;
+}
+
+.desktop {
+  display:unset;
+}
+
+.mobile {
+  display:none;
+}
+@media (max-width: 1000px) {
+  .tabs {
+    justify-content: space-between;
+    margin-right: 3%;
+  }
+
+  .max-width {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .mockup {
+    margin-top:3%;
+  }
+
+  .left {
+    width:unset;
+    margin-top:4%;
+  }
+
+  .desktop {
+    display:none;
+  }
+
+  .mobile {
+    display:unset;
+    align-self: center;
+  }
+
+  .right {
+    width:80%;
+  }
+  
 }
