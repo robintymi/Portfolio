@@ -93,7 +93,7 @@
   .what-learning {
     color: #89bcd9;
     font-size: 22px;
-    margin-top:5%;
+    margin-top: 5%;
   }
 
   .learning-by-doing {
@@ -104,7 +104,7 @@
     margin-top: 5%;
     display: flex;
     align-items: center;
-    gap: 1%;
+    gap: 3%;
   }
 
   .mobile-ellipse {
@@ -135,5 +135,44 @@
 
   .learning-text {
     width: 60%;
+  }
+
+  .backend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    gap: 10%;
+  }
+}
+
+@media (max-width: 650px) {
+  .backend {
+    > img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 3px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .skill-set-img {
+    width: 80vw;
+  }
+
+  .learning-by-doing {
+    font-size: 18px;
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+
+  .mobile-ellipse {
+    width:50%;
+  }
+
+  .learning-text {
+    width:80%;
+    font-size:22px;
+    margin-top:4%;
   }
 }

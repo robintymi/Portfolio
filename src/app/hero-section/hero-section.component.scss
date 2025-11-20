@@ -268,3 +268,20 @@ h2 {
     margin-bottom:50px;
   }
 }
+
+
+@media (max-width:650px) {
+  .mobile-bg {
+    width:60%;
+  }
+}
+
+@media (max-width:450px) {
+  h1 {
+    font-size:50px;
+  }
+
+  h2 {
+    font-size:20px;
+  }
+}

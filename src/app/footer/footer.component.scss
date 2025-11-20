@@ -35,3 +35,54 @@ footer {
     gap:8px;
     font-size:18px;
 }
+
+.desktop {
+  display:unset;
+}
+
+.mobile {
+  display:none;
+}
+
+@media(max-width:1000px) {
+  .desktop {
+    display:none;
+  }
+
+  .mobile {
+    display:unset;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  .left-side {
+    flex-direction:unset;
+
+    >p {
+      margin:10px;
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+  }
+
+  a {
+    margin: 10px;
+  }
+
+  .footer-icons {
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+}
+
+@media (max-width:500px) {
+  a {
+    font-size:16px !important;
+  }
+
+  footer {
+    padding: 10px 10px !important;
+  }
+}

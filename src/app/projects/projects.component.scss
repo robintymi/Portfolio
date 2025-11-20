@@ -44,7 +44,6 @@ section {
 .tab.active::before {
   content: "";
   position: absolute;
-  left: -14px;
   right: -14px;
   bottom: -10px;
   height: 44px;
@@ -187,16 +186,22 @@ p {
 }
 
 .desktop {
-  display:unset;
+  display: unset;
 }
 
 .mobile {
-  display:none;
+  display: none;
 }
 @media (max-width: 1000px) {
   .tabs {
     justify-content: space-between;
     margin-right: 3%;
+    gap: unset;
+  }
+
+  .tab {
+    padding-left: 10px;
+    font-size: clamp(24px, 2.2vw, 18px);
   }
 
   .max-width {
@@ -209,25 +214,105 @@ p {
   }
 
   .mockup {
-    margin-top:3%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    border-radius: 8%;
   }
 
   .left {
-    width:unset;
-    margin-top:4%;
+    width: unset;
+    margin-top: 4%;
   }
 
   .desktop {
-    display:none;
+    display: none !important;
   }
 
   .mobile {
-    display:unset;
+    display: unset;
     align-self: center;
   }
 
   .right {
-    width:80%;
+    width: 100%;
+    display: unset;
   }
-  
+
+  .block-title {
+    > img {
+      height: 30px;
+    }
+  }
+
+  .max-width {
+    gap: unset;
+  }
+  .block {
+    > p {
+      margin-left: 3%;
+    }
+  }
+
+  .project-title {
+    margin-left: 3%;
+    font-size: 40px;
+    margin-top: 5%;
+  }
+
+  .tech-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: unset;
+    margin-left: 3%;
+  }
+
+  .tech-names p {
+    margin: 0; // überschreibt dein globales p-margin
+  }
+
+  .tech {
+    flex-direction: unset;
+  }
+
+  .muted {
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 750px) {
+  .tab {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 530px) {
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    margin-right: unset;
+  }
+
+  .tab {
+    font-size: 24px;
+  }
+
+  .tab.active {
+    color: white;
+    background-color: #2d3840;
+    padding: 15px;
+    border-radius: unset;
+    left:0 !important;
+  }
+
+  .cta-btn {
+    width:100px;
+  }
+
+  .cta {
+    width:120%;
+  }
 }

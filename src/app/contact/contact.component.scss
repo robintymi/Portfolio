@@ -189,5 +189,88 @@ p {
 }
 
 .priv {
-  color: #89bcd9;
+  color: #89bcd9 !important;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: unset;
+}
+
+@media (max-width: 1000px) {
+  .role {
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .mobile {
+    display: unset;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .contact-details {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+
+  .my-motivation {
+    width: 80%;
+  }
+
+  .name-email-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .label-flex {
+    width: 80%;
+  }
+
+  .textarea {
+    display: flex;
+    justify-content: center;
+  }
+
+  textarea {
+    width: 77%;
+    margin-top: 25px;
+  }
+
+  input::placeholder {
+    padding: 20px;
+  }
+  textarea::placeholder {
+    padding: 20px;
+  }
+
+  .checkbox-wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .arrow-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom:5%;
+  }
+
+  .submit-btn {
+    margin-bottom: 5% !important;
+  }
+}
+
+@media (max-width:500px) {
+  .my-motivation {
+    display:none;
+  }
 }

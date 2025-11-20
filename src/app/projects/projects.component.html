@@ -27,7 +27,7 @@
             <span class="dot"></span>
             <img src="assets/img/skills/bullet points.png" alt="" />
             {{ "projects.sections.about" | translate }}
-            <span class="muted" *ngIf="proj.hasDuration">
+            <span class="muted desktop" *ngIf="proj.hasDuration">
               {{ "projects.sections.duration" | translate }}:
               {{ "projects.items." + proj.key + ".duration" | translate }}
             </span>
@@ -58,9 +58,17 @@
 
       <div class="right">
         <div class="tech">
-          <span>{{ "projects.sections.technologies" | translate }}</span>
-          <div class="icons">
+          <span class="desktop">{{
+            "projects.sections.technologies" | translate
+          }}</span>
+          <div class="icons desktop">
             <img *ngFor="let t of proj.tech" [src]="t.icon" [alt]="t.name" />
+          </div>
+          <div class="tech-names mobile">
+            Technologies:
+            <p *ngFor="let t of proj.tech">
+              {{ t.name }}
+            </p>
           </div>
         </div>
         <span class="muted" *ngIf="proj.hasDuration">
@@ -106,7 +114,7 @@
         class="btn primary"
         *ngIf="proj.live"
       >
-        <img src="assets/img/skills/Button Primary Web.png" alt="Live" />
+        <img class="cta-btn"src="assets/img/skills/Button Primary Web.png" alt="Live" />
       </a>
 
       <a
@@ -115,7 +123,7 @@
         class="btn primary"
         *ngIf="proj.github"
       >
-        <img src="assets/img/skills/Button Secondary Web.png" alt="GitHub" />
+        <img class="cta-btn"src="assets/img/skills/Button Secondary Web.png" alt="GitHub" />
       </a>
     </div>
   </div>

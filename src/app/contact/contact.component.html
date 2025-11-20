@@ -2,7 +2,7 @@
   <div class="head-and-arrow">
     <h1>{{ "contact.title" | translate }}</h1>
     <a
-      class="arrow-up"
+      class="arrow-up desktop"
       href="#hero-section"
       (mouseenter)="arrowHover = true"
       (mouseleave)="arrowHover = false"
@@ -51,10 +51,11 @@
         <div class="name-email-flex">
           <!-- Name -->
           <div class="label-flex">
-            <label for="name">
+            <label class="desktop" for="name">
               {{ "contact.form.nameLabel" | translate }}
             </label>
             <input
+              placeholder="Your name"
               id="name"
               type="text"
               name="name"
@@ -70,10 +71,11 @@
 
           <!-- Email -->
           <div class="label-flex">
-            <label for="email">
+            <label class="desktop" for="email">
               {{ "contact.form.emailLabel" | translate }}
             </label>
             <input
+              placeholder="Your email"
               id="email"
               type="email"
               name="email"
@@ -90,11 +92,12 @@
       </div>
 
       <!-- Message -->
-      <div>
-        <label for="message">
+      <div class="textarea">
+        <label class="desktop" for="message">
           {{ "contact.form.messageLabel" | translate }}
         </label>
         <textarea
+          placeholder="Your message"
           id="message"
           name="message"
           rows="6"
@@ -160,6 +163,21 @@
           />
         </button>
       </div>
+      <a
+        class="arrow-mobile mobile"
+        href="#hero-section"
+        (mouseenter)="arrowHover = true"
+        (mouseleave)="arrowHover = false"
+      >
+        <img
+          [src]="
+            arrowHover
+              ? 'assets/img/contact/arrow up hover.png'
+              : 'assets/img/contact/Arrow up.png'
+          "
+          alt="arrow up"
+        />
+      </a>
     </form>
   </div>
 </section>

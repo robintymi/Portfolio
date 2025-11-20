@@ -49,7 +49,7 @@ h1 {
 .img-hover {
   opacity: 0;
   visibility: hidden;
-  transform:scale(1.15);
+  transform: scale(1.15);
 }
 
 /* Normalbild standardmäßig sichtbar */
@@ -117,4 +117,46 @@ h1 {
   font-size: 16px;
   text-decoration: underline;
   pointer-events: auto; /* Link wieder klickbar machen */
+}
+
+@media (max-width: 1000px) {
+  .max-width {
+    /* Damit der Container sich nicht zu stark einschränkt */
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .refs {
+    display: flex;
+    flex-wrap: nowrap; /* NICHT umbrechen */
+    overflow-x: auto; /* horizontal scrollen */
+    scroll-snap-type: x mandatory; /* Snap-Effekt beim Scrollen */
+    gap: 16px;
+  }
+
+  .one-ref {
+    flex: 0 0 80vw; /* ca. 80% der Viewport-Breite */
+    scroll-snap-align: center; /* snap in die Mitte */
+    width: auto; /* width von oben überschreiben */
+  }
+
+  /* Optional: Scrollbar etwas hübscher oder verstecken */
+  .refs::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .refs::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+  }
+
+  .image-wrapper {
+    width:90%;
+    height:90%;
+  }
+
+  .overlay {
+    width:70%;
+    justify-content: unset;
+    top:12%;
+  }
 }
