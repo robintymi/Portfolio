@@ -10,6 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
+  isMenuOpen = false;
+  toggleMenu() { this.isMenuOpen = !this.isMenuOpen; }
 
- 
 }

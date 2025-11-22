@@ -19,6 +19,7 @@
     </div>
     <img
       class="burger-menu"
+      (click)="toggleMenu()"
       src="assets/img/hero-section/burger menu default.png"
       alt=""
     />
@@ -47,6 +48,14 @@
         src="assets/img/hero-section/Robin-no-background.png"
         alt=""
       />
+      <img
+        *ngIf="isMenuOpen"
+        class="mobile-nav-bg"
+        src="assets/img/hero-section/mobile-navbar-bg.png"
+        alt="mobile menu
+      background"
+        (click)="toggleMenu()"
+      />
     </div>
 
     <div class="right-side">
@@ -71,7 +80,14 @@
         <h1>Robin Erike</h1>
         <h2>FRONTEND DEVELOPER</h2>
       </div>
-      <a href="#why-me" class="arrow-container">
+      <a href="#contact" class="arrow-container mobile">
+        <img
+          class="arrow arrow-base"
+          src="assets/img/hero-section/Arrow down.png"
+          alt=""
+        />
+      </a>
+      <a href="#why-me" class="arrow-container desktop">
         <img
           class="arrow arrow-base"
           src="assets/img/hero-section/Arrow down.png"

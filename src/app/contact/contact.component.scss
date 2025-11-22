@@ -261,7 +261,7 @@ p {
   .arrow-mobile {
     display: flex;
     justify-content: center;
-    margin-bottom:5%;
+    margin-bottom: 5%;
   }
 
   .submit-btn {
@@ -269,8 +269,12 @@ p {
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .my-motivation {
-    display:none;
+    display: none;
+  }
+
+  .contact-details {
+    font-size: 20px;
   }
 }

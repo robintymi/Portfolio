@@ -119,6 +119,10 @@ h1 {
   pointer-events: auto; /* Link wieder klickbar machen */
 }
 
+a {
+  color:#89bcd9;
+}
+
 @media (max-width: 1000px) {
   .max-width {
     /* Damit der Container sich nicht zu stark einschränkt */
@@ -158,5 +162,13 @@ h1 {
     width:70%;
     justify-content: unset;
     top:12%;
+    gap:10px;
+  }
+}
+
+
+@media (max-width:500px) {
+  h1 {
+    font-size:22px;
   }
 }
