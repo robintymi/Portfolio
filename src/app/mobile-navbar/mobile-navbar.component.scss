@@ -1,0 +1,128 @@
+/* Nur mobile anzeigen */
+.mobile-bar {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .mobile-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.frontend-dev {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.frontend-icon {
+  position: relative;
+  width: 60px;
+  margin-bottom:40px;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    transition: opacity 0.3s ease;
+  }
+  .icon-hover {
+    opacity: 0;
+  }
+}
+
+.frontend-dev:hover .icon-hover {
+  opacity: 1;
+}
+.frontend-dev:hover .icon-base {
+  opacity: 0;
+}
+
+.burger-menu {
+  height: 50px;
+  margin-top: 6%;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+/* Overlay (nimmt Klicks zum Schließen) */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+}
+
+/* Ellipse */
+.mobile-nav-bg {
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(67vw, 430px);
+  height: auto;
+  z-index: 100001;
+  pointer-events: none; /* Klicks auf Overlay schließen */
+}
+
+/* Menü-Inhalte in der Ellipse */
+.mobile-menu {
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(60vw, 380px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(15px, 4vw, 32px);
+  z-index: 100002;
+}
+
+.mobile-menu a {
+  font-family: "Josefin Sans";
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Language */
+.mobile-lang {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-lang .lang-option {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.mobile-lang .ellipse-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mobile-lang .lang-code {
+  position: relative;
+  z-index: 2;
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 0.5px;
+}
+
+.mobile-lang .active .lang-code {
+  color: white;
+}

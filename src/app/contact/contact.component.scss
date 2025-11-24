@@ -61,10 +61,20 @@ label {
 }
 h1 {
   font-size: 54px;
+  margin-top:50px;
 }
 form {
   max-width: 900px;
   font-weight: 400;
+}
+
+.work-together {
+  color:#89bcd9;
+  font-size:22px;
+  display:flex !important;
+  justify-content: center;
+  margin-top:3%;
+ 
 }
 
 .my-motivation {

@@ -1,8 +1,7 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 125px ;
+  scroll-padding-top: 125px;
 }
-
 
 body {
   margin: 0;
@@ -77,4 +76,8 @@ p {
 button,
 a {
   cursor: pointer;
+}
+
+app-projects {
+  margin-top: 10%;
 }

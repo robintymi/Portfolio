@@ -1,31 +1,12 @@
 <section>
-  <div class="mobile">
-    <div class="frontend-dev">
-      <div class="frontend-icon">
-        <img
-          class="icon-base"
-          src="assets/img/hero-section/frontend-dev-icon.png"
-          alt=""
-        />
-        <img
-          class="icon-hover"
-          src="assets/img/hero-section/frontend-dev-icon-hover.png"
-          alt=""
-        />
-      </div>
+  <!-- Neue, gekapselte Mobile-Navigation -->
+  <app-mobile-navbar
+    (menuOpenChange)="onMenuOpenChange($event)"
+  ></app-mobile-navbar>
 
-      <p class="anta-font fs-16 white">{{ "brand.nameShort" | translate }}</p>
-      <p class="josefin-font fs-14 blue">{{ "brand.role" | translate }}</p>
-    </div>
-    <img
-      class="burger-menu"
-      (click)="toggleMenu()"
-      src="assets/img/hero-section/burger menu default.png"
-      alt=""
-    />
-  </div>
   <div class="its-me">
     <div class="left-side">
+      <!-- Desktop/Hover Background Swap -->
       <div class="bg-swap">
         <img
           class="bg-img bg-base"
@@ -38,27 +19,25 @@
           alt=""
         />
       </div>
+
+      <!-- Mobile Hintergrund-Ellipse (nur via CSS auf Mobile sichtbar) -->
       <img
-        class="mobile-bg"
+        class="mobile-bg mobile"
         src="assets/img/hero-section/mobilebg.png"
         alt=""
       />
+
+      <!-- Dein Bild – wird vom Parent via (menuOpenChange) ausgeblendet -->
       <img
         class="my-picture"
+        [ngClass]="{ 'hidden-img': hidePicture }"
         src="assets/img/hero-section/Robin-no-background.png"
         alt=""
-      />
-      <img
-        *ngIf="isMenuOpen"
-        class="mobile-nav-bg"
-        src="assets/img/hero-section/mobile-navbar-bg.png"
-        alt="mobile menu
-      background"
-        (click)="toggleMenu()"
       />
     </div>
 
     <div class="right-side">
+      <!-- Desktop-Block mit Icon + Name/Rolle -->
       <div class="frontend-dev desktop">
         <div class="frontend-icon">
           <img
@@ -76,10 +55,13 @@
         <p class="anta-font fs-16 white">{{ "brand.nameShort" | translate }}</p>
         <p class="josefin-font fs-14 blue">{{ "brand.role" | translate }}</p>
       </div>
+
       <div class="name-job">
         <h1>Robin Erike</h1>
         <h2>FRONTEND DEVELOPER</h2>
       </div>
+
+      <!-- Pfeile -->
       <a href="#contact" class="arrow-container mobile">
         <img
           class="arrow arrow-base"
@@ -99,6 +81,8 @@
           alt=""
         />
       </a>
+
+      <!-- Socials (Desktop) -->
       <div class="social-icons">
         <a href="mailto:robinerike@gmail.com" class="social-icon">
           <img
