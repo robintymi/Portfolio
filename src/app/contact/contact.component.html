@@ -69,6 +69,12 @@
                 name="name"
                 required
                 minlength="2"
+                [placeholder]="
+                  (isNameInvalid(nameModel)
+                    ? 'contact.form.nameError'
+                    : 'contact.form.nameLabel'
+                  ) | translate
+                "
                 [(ngModel)]="contactData.name"
                 #nameModel="ngModel"
                 [class.filled]="contactData.name"
@@ -96,10 +102,15 @@
                 type="email"
                 name="email"
                 required
+                [placeholder]="
+                  (isEmailInvalid(emailModel)
+                    ? 'contact.form.emailError'
+                    : 'contact.form.emailLabel'
+                  ) | translate
+                "
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 [(ngModel)]="contactData.email"
                 #emailModel="ngModel"
-                [class.filled]="contactData.email"
               />
               <span class="valid-indicator" *ngIf="emailModel.valid"></span>
             </div>
@@ -127,9 +138,14 @@
             rows="6"
             required
             minlength="4"
+            [placeholder]="
+              (isMessageInvalid(messageModel)
+                ? 'contact.form.messageError'
+                : 'contact.form.messageLabel'
+              ) | translate
+            "
             [(ngModel)]="contactData.message"
             #messageModel="ngModel"
-            [class.filled]="contactData.message"
           ></textarea>
           <span class="valid-indicator" *ngIf="messageModel.valid"></span>
         </div>
@@ -142,9 +158,10 @@
               ? 'assets/img/contact/Check box neutral.png'
               : checkboxState === 'hover'
               ? 'assets/img/contact/Check box hover.png'
-              : 'assets/img/contact/Check box checked.png'
+              : checkboxState === 'checked'
+              ? 'assets/img/contact/Check box checked.png'
+              : 'assets/img/contact/Check box red.png'
           "
-          alt="Checkbox"
           class="checkbox-img"
           (mouseenter)="onHover(true)"
           (mouseleave)="onHover(false)"

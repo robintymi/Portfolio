@@ -14,7 +14,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class ContactComponent {
   arrowHover = false;
   http = inject(HttpClient);
-  checkboxState: 'neutral' | 'hover' | 'checked' = 'neutral';
+  checkboxState: 'neutral' | 'hover' | 'checked' | 'error' = 'neutral';
   isChecked = false;
   showError = false;
   contactData = { name: '', email: '', message: '' };
@@ -26,7 +26,9 @@ export class ContactComponent {
   };
 
   onHover(isHovering: boolean) {
-    if (!this.isChecked) this.checkboxState = isHovering ? 'hover' : 'neutral';
+    if (!this.isChecked && this.checkboxState !== 'error') {
+      this.checkboxState = isHovering ? 'hover' : 'neutral';
+    }
   }
 
   onToggle() {
@@ -50,8 +52,10 @@ export class ContactComponent {
   onTrySubmit(form: NgForm, nameModel: any, emailModel: any, messageModel: any) {
     if (!this.isChecked || !form.valid) {
       this.showError = true;
+      if (!this.isChecked) this.checkboxState = 'error';
       setTimeout(() => {
         this.showError = false;
+        if (!this.isChecked) this.checkboxState = 'neutral';
       }, 4000);
       return;
     }

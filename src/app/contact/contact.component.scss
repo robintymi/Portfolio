@@ -50,14 +50,16 @@ textarea {
 
 .valid-indicator {
   position: absolute;
-  right: 12px;
+  right: 10%;
   top: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  background-image: url("/assets/img/contact/inputCorrect.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  background: white;
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 11 12 14 22 4'/><path d='M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11'/></svg>") no-repeat center / contain;
-  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 11 12 14 22 4'/><path d='M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11'/></svg>") no-repeat center / contain;
 }
 
 input,
@@ -71,9 +73,15 @@ textarea {
   -webkit-appearance: none;
   background-clip: padding-box;
   font-size: 20px;
-  transition: background-color .15s ease, border-color .15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
+input {
+  width: 85%;
+}
+textarea {
+  width: 93%;
+}
 input:focus,
 textarea:focus {
   background-color: #333f48;
@@ -84,7 +92,7 @@ label {
   color: #89bcd9;
   font-size: 14px;
   margin-left: 24px;
-  transition: color .15s ease;
+  transition: color 0.15s ease;
 }
 
 .error-label {
@@ -216,10 +224,53 @@ form {
 }
 
 @media (max-width: 1000px) {
+  .input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #89bcd9;
+    opacity: 1;
+  }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #89bcd9;
+    opacity: 1;
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #89bcd9;
+    opacity: 1;
+  }
+  input::-ms-input-placeholder,
+  textarea::-ms-input-placeholder {
+    color: #89bcd9;
+    opacity: 1;
+  }
+  .label-flex.invalid input::placeholder,
+  .textarea.invalid textarea::placeholder {
+    color: #e44c36;
+  }
+  .label-flex.invalid input::-webkit-input-placeholder,
+  .textarea.invalid textarea::-webkit-input-placeholder {
+    color: #e44c36;
+  }
+  .label-flex.invalid input:-ms-input-placeholder,
+  .textarea.invalid textarea:-ms-input-placeholder {
+    color: #e44c36;
+  }
+  .label-flex.invalid input::-ms-input-placeholder,
+  .textarea.invalid textarea::-ms-input-placeholder {
+    color: #e44c36;
+  }
   .role {
     flex-direction: column-reverse;
     align-items: center;
     font-size: 24px;
+    margin-top: 5%;
   }
 
   .mobile {
@@ -254,13 +305,12 @@ form {
   .textarea {
     display: flex;
     justify-content: center;
-  }
-
-  textarea {
-    width: 77%;
     margin-top: 25px;
   }
 
+  textarea {
+    width: 68%;
+  }
   .checkbox-wrapper {
     margin-left: 10%;
     margin-right: 10%;
