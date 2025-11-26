@@ -15,7 +15,7 @@ export const appConfig: ApplicationConfig = {
     // ngx-translate Konfiguration (v17)
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/assets/i18n/',
+        prefix: 'assets/i18n/',
         suffix: '.json',
       }),
       lang: 'en',

@@ -21,10 +21,10 @@ export class ContactComponent {
 
   contactData = { name: '', email: '', message: '' };
 
-  mailTest = true;
+  mailTest = false;
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (p: any) => JSON.stringify(p),
+    endPoint: 'sendMail.php',
+    body: (p: any) => p,
     options: { headers: { 'Content-Type': 'text/plain' }, responseType: 'text' as const },
   };
 
