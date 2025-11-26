@@ -102,6 +102,7 @@ label {
 h1 {
   font-size: 54px;
   margin-top: 50px;
+  margin-bottom:3%;
 }
 
 form {
@@ -278,13 +279,18 @@ form {
   }
 
   .mobile {
-    display: unset;
+    display: unset !important;
   }
 
   .desktop {
-    display: none;
+    display: none !important;
   }
 
+  .work-together {
+    display:flex !important;
+    justify-content: center;
+    margin-top:2%;
+  }
   .contact-details {
     flex-direction: column-reverse;
     width: 80%;

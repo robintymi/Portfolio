@@ -10,7 +10,7 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  active = 'why-me';
+  active = '';
   currentLang: 'de' | 'en' = 'en'; // <--- UI-Standard: EN
 
   constructor(private translate: TranslateService) {
