@@ -1,6 +1,6 @@
 section {
   background-color: #89bcd9;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -14,24 +14,25 @@ section {
   width: 100vw;
   max-width: 1440px;
 }
+
 .nav-link {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 10px; /* etwas Innenabstand, damit die Ellipse Platz hat */
+  padding: 6px 10px;
   margin: 30px;
   text-decoration: none;
   font-size: 26px;
   font-weight: 500;
   color: #262e34;
   transition: color 0.3s ease;
-  z-index: 0; /* eigener Stacking-Context */
+  z-index: 0;
 }
 
 .nav-link span {
   position: relative;
-  z-index: 1; /* Text über der Ellipse */
+  z-index: 1;
 }
 
 .nav-link .ellipse {
@@ -39,27 +40,26 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px; /* Ellipsengröße anpassen */
+  width: 120px;
   height: 50px;
   z-index: 0;
-  opacity: 0; /* standardmäßig unsichtbar */
+  opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none; /* klickt nicht die Ellipse, sondern der Link */
+  pointer-events: none;
 }
 
 .nav-link:hover {
   color: white;
 }
 
-/* Aktiv wie bei DE/EN: Ellipse sichtbar + Schrift weiß */
 .nav-link.active {
   color: white !important;
 }
+
 .nav-link.active .ellipse {
   opacity: 1;
 }
 
-/* Optional: beim Hover leicht einblenden, wenn nicht aktiv */
 .nav-link:hover:not(.active) .ellipse {
   opacity: 0.7;
 }
@@ -71,29 +71,29 @@ section {
 
 .navs {
   display: flex;
-
-  > a {
-    margin: 30px;
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  > a:visited {
-    color: #262e34;
-  }
-  > a:hover {
-    color: white;
-  }
 }
 
-.language-btns {
-  > img {
-    cursor: pointer;
-    margin: 5px;
-  }
+.navs > a {
+  margin: 30px;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 500;
+  cursor: pointer;
 }
-/* Layout & Basis */
+
+.navs > a:visited {
+  color: #262e34;
+}
+
+.navs > a:hover {
+  color: white;
+}
+
+.language-btns > img {
+  cursor: pointer;
+  margin: 5px;
+}
+
 .EN-active {
   display: flex;
   align-items: center;
@@ -146,6 +146,7 @@ section {
 .EN-active:has(.lang-option:not(.active):hover) .lang-option.active {
   color: black;
 }
+
 .EN-active:has(.lang-option:not(.active):hover) .lang-option.active img {
   opacity: 0;
 }

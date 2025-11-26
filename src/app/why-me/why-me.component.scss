@@ -19,6 +19,7 @@ h1 {
   gap: 4%;
   justify-content: center;
 }
+
 .why-icon {
   height: 70px;
 }
@@ -30,6 +31,7 @@ h1 {
   align-items: center;
   font-size: 24px;
 }
+
 .open-to {
   display: flex;
   align-items: center;
@@ -44,30 +46,30 @@ span {
   position: relative;
   font-size: 18px;
   padding-bottom: 70px;
+}
 
-  > img {
-    height: 50px;
-    width: 134px;
-    display: flex;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  > p {
-    margin-left: 50px;
-  }
+.why-right > img {
+  height: 50px;
+  width: 134px;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.why-right > p {
+  margin-left: 50px;
 }
 
 .lets-talk {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 134px; /* = Bildbreite */
-  height: 50px; /* = Bildhöhe */
+  width: 134px;
+  height: 50px;
   display: block;
   cursor: pointer;
 }
 
-/* Beide Bilder deckungsgleich in den Anker legen */
 .lets-talk img {
   position: absolute;
   inset: 0;
@@ -85,6 +87,7 @@ span {
 .lets-talk:hover .lt-hover {
   opacity: 1;
 }
+
 .lets-talk:hover .lt-base {
   opacity: 0;
 }
@@ -94,9 +97,9 @@ span {
     flex-direction: column;
     align-items: center;
   }
+
   .why-left {
     width: 100%;
-    display: flex;
     font-size: 22px;
   }
 
@@ -123,5 +126,4 @@ span {
   .why-left {
     width: 80%;
   }
-
 }

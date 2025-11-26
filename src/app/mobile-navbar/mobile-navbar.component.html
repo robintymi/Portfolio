@@ -1,4 +1,3 @@
-<!-- Top-Bar (nur Mobile sichtbar) -->
 <div class="mobile-bar">
   <div class="frontend-dev">
     <div class="frontend-icon">
@@ -33,27 +32,29 @@
   />
 </div>
 
-<!-- Overlay: Ellipse + Menü -->
 <div class="mobile-overlay" *ngIf="isMenuOpen" (click)="toggleMenu()">
   <img
     class="mobile-nav-bg"
     src="assets/img/hero-section/mobile-navbar-bg.png"
-    alt="mobile menu background"
+    alt=""
   />
+
   <div class="mobile-menu" (click)="$event.stopPropagation()">
-    <!-- WICHTIG: keine href-Hashes; wir navigieren via Router -->
-    <a role="button" tabindex="0" (click)="goAndClose($event, 'why')">{{
-      "nav.why" | translate
-    }}</a>
-    <a role="button" tabindex="0" (click)="goAndClose($event, 'skills')">{{
-      "nav.skills" | translate
-    }}</a>
-    <a role="button" tabindex="0" (click)="goAndClose($event, 'projects')">{{
-      "nav.projects" | translate
-    }}</a>
-    <a role="button" tabindex="0" (click)="goAndClose($event, 'contact')">{{
-      "nav.contact" | translate
-    }}</a>
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'why')">
+      {{ "nav.why" | translate }}
+    </a>
+
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'skills')">
+      {{ "nav.skills" | translate }}
+    </a>
+
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'projects')">
+      {{ "nav.projects" | translate }}
+    </a>
+
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'contact')">
+      {{ "nav.contact" | translate }}
+    </a>
 
     <div class="mobile-lang">
       <div

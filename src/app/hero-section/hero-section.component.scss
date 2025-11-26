@@ -34,6 +34,7 @@ h2 {
   width: 50%;
   height: auto;
 }
+
 .bg-swap {
   position: relative;
   height: auto;
@@ -59,19 +60,22 @@ h2 {
   transition: opacity 0.6s ease;
   z-index: 99998;
 }
+
 .bg-hover {
   opacity: 0;
 }
+
 .left-side:hover .bg-hover {
   opacity: 1;
 }
+
 .left-side:hover .bg-base {
   opacity: 0;
 }
+
 .my-picture {
   position: absolute;
   bottom: 0;
-
   height: auto;
   width: 40vw;
   z-index: 99999;
@@ -81,6 +85,7 @@ h2 {
 .frontend-dev {
   margin-top: 6%;
 }
+
 .right-side {
   display: flex;
   flex-direction: column;
@@ -88,17 +93,20 @@ h2 {
   position: relative;
   height: 100%;
   width: 50%;
-  > img {
-    cursor: pointer;
-    margin-top: 30%;
-  }
 }
+
+.right-side > img {
+  cursor: pointer;
+  margin-top: 30%;
+}
+
 .name-job {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
 }
+
 .arrow-container {
   position: relative;
   width: 60px;
@@ -125,6 +133,7 @@ h2 {
 .arrow-container:hover .arrow-base {
   opacity: 0;
 }
+
 .social-icons {
   display: flex;
   position: absolute;
@@ -156,9 +165,11 @@ h2 {
 .social-icon:hover .icon-hover {
   opacity: 1;
 }
+
 .social-icon:hover .icon-base {
   opacity: 0;
 }
+
 .frontend-icon {
   position: relative;
   width: 60px;
@@ -187,6 +198,7 @@ h2 {
 .mobile {
   display: none;
 }
+
 @media (max-width: 1250px) {
   h1 {
     font-size: 60px;
@@ -202,14 +214,15 @@ h2 {
   .mobile-nav-bg {
     position: absolute;
     bottom: -5%;
-    left: 53%; /* wie .my-picture */
+    left: 53%;
     transform: translateX(-50%);
     width: 67%;
     max-width: 430px;
     height: auto;
-    z-index: 100000; /* höher als .my-picture (99999) */
-    pointer-events: auto; /* oder none, wenn Klicks durchgehen sollen */
+    z-index: 100000;
+    pointer-events: auto;
   }
+
   .social-icons {
     display: none;
   }
@@ -231,23 +244,24 @@ h2 {
   }
 
   .mobile-bg {
-    display: block; /* jetzt sichtbar */
-    margin: 0 auto; /* mittig */
+    display: block;
+    margin: 0 auto;
     width: 80%;
     max-width: 340px;
     height: auto;
   }
 
   .my-picture {
-    position: absolute; /* über der Ellipse */
-    bottom: 0; /* am unteren Rand der Ellipse */
+    position: absolute;
+    bottom: 0;
     left: 53%;
     transform: translateX(-50%);
     width: 60%;
     max-width: 430px;
     height: auto;
-    margin: 0; /* kein auto-Margin mehr nötig */
+    margin: 0;
   }
+
   .left-side {
     width: 100%;
     height: 60%;
@@ -266,6 +280,7 @@ h2 {
     cursor: pointer;
     height: 50px;
   }
+
   .desktop {
     display: none;
   }
@@ -273,8 +288,8 @@ h2 {
   .frontend-dev {
     align-items: unset;
     margin-left: 5%;
-
   }
+
   .name-job {
     margin-top: unset;
   }
@@ -324,50 +339,42 @@ h2 {
   color: black;
   text-decoration: none;
 }
-/* ----------------------------- */
-/* MOBILE NAVIGATION - LANGUAGES */
-/* ----------------------------- */
 
 .mobile-lang {
   display: flex;
-  gap: 18px; /* Abstand zwischen DE und EN */
+  gap: 18px;
   align-items: center;
   justify-content: center;
 }
 
 .mobile-lang .lang-option {
   position: relative;
-  width: 48px; /* Größe der Ellipse */
+  width: 48px;
   height: 48px;
-
-  display: grid; /* Text exakt zentrieren */
+  display: grid;
   place-items: center;
-
   cursor: pointer;
 }
 
-/* Ellipse als Hintergrund */
 .mobile-lang .ellipse-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  pointer-events: none; /* Klicks gehen an den Button */
+  pointer-events: none;
 }
 
-/* Sprachcode (DE / EN) */
 .mobile-lang .lang-code {
   position: relative;
   z-index: 2;
   font-family: "Josefin Sans";
   font-size: 16px;
   font-weight: 600;
-  color: black; /* Inaktiv */
+  color: black;
   letter-spacing: 0.5px;
 }
 
-/* Aktiver Zustand */
 .mobile-lang .active .lang-code {
   color: white;
 }

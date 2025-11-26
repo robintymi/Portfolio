@@ -13,6 +13,10 @@ import { MobileNavbarComponent } from '../mobile-navbar/mobile-navbar.component'
   styleUrls: ['./legal-notice.component.scss'],
 })
 export class LegalNoticeComponent {
+
+  /**
+   * arrow button to navigate back
+   */
   goBack() {
     history.back();
   }

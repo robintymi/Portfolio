@@ -121,7 +121,7 @@ h1 {
 }
 
 a {
-  color:#89bcd9;
+  color: #89bcd9;
 }
 
 @media (max-width: 1000px) {
@@ -155,25 +155,24 @@ a {
   }
 
   .image-wrapper {
-    width:90%;
-    height:90%;
+    width: 90%;
+    height: 90%;
   }
 
   .overlay {
-    width:70%;
+    width: 70%;
     justify-content: unset;
-    top:9%;
-    gap:8px;
+    top: 9%;
+    gap: 8px;
   }
 }
 
-
-@media (max-width:500px) {
+@media (max-width: 500px) {
   h1 {
-    font-size:22px;
+    font-size: 22px;
   }
 
   .name {
-    font-size:22px;
+    font-size: 22px;
   }
 }

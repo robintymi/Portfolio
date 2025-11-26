@@ -17,13 +17,10 @@ export class FooterComponent {
 
   constructor(private router: Router) { }
 
-  goLegalNotice(event: Event) {
-    event.preventDefault(); // verhindert den Standard-Link
-    this.router.navigate(['/legal-notice']).then(() => {
-      // Scroll sicher nach oben
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-      }, 0);
-    });
+  /** Navigates to legal notice and scrolls to the top */
+  goLegalNotice(e: Event) {
+    e.preventDefault();
+    this.router.navigate(['/legal-notice'])
+      .then(() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0));
   }
 }

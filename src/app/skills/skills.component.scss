@@ -8,9 +8,9 @@
 }
 
 .skill-set-img {
-  width: 34vw; /* 25 % der Viewport-Breite */
-  height: auto; /* behält Seitenverhältnis */
-  max-width: 100%; /* falls Container kleiner als Viewport */
+  width: 34vw;
+  height: auto;
+  max-width: 100%;
   display: block;
 }
 
@@ -36,7 +36,6 @@
   opacity: 0;
 }
 
-/* Beim Hover tauschen */
 .currently-learning:hover .cl-hover {
   opacity: 1;
 }
@@ -49,7 +48,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* perfekt zentriert */
+  transform: translate(-50%, -50%);
   text-align: center;
   width: 70%;
   color: #e7eef3;
@@ -59,6 +58,7 @@
   font-size: 18px;
   line-height: 120%;
   font-weight: 400;
+
   > img {
     height: 50px;
     width: 50px;
@@ -70,6 +70,7 @@
   justify-content: center;
   margin: 12px 12px;
 }
+
 .mobile {
   display: none;
 }
@@ -90,6 +91,7 @@
   .skill-set-img {
     width: 50vw;
   }
+
   .what-learning {
     color: #89bcd9;
     font-size: 22px;
@@ -147,14 +149,13 @@
 }
 
 @media (max-width: 650px) {
-  .backend {
-    > img {
-      width: 30px;
-      height: 30px;
-      margin-bottom: 3px;
-    }
+  .backend > img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 3px;
   }
 }
+
 @media (max-width: 500px) {
   .skill-set-img {
     width: 80vw;
@@ -167,12 +168,12 @@
   }
 
   .mobile-ellipse {
-    width:50%;
+    width: 50%;
   }
 
   .learning-text {
-    width:80%;
-    font-size:22px;
-    margin-top:4%;
+    width: 80%;
+    font-size: 22px;
+    margin-top: 4%;
   }
 }

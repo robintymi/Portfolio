@@ -1,12 +1,10 @@
 <section>
-  <!-- Neue, gekapselte Mobile-Navigation -->
   <app-mobile-navbar
     (menuOpenChange)="onMenuOpenChange($event)"
   ></app-mobile-navbar>
 
   <div class="its-me">
     <div class="left-side">
-      <!-- Desktop/Hover Background Swap -->
       <div class="bg-swap">
         <img
           class="bg-img bg-base"
@@ -20,14 +18,12 @@
         />
       </div>
 
-      <!-- Mobile Hintergrund-Ellipse (nur via CSS auf Mobile sichtbar) -->
       <img
         class="mobile-bg mobile"
         src="assets/img/hero-section/mobilebg.png"
         alt=""
       />
 
-      <!-- Dein Bild – wird vom Parent via (menuOpenChange) ausgeblendet -->
       <img
         class="my-picture"
         [ngClass]="{ 'hidden-img': hidePicture }"
@@ -37,7 +33,6 @@
     </div>
 
     <div class="right-side">
-      <!-- Desktop-Block mit Icon + Name/Rolle -->
       <div class="frontend-dev desktop">
         <div class="frontend-icon">
           <img
@@ -61,7 +56,6 @@
         <h2>FRONTEND DEVELOPER</h2>
       </div>
 
-      <!-- Pfeile -->
       <a href="#contact" class="arrow-container mobile">
         <img
           class="arrow arrow-base"
@@ -69,6 +63,7 @@
           alt=""
         />
       </a>
+
       <a href="#why-me" class="arrow-container desktop">
         <img
           class="arrow arrow-base"
@@ -82,7 +77,6 @@
         />
       </a>
 
-      <!-- Socials (Desktop) -->
       <div class="social-icons">
         <a href="mailto:robinerike@gmail.com" class="social-icon">
           <img

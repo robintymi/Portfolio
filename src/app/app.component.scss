@@ -1,17 +1,15 @@
-
 body {
   margin: 0;
   background-color: #262e34;
 }
 
 app-navbar {
-  display: block; /* Custom Element -> Block */
+  display: block;
   position: sticky;
   top: 0;
-  z-index: 9999; /* über allen Sektionen liegen */
+  z-index: 9999;
   width: 100%;
-  /* optional: Hintergrund, damit Content darunter nicht “durchscheint” */
-  background: #262e24; /* oder deine Navbar-Farbe */
+  background: #262e24;
 }
 
 main {
@@ -20,16 +18,16 @@ main {
 }
 
 app-skills {
-  display:block;
-  margin-top:3%;
+  display: block;
+  margin-top: 3%;
 }
 
 app-projects {
-  margin-top:6%;
-  display:block;
+  display: block;
+  margin-top: 6%;
 }
 
 app-contact {
-  margin-top:6%;
-  display:block;
+  display: block;
+  margin-top: 6%;
 }

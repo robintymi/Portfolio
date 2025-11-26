@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 
+/**
+ * Represents a single reference entry.
+ */
 interface Reference {
-  key: string;            // ← neuer Schlüssel
+  key: string;
   image: string;
   linkedin: string;
 }
@@ -16,6 +19,9 @@ interface Reference {
   styleUrls: ['./references.component.scss'],
 })
 export class ReferencesComponent {
+  /**
+   * List of reference entries displayed on the page.
+   */
   references: Reference[] = [
     {
       key: 'comingSoon1',

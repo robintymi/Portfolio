@@ -1,7 +1,6 @@
 <h1>{{ "projects.title" | translate }}</h1>
 
 <section class="projects">
-  <!-- Tabs -->
   <nav class="tabs">
     <button
       *ngFor="let p of projects; let i = index"
@@ -14,14 +13,13 @@
     </button>
   </nav>
 
-  <!-- Content -->
   <div class="content" *ngIf="projects[active] as proj">
     <h2 class="project-title mobile">
       {{ "projects.items." + proj.key + ".tabTitle" | translate }}
     </h2>
+
     <div class="max-width">
       <div class="left">
-        <!-- ABOUT -->
         <div class="block">
           <h3 class="block-title">
             <span class="dot"></span>
@@ -35,7 +33,6 @@
           <p>{{ "projects.items." + proj.key + ".about" | translate }}</p>
         </div>
 
-        <!-- PROCESS -->
         <div class="block" *ngIf="proj.hasProcess">
           <h3 class="block-title">
             <span class="dot"></span>
@@ -45,7 +42,6 @@
           <p>{{ "projects.items." + proj.key + ".process" | translate }}</p>
         </div>
 
-        <!-- EXPERIENCE -->
         <div class="block" *ngIf="proj.hasExperience">
           <h3 class="block-title">
             <span class="dot"></span>
@@ -58,19 +54,20 @@
 
       <div class="right">
         <div class="tech">
-          <span class="desktop">{{
-            "projects.sections.technologies" | translate
-          }}</span>
+          <span class="desktop">
+            {{ "projects.sections.technologies" | translate }}
+          </span>
+
           <div class="icons desktop">
             <img *ngFor="let t of proj.tech" [src]="t.icon" [alt]="t.name" />
           </div>
+
           <div class="tech-names mobile">
             Technologies:
-            <p *ngFor="let t of proj.tech">
-              {{ t.name }}
-            </p>
+            <p *ngFor="let t of proj.tech">{{ t.name }}</p>
           </div>
         </div>
+
         <span class="muted" *ngIf="proj.hasDuration">
           {{ "projects.sections.duration" | translate }}:
           {{ "projects.items." + proj.key + ".duration" | translate }}
@@ -85,19 +82,19 @@
 
         <div class="cta desktop" *ngIf="proj.live || proj.github">
           <a
+            *ngIf="proj.live"
             [href]="proj.live"
             target="_blank"
             class="btn primary"
-            *ngIf="proj.live"
           >
             <img src="assets/img/skills/Button Primary Web.png" alt="Live" />
           </a>
 
           <a
+            *ngIf="proj.github"
             [href]="proj.github"
             target="_blank"
             class="btn primary"
-            *ngIf="proj.github"
           >
             <img
               src="assets/img/skills/Button Secondary Web.png"
@@ -107,23 +104,32 @@
         </div>
       </div>
     </div>
+
     <div class="cta mobile" *ngIf="proj.live || proj.github">
       <a
+        *ngIf="proj.live"
         [href]="proj.live"
         target="_blank"
         class="btn primary"
-        *ngIf="proj.live"
       >
-        <img class="cta-btn"src="assets/img/skills/Button Primary Web.png" alt="Live" />
+        <img
+          class="cta-btn"
+          src="assets/img/skills/Button Primary Web.png"
+          alt="Live"
+        />
       </a>
 
       <a
+        *ngIf="proj.github"
         [href]="proj.github"
         target="_blank"
         class="btn primary"
-        *ngIf="proj.github"
       >
-        <img class="cta-btn"src="assets/img/skills/Button Secondary Web.png" alt="GitHub" />
+        <img
+          class="cta-btn"
+          src="assets/img/skills/Button Secondary Web.png"
+          alt="GitHub"
+        />
       </a>
     </div>
   </div>

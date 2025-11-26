@@ -11,17 +11,24 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 })
 export class NavbarComponent {
   active = '';
-  currentLang: 'de' | 'en' = 'en'; // <--- UI-Standard: EN
+  currentLang: 'de' | 'en' = 'en';
 
   constructor(private translate: TranslateService) {
-    // i18n-Standard beim Start: EN
     this.translate.use('en');
   }
 
+  /**
+   * Sets the currently active navigation item.
+   * @param id Section identifier to activate.
+   */
   setActive(id: string) {
     this.active = id;
   }
 
+  /**
+   * Switches the application language.
+   * @param lang Target language code ('de' or 'en').
+   */
   switchLang(lang: 'de' | 'en') {
     this.currentLang = lang;
     this.translate.use(lang);
