@@ -161,6 +161,10 @@ form {
   cursor: pointer;
 }
 
+.arrow-up {
+  position:absolute;
+  right:10%;
+}
 .checkbox-wrapper label {
   color: white;
   font-size: 16px;
@@ -317,7 +321,7 @@ form {
   }
 
   .arrow-mobile {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     margin-bottom: 5%;
   }
