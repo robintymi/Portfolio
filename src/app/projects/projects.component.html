@@ -25,7 +25,7 @@
             <span class="dot"></span>
             <img src="assets/img/skills/bullet points.png" alt="" />
             {{ "projects.sections.about" | translate }}
-            <span class="muted desktop" *ngIf="proj.hasDuration">
+            <span class="muted mobile" *ngIf="proj.hasDuration">
               {{ "projects.sections.duration" | translate }}:
               {{ "projects.items." + proj.key + ".duration" | translate }}
             </span>
