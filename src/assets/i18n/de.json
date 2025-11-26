@@ -149,49 +149,49 @@
 
     "imprint": {
       "title": "Impressum",
-      "line1": "[Liste der Studierenden]",
-      "line2": "[Adresse des Portfolio-Betreibers, z. B. eine:r der Studierenden]",
-      "line3": "[Postleitzahl und Ort]"
+      "line1": "Robin Erike",
+      "line2": "Dietrich-Bonhoeffer Str. 3",
+      "line3": "15745 Wildau"
     },
 
     "contact": {
       "title": "Kontakt",
-      "email": "E-Mail: [E-Mail-Adresse]"
+      "email": "E-Mail: robinerike@gmail.com"
     },
 
     "acceptance": {
       "title": "Akzeptanz der Bedingungen",
-      "body": "Durch den Zugriff auf und die Nutzung dieses Portfolios (\"Produkt\") erkennen Sie die folgenden Bedingungen sowie alle ergänzenden Richtlinien, Hinweise oder Aktualisierungen an und stimmen ihnen zu. Die aufgeführten Studierenden behalten sich vor, diese Bedingungen jederzeit ohne vorherige Ankündigung zu ändern oder zu aktualisieren."
+      "body": "Durch den Zugriff auf und die Nutzung dieses <a class='portfolio-link' href='/'>Portfolio</a> (\"Produkt\") erkennen Sie die folgenden Bedingungen sowie alle ergänzenden Richtlinien, Hinweise oder Aktualisierungen an und stimmen ihnen zu. Die aufgeführten Studierenden behalten sich vor, diese Bedingungen jederzeit ohne vorherige Ankündigung zu ändern oder zu aktualisieren."
     },
 
     "scope": {
       "title": "Anwendungsbereich und Eigentum am Produkt",
-      "body1": "Dieses Portfolio wurde im Rahmen eines Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH erstellt. Es dient ausschließlich zu Ausbildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine Gewähr für ständige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts übernehmen.",
-      "body2": "Das visuelle Design dieses Portfolios ist Eigentum der Developer Akademie GmbH. Jede unbefugte Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Reproduktion des Designs ist strikt untersagt."
+      "body1": "Dieses <a class='portfolio-link' href='/'>Portfolio</a> wurde im Rahmen eines Gruppenprojekts in einem Webentwicklungs-Bootcamp der <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a> erstellt. Es dient ausschließlich zu Ausbildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine Gewähr für ständige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts übernehmen.",
+      "body2": "Das visuelle Design dieses <a class='portfolio-link' href='/'>Portfolio</a> ist Eigentum der <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a>. Jede unbefugte Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Reproduktion des Designs ist strikt untersagt."
     },
 
     "rights": {
       "title": "Schutzrechte",
-      "body": "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die aufgeführten Studierenden, alle Schutzrechte an diesem Portfolio, einschließlich aller urheberrechtlich geschützten Inhalte, Marken und sonstiger geschützter Informationen."
+      "body": "Abgesehen vom Design, das der per <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a> gehört, behalten wir, die aufgeführten Studierenden, alle Schutzrechte an diesem <a class='portfolio-link' href='/'>Portfolio</a>, einschließlich aller urheberrechtlich geschützten Inhalte, Marken und sonstiger geschützter Informationen."
     },
 
     "use": {
       "title": "Nutzung des Produkts",
-      "body": "Dieses Portfolio darf nur zu rechtmäßigen Zwecken und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jede Nutzung des Portfolios für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist streng untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern dieses Portfolios verantwortlich."
+      "body": "Dieses <a class='portfolio-link' href='/'>Portfolio</a> darf nur zu rechtmäßigen Zwecken und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jede Nutzung des <a class='portfolio-link' href='/'>Portfolio</a> für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist streng untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern dieses <a class='portfolio-link' href='/'>Portfolio</a> verantwortlich."
     },
 
     "disclaimer": {
       "title": "Haftungsausschluss und Beschränkung der Gewährleistung",
-      "body": "Dieses Portfolio wird \"wie besehen\" und ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf stillschweigende Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden, oder die Developer Akademie für direkte oder indirekte Schäden, Neben-, Sonder- oder Folgeschäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, die sich aus der Nutzung oder der Leistung dieses Portfolios ergeben oder damit zusammenhängen."
+      "body": "Dieses <a class='portfolio-link' href='/'>Portfolio</a> wird \"wie besehen\" und ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf stillschweigende Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden, oder die per <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a> für direkte oder indirekte Schäden, Neben-, Sonder- oder Folgeschäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, die sich aus der Nutzung oder der Leistung dieses <a class='portfolio-link' href='/'>Portfolio</a> ergeben oder damit zusammenhängen."
     },
 
     "indemnity": {
       "title": "Freistellung",
-      "body": "Sie erklären sich damit einverstanden, die aufgeführten Studierenden, die Developer Akademie sowie deren verbundene Unternehmen, Partner, Leitende, Geschäftsführer, Mitarbeitende und Beauftragte von sämtlichen Ansprüchen, Forderungen, Schäden, Verlusten, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, die sich aus Ihrer Nutzung dieses Portfolios und/oder einem Verstoß gegen diesen rechtlichen Hinweis ergeben."
+      "body": "Sie erklären sich damit einverstanden, die aufgeführten Studierenden, die <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a> sowie deren verbundene Unternehmen, Partner, Leitende, Geschäftsführer, Mitarbeitende und Beauftragte von sämtlichen Ansprüchen, Forderungen, Schäden, Verlusten, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, die sich aus Ihrer Nutzung dieses <a class='portfolio-link' href='/'>Portfolio</a> und/oder einem Verstoß gegen diesen rechtlichen Hinweis ergeben."
     },
 
-    "questions": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter [Kontakt-E-Mail].",
+    "questions": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter robinerike@gmail.com .",
     "dateLabel": "Datum:",
-    "dateValue": "06. Juli 2025"
+    "dateValue": "26.11.2025"
   }
 }

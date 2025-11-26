@@ -1,6 +1,15 @@
-<app-navbar></app-navbar>
+<app-navbar class="desktop"></app-navbar>
+<app-mobile-navbar></app-mobile-navbar>
+
 <section class="legal-page">
   <div class="legal-container">
+    <img
+      class="mobile"
+      src="assets/img/legal-notice/Arrow Up (1).png"
+      alt=""
+      (click)="goBack()"
+    />
+
     <h1 class="legal-title">{{ "legal.title" | translate }}</h1>
 
     <!-- Imprint -->
@@ -20,7 +29,7 @@
       <h2 class="section-heading">
         {{ "legal.contact.title" | translate }}
       </h2>
-      <p>{{ "legal.contact.email" | translate }}</p>
+      <p [innerHTML]="'legal.contact.email' | translate"></p>
     </section>
 
     <!-- Acceptance of terms -->
@@ -28,7 +37,7 @@
       <h2 class="section-heading">
         {{ "legal.acceptance.title" | translate }}
       </h2>
-      <p>{{ "legal.acceptance.body" | translate }}</p>
+      <p [innerHTML]="'legal.acceptance.body' | translate"></p>
     </section>
 
     <!-- Scope & ownership -->
@@ -36,8 +45,8 @@
       <h2 class="section-heading">
         {{ "legal.scope.title" | translate }}
       </h2>
-      <p>{{ "legal.scope.body1" | translate }}</p>
-      <p>{{ "legal.scope.body2" | translate }}</p>
+      <p [innerHTML]="'legal.scope.body1' | translate"></p>
+      <p [innerHTML]="'legal.scope.body2' | translate"></p>
     </section>
 
     <!-- Proprietary rights -->
@@ -45,7 +54,7 @@
       <h2 class="section-heading">
         {{ "legal.rights.title" | translate }}
       </h2>
-      <p>{{ "legal.rights.body" | translate }}</p>
+      <p [innerHTML]="'legal.rights.body' | translate"></p>
     </section>
 
     <!-- Use of the product -->
@@ -53,7 +62,7 @@
       <h2 class="section-heading">
         {{ "legal.use.title" | translate }}
       </h2>
-      <p>{{ "legal.use.body" | translate }}</p>
+      <p [innerHTML]="'legal.use.body' | translate"></p>
     </section>
 
     <!-- Disclaimer -->
@@ -61,7 +70,7 @@
       <h2 class="section-heading">
         {{ "legal.disclaimer.title" | translate }}
       </h2>
-      <p>{{ "legal.disclaimer.body" | translate }}</p>
+      <p [innerHTML]="'legal.disclaimer.body' | translate"></p>
     </section>
 
     <!-- Indemnity -->
@@ -69,14 +78,13 @@
       <h2 class="section-heading">
         {{ "legal.indemnity.title" | translate }}
       </h2>
-      <p>{{ "legal.indemnity.body" | translate }}</p>
+      <p [innerHTML]="'legal.indemnity.body' | translate"></p>
     </section>
 
     <!-- Contact + date -->
     <section class="legal-section">
-      <p class="questions">
-        {{ "legal.questions" | translate }}
-      </p>
+      <p class="questions" [innerHTML]="'legal.questions' | translate"></p>
+
       <p class="date-line">
         {{ "legal.dateLabel" | translate }}
         {{ "legal.dateValue" | translate }}

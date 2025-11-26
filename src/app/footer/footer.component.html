@@ -1,6 +1,6 @@
 <footer>
   <div class="left-side">
-    <a class="legal-notice" [routerLink]="['/legal-notice']">
+    <a class="legal-notice" (click)="goLegalNotice($event)">
       {{ "footer.legal" | translate }}
     </a>
 

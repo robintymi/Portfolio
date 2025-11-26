@@ -41,14 +41,17 @@
     alt="mobile menu background"
   />
   <div class="mobile-menu" (click)="$event.stopPropagation()">
-    <a href="#why-me" (click)="closeAfterNav()">{{ "nav.why" | translate }}</a>
-    <a href="#skills" (click)="closeAfterNav()">{{
+    <!-- WICHTIG: keine href-Hashes; wir navigieren via Router -->
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'why')">{{
+      "nav.why" | translate
+    }}</a>
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'skills')">{{
       "nav.skills" | translate
     }}</a>
-    <a href="#projects" (click)="closeAfterNav()">{{
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'projects')">{{
       "nav.projects" | translate
     }}</a>
-    <a href="#contact" (click)="closeAfterNav()">{{
+    <a role="button" tabindex="0" (click)="goAndClose($event, 'contact')">{{
       "nav.contact" | translate
     }}</a>
 

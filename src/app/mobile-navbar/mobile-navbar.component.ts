@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe], // KEIN Router hier
   templateUrl: './mobile-navbar.component.html',
   styleUrls: ['./mobile-navbar.component.scss'],
 })
@@ -15,8 +16,7 @@ export class MobileNavbarComponent {
   isMenuOpen = false;
   currentLang: 'de' | 'en' = 'en';
 
-  constructor(private translate: TranslateService) {
-    // Falls App noch keine Sprache gesetzt hat:
+  constructor(private router: Router, private translate: TranslateService) {
     if (!this.translate.currentLang) {
       this.translate.use(this.currentLang);
     }
@@ -39,8 +39,22 @@ export class MobileNavbarComponent {
     this.translate.use(lang);
   }
 
-  closeAfterNav() {
+  async goAndClose(event: Event, section: 'why' | 'skills' | 'projects' | 'contact' | 'why-me') {
+    event.preventDefault(); // keine Default-Anchor-Action
     this.isMenuOpen = false;
     this.menuOpenChange.emit(false);
+
+    await this.router.navigate(['/'], { fragment: section });
+
+    // Fallback: sicher nach Render scollen (falls anchorScrolling zu früh feuert)
+    setTimeout(() => {
+      const el = document.getElementById(section);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Notfalls ganz nach oben
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 0);
   }
 }

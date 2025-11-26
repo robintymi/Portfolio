@@ -15,12 +15,13 @@
   display: flex;
   align-items: center;
   margin-left: 5%;
+  margin-top:5%;
 }
 
 .frontend-icon {
   position: relative;
   width: 60px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 
   img {
     position: absolute;
@@ -47,14 +48,13 @@
   cursor: pointer;
 }
 
-/* Overlay (nimmt Klicks zum Schließen) */
 .mobile-overlay {
   position: fixed;
   inset: 0;
   z-index: 100000;
+  width: 70%;
 }
 
-/* Ellipse */
 .mobile-nav-bg {
   position: fixed;
   top: 8%;
@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(15px, 4vw, 32px);
+  gap: clamp(10px, 5vw, 80px);
   z-index: 100002;
 }
 

@@ -150,48 +150,48 @@
 
     "imprint": {
       "title": "Imprint",
-      "line1": "[Student names list]",
-      "line2": "[Address of the portfolio operator, e.g. one of the students]",
-      "line3": "[Postcode and city]"
+      "line1": "Robin Erike",
+      "line2": "Dietrich-Bonhoeffer Str.3",
+      "line3": "15745 Wildau"
     },
 
     "contact": {
       "title": "Exploring the Board",
-      "email": "Email: [Email]"
+      "email": "Email: robinerike@gmail.com"
     },
 
     "acceptance": {
       "title": "Acceptance of terms",
-      "body": "By accessing and using this portfolio (\"Product\"), you acknowledge and agree to the following terms and conditions, as well as any policies, guidelines, or updates that may be provided to you from time to time. The listed students may update or change these terms and conditions without prior notice."
+      "body": "By accessing and using this <a class='portfolio-link' href='/'>Portfolio</a> (\"Product\"), you acknowledge and agree to the following terms and conditions, as well as any policies, guidelines, or updates that may be provided to you from time to time. The listed students may update or change these terms and conditions without prior notice."
     },
 
     "scope": {
       "title": "Scope and ownership of the product",
-      "body1": "This portfolio was developed as part of a student group project in a web development bootcamp at Developer Akademie GmbH. It is intended for educational purposes only and is not designed for extensive personal or business use. Therefore, we cannot guarantee constant availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
-      "body2": "The visual design of this portfolio is owned by Developer Akademie GmbH. Any unauthorised use, reproduction, modification, distribution, or replication of this design is strictly prohibited."
+      "body1": "This <a class='portfolio-link' href='/'>Portfolio</a> was developed as part of a student group project in a web development bootcamp at <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a>. It is intended for educational purposes only and is not designed for extensive personal or business use. Therefore, we cannot guarantee constant availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+      "body2": "The visual design of this <a class='portfolio-link' href='/'>Portfolio</a> is owned by <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a>. Any unauthorised use, reproduction, modification, distribution, or replication of this design is strictly prohibited."
     },
 
     "rights": {
       "title": "Proprietary rights",
-      "body": "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in this portfolio, including any associated copyrighted material, trademarks, and other proprietary information."
+      "body": "Aside from the design owned by <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie GmbH</a>, we, the listed students, retain all proprietary rights in this <a class='portfolio-link' href='/'>Portfolio</a>, including any associated copyrighted material, trademarks, and other proprietary information."
     },
 
     "use": {
       "title": "Use of the product",
-      "body": "This portfolio is intended to be used for lawful purposes only and in accordance with all applicable laws and regulations. Any use of the portfolio for illegal activities or to harass, harm, threaten, or intimidate another person is strictly prohibited. You are solely responsible for your interactions with other users of this portfolio."
+      "body": "This <a class='portfolio-link' href='/'>Portfolio</a> is intended to be used for lawful purposes only and in accordance with all applicable laws and regulations. Any use of the <a class='portfolio-link' href='/'>Portfolio</a> for illegal activities or to harass, harm, threaten, or intimidate another person is strictly prohibited. You are solely responsible for your interactions with other users of this <a class='portfolio-link' href='/'>Portfolio</a>."
     },
 
     "disclaimer": {
       "title": "Disclaimer of warranties and limitation of liability",
-      "body": "This portfolio is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or Developer Akademie be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to loss of profits, goodwill, use, data, or other intangible losses, arising out of or in connection with the use or performance of this portfolio."
+      "body": "This <a class='portfolio-link' href='/'>Portfolio</a> is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie</a> be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to loss of profits, goodwill, use, data, or other intangible losses, arising out of or in connection with the use or performance of this <a class='portfolio-link' href='/'>Portfolio</a>."
     },
 
     "indemnity": {
       "title": "Indemnity",
-      "body": "You agree to indemnify, defend, and hold harmless the listed students, Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of this portfolio and/or your breach of this legal notice."
+      "body": "You agree to indemnify, defend, and hold harmless the listed students, <a class='devakademie-link' href='https://developerakademie.com'>Developer Akademie</a>, and our affiliates, partners, officers, directors, agents, and employees from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of this <a class='portfolio-link' href='/'>Portfolio</a> and/or your breach of this legal notice."
     },
 
-    "questions": "For any questions or notices, please contact us at [Contact email].",
+    "questions": "For any questions or notices, please contact us at robinerike@gmail.com .",
     "dateLabel": "Date:",
     "dateValue": "July 06, 2025"
   }

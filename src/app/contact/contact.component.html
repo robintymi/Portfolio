@@ -19,8 +19,7 @@
   </div>
 
   <div class="contact">
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
-      <!-- Intro / Kontaktinfos -->
+    <form #contactForm="ngForm" novalidate>
       <div class="role">
         <p class="my-motivation">
           {{ "contact.intro" | translate }}
@@ -45,73 +44,97 @@
           </a>
         </div>
       </div>
+
       <div class="work-together mobile">Let us work together!</div>
-      <!-- Name + Email -->
+
       <div>
         <div class="name-email-flex">
-          <!-- Name -->
-          <div class="label-flex">
-            <label class="desktop" for="name">
-              {{ "contact.form.nameLabel" | translate }}
+          <div class="label-flex" [class.invalid]="isNameInvalid(nameModel)">
+            <label
+              class="desktop"
+              [class.error-label]="isNameInvalid(nameModel)"
+              for="name"
+            >
+              {{
+                (isNameInvalid(nameModel)
+                  ? "contact.form.nameError"
+                  : "contact.form.nameLabel"
+                ) | translate
+              }}
             </label>
-            <input
-              placeholder="Your name"
-              id="name"
-              type="text"
-              name="name"
-              required
-              minlength="2"
-              [(ngModel)]="contactData.name"
-              #nameModel="ngModel"
-            />
-            <p class="error" *ngIf="nameModel.invalid && nameModel.touched">
-              {{ "contact.form.nameError" | translate }}
-            </p>
+            <div class="input-wrapper">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                required
+                minlength="2"
+                [(ngModel)]="contactData.name"
+                #nameModel="ngModel"
+                [class.filled]="contactData.name"
+              />
+              <span class="valid-indicator" *ngIf="nameModel.valid"></span>
+            </div>
           </div>
 
-          <!-- Email -->
-          <div class="label-flex">
-            <label class="desktop" for="email">
-              {{ "contact.form.emailLabel" | translate }}
+          <div class="label-flex" [class.invalid]="isEmailInvalid(emailModel)">
+            <label
+              class="desktop"
+              [class.error-label]="isEmailInvalid(emailModel)"
+              for="email"
+            >
+              {{
+                (isEmailInvalid(emailModel)
+                  ? "contact.form.emailError"
+                  : "contact.form.emailLabel"
+                ) | translate
+              }}
             </label>
-            <input
-              placeholder="Your email"
-              id="email"
-              type="email"
-              name="email"
-              required
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-              [(ngModel)]="contactData.email"
-              #emailModel="ngModel"
-            />
-            <p class="error" *ngIf="emailModel.invalid && emailModel.touched">
-              {{ "contact.form.emailError" | translate }}
-            </p>
+            <div class="input-wrapper">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                [(ngModel)]="contactData.email"
+                #emailModel="ngModel"
+                [class.filled]="contactData.email"
+              />
+              <span class="valid-indicator" *ngIf="emailModel.valid"></span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Message -->
-      <div class="textarea">
-        <label class="desktop" for="message">
-          {{ "contact.form.messageLabel" | translate }}
+      <div class="textarea" [class.invalid]="isMessageInvalid(messageModel)">
+        <label
+          class="desktop"
+          [class.error-label]="isMessageInvalid(messageModel)"
+          for="message"
+        >
+          {{
+            (isMessageInvalid(messageModel)
+              ? "contact.form.messageError"
+              : "contact.form.messageLabel"
+            ) | translate
+          }}
         </label>
-        <textarea
-          placeholder="Your message"
-          id="message"
-          name="message"
-          rows="6"
-          required
-          minlength="4"
-          [(ngModel)]="contactData.message"
-          #messageModel="ngModel"
-        ></textarea>
-        <p class="error" *ngIf="messageModel.invalid && messageModel.touched">
-          {{ "contact.form.messageError" | translate }}
-        </p>
+        <div class="input-wrapper textarea-wrapper">
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            minlength="4"
+            [(ngModel)]="contactData.message"
+            #messageModel="ngModel"
+            [class.filled]="contactData.message"
+          ></textarea>
+          <span class="valid-indicator" *ngIf="messageModel.valid"></span>
+        </div>
       </div>
 
-      <!-- DSGVO Checkbox mit Bild -->
       <div class="checkbox-wrapper">
         <img
           [src]="
@@ -141,12 +164,14 @@
         </p>
       </div>
 
-      <!-- Submit -->
       <div class="submit-btns">
         <button
-          type="submit"
+          type="button"
           class="submit-btn"
-          [disabled]="!isChecked || !contactForm.valid"
+          [class.active]="isChecked && contactForm.valid"
+          (click)="
+            onTrySubmit(contactForm, nameModel, emailModel, messageModel)
+          "
           [attr.aria-disabled]="
             !isChecked || !contactForm.valid ? 'true' : null
           "
@@ -163,6 +188,7 @@
           />
         </button>
       </div>
+
       <a
         class="arrow-mobile mobile"
         href="#hero-section"

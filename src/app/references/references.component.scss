@@ -162,14 +162,18 @@ a {
   .overlay {
     width:70%;
     justify-content: unset;
-    top:12%;
-    gap:10px;
+    top:9%;
+    gap:8px;
   }
 }
 
 
 @media (max-width:500px) {
   h1 {
+    font-size:22px;
+  }
+
+  .name {
     font-size:22px;
   }
 }
