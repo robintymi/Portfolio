@@ -30,6 +30,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $subject = 'Contact From <' . $email . '>';
 
     // HTML-Mail
+    $subject = 'Kontakt: '.$name.' <'.$email.'>';
     $body  = 'From: ' . htmlspecialchars($name, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . '<br><br>';
     $body .= nl2br(htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
 

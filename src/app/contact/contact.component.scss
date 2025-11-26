@@ -48,6 +48,13 @@ textarea {
   position: relative;
 }
 
+.feedback-success {
+  color: #89bcd9;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 16px;
+}
+
 .valid-indicator {
   position: absolute;
   right: 10%;
@@ -55,7 +62,7 @@ textarea {
   transform: translateX(-50%);
   width: 22px;
   height: 22px;
-  background-image: url("/assets/img/contact/inputCorrect.png");
+  background-image: url("/projects/Portfolio/assets/img/contact/inputCorrect.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -102,7 +109,7 @@ label {
 h1 {
   font-size: 54px;
   margin-top: 50px;
-  margin-bottom:3%;
+  margin-bottom: 3%;
 }
 
 form {
@@ -163,8 +170,8 @@ form {
 }
 
 .arrow-up {
-  position:absolute;
-  right:10%;
+  position: absolute;
+  right: 10%;
 }
 .checkbox-wrapper label {
   color: white;
@@ -200,7 +207,7 @@ form {
   padding: 0;
   cursor: pointer;
   width: 120px;
-  margin-bottom:15%;
+  margin-bottom: 15%;
 }
 
 .submit-btn[aria-disabled="true"] {
@@ -222,6 +229,65 @@ form {
 
 .desktop {
   display: unset;
+}
+input,
+textarea {
+  font-family: inherit;
+  font-size: 20px;
+  color: #fff;
+  background-color: #262e34;
+  appearance: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  box-shadow: 0 0 0 1000px #262e34 inset !important;
+}
+
+input:focus:-webkit-autofill,
+textarea:focus:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #333f48 inset !important;
+}
+
+input:hover:-webkit-autofill,
+textarea:hover:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #262e34 inset !important;
+}
+
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  color: #fff !important;
+}
+
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0 1000px #262e34 inset !important;
+  -moz-text-fill-color: #fff;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 20px;
+  color: #fff;
+  background-color: #262e34;
+  appearance: none;
+}
+
+input,
+textarea {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  color: #fff;
+  background-color: #262e34;
+  appearance: none;
 }
 
 .label-flex.invalid input,
@@ -288,9 +354,9 @@ form {
   }
 
   .work-together {
-    display:flex !important;
+    display: flex !important;
     justify-content: center;
-    margin-top:2%;
+    margin-top: 2%;
   }
   .contact-details {
     flex-direction: column-reverse;

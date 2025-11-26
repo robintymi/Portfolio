@@ -108,7 +108,7 @@
                     : 'contact.form.emailLabel'
                   ) | translate
                 "
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                 [(ngModel)]="contactData.email"
                 #emailModel="ngModel"
               />
@@ -180,7 +180,9 @@
           {{ "contact.privacy.error" | translate }}
         </p>
       </div>
-
+      <p *ngIf="sendSuccess" class="feedback-success" aria-live="polite">
+        {{ "contact.feedback.success" | translate }}
+      </p>
       <div class="submit-btns">
         <button
           type="button"

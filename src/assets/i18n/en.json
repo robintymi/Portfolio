@@ -112,6 +112,9 @@
       "link": "privacy policy",
       "textAfterLink": "and agree to the processing of my data as outlined.",
       "error": "Please accept the privacy policy."
+    },
+    "feedback": {
+      "success": "Thank you! I’ll get back to you as soon as possible."
     }
   },
   "references": {

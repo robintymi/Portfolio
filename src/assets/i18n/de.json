@@ -105,6 +105,9 @@
       "messageLabel": "Ihre Nachricht",
       "messageError": "Bitte geben Sie eine Nachricht ein (mind. 4 Zeichen)."
     },
+    "feedback": {
+      "success": "Dankeschön! Ich melde mich schnellstmöglich bei Ihnen."
+    },
 
     "privacy": {
       "textBeforeLink": "Ich habe die",

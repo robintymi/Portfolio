@@ -13,6 +13,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class ContactComponent {
   arrowHover = false;
+  sendSuccess = false;
   http = inject(HttpClient);
 
   checkboxState: 'neutral' | 'hover' | 'checked' | 'error' = 'neutral';
@@ -75,11 +76,18 @@ export class ContactComponent {
       return;
     }
     this.showError = false;
-    if (this.mailTest) return this.resetForm(form);
 
-    this.http
-      .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
-      .subscribe(() => this.resetForm(form));
+    this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      .subscribe({
+        next: () => {
+          this.sendSuccess = true;            // Meldung zeigen
+          this.resetForm(form);               // Formular leeren
+          setTimeout(() => this.sendSuccess = false, 4500); // nach ~4.5 s ausblenden
+        },
+        error: () => {
+          this.showError = true;
+        }
+      });
   }
 
   /** Resets all temporary validation states */
