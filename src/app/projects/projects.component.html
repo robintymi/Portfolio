@@ -81,56 +81,21 @@
         </div>
 
         <div class="cta desktop" *ngIf="proj.live || proj.github">
-          <a
-            *ngIf="proj.live"
-            [href]="proj.live"
-            target="_blank"
-            class="btn primary"
-          >
-            <img src="assets/img/skills/Button Primary Web.png" alt="Live" />
-          </a>
+          <button *ngIf="proj.live" type="button" class="btn primary">
+            Live Test
+          </button>
 
-          <a
-            *ngIf="proj.github"
-            [href]="proj.github"
-            target="_blank"
-            class="btn primary"
-          >
-            <img
-              src="assets/img/skills/Button Secondary Web.png"
-              alt="GitHub"
-            />
-          </a>
+          <button *ngIf="proj.github" type="button" class="btn primary">
+            GitHub
+          </button>
         </div>
       </div>
     </div>
 
     <div class="cta mobile" *ngIf="proj.live || proj.github">
-      <a
-        *ngIf="proj.live"
-        [href]="proj.live"
-        target="_blank"
-        class="btn primary"
-      >
-        <img
-          class="cta-btn"
-          src="assets/img/skills/Button Primary Web.png"
-          alt="Live"
-        />
-      </a>
+      <button *ngIf="proj.live" type="button" class="btn primary">Live Test</button>
 
-      <a
-        *ngIf="proj.github"
-        [href]="proj.github"
-        target="_blank"
-        class="btn primary"
-      >
-        <img
-          class="cta-btn"
-          src="assets/img/skills/Button Secondary Web.png"
-          alt="GitHub"
-        />
-      </a>
+      <button *ngIf="proj.github" type="button" class="btn primary">GitHub</button>
     </div>
   </div>
 </section>
