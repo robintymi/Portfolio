@@ -81,11 +81,11 @@
         </div>
 
         <div class="cta desktop" *ngIf="proj.live || proj.github">
-          <button *ngIf="proj.live" type="button" class="btn primary">
+          <button *ngIf="proj.live" type="button" class="livetest-btn primary">
             Live Test
           </button>
 
-          <button *ngIf="proj.github" type="button" class="btn primary">
+          <button *ngIf="proj.github" type="button" class="github-btn primary">
             GitHub
           </button>
         </div>
@@ -93,9 +93,9 @@
     </div>
 
     <div class="cta mobile" *ngIf="proj.live || proj.github">
-      <button *ngIf="proj.live" type="button" class="btn primary">Live Test</button>
+      <button *ngIf="proj.live" type="button" class="livetest-btn primary">Live Test</button>
 
-      <button *ngIf="proj.github" type="button" class="btn primary">GitHub</button>
+      <button *ngIf="proj.github" type="button" class="github-btn primary">GitHub</button>
     </div>
   </div>
 </section>

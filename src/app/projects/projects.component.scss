@@ -176,6 +176,40 @@ h1 {
   color: #0d1b22;
   border-color: transparent;
 }
+/* Gemeinsame Button-Basis */
+.livetest-btn,
+.github-btn {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  padding: 8px 22px;
+  border-radius: 999px; /* pill shape */
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+/* --- LIVE TEST BUTTON --- */
+.livetest-btn {
+  background: #a3d4ff; /* hellblau wie im Screenshot */
+  color: #0d1b22; /* dunkler Text */
+  border: none;
+}
+
+.livetest-btn:hover {
+  background: #c5e5ff; /* etwas heller */
+  transform: translateY(-1px);
+}
+
+/* --- GITHUB BUTTON --- */
+.github-btn {
+  background: #2d3840; /* gleiche Farbe wie dein Panel */
+  border: 2px solid #a3d4ff; /* blauer Rand wie im Bild */
+  color: #a3d4ff; /* Schrift in Randfarbe */
+}
+
+.github-btn:hover {
+  background: #3a4650;
+  transform: translateY(-1px);
+}
 
 .btn.primary:hover {
   background: var(--accent-2);
