@@ -1,58 +1,70 @@
-<h1>{{ "skills.title" | translate }}</h1>
-<div class="mobile">
-  <img class="skill-set-img" src="assets/img/skills/skills mobile.png" alt="" />
-  <div class="what-learning">
-    {{ "skills.currentlyLearningMobile" | translate }}
-  </div>
-  <div class="learning-by-doing">
-    <div class="learning-text">
-      {{ "skills.currentlyLearningText" | translate }}
-    </div>
-
-    <div class="mobile-ellipse">
+<section>
+  <div class="skills-wrapper">
+    <h1>{{ "skills.title" | translate }}</h1>
+    <div class="mobile">
       <img
-        src="assets/img/skills/ellipse-mobile.png"
-        alt="learning background"
-        class="ellipse-bg"
+        class="skill-set-img"
+        src="assets/img/skills/skills mobile.png"
+        alt=""
+      />
+      <div class="what-learning">
+        {{ "skills.currentlyLearningMobile" | translate }}
+      </div>
+      <div class="learning-by-doing">
+        <div class="learning-text">
+          {{ "skills.currentlyLearningText" | translate }}
+        </div>
+
+        <div class="mobile-ellipse">
+          <img
+            src="assets/img/skills/ellipse-mobile.png"
+            alt="learning background"
+            class="ellipse-bg"
+          />
+
+          <div class="ellipse-icons">
+            <div class="backend mobile">
+              <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
+              PostgreSQL
+            </div>
+            <div class="backend mobile">
+              <img src="assets/img/skills/rxjs.png" alt="RXJS" />
+              RXJS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="skills">
+      <img
+        class="skill-set-img"
+        src="assets/img/skills/Skill set (1).png"
+        alt=""
       />
 
-      <div class="ellipse-icons">
-        <div class="backend mobile">
-          <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
-          PostgreSQL
-        </div>
-        <div class="backend mobile">
-          <img src="assets/img/skills/rxjs.png" alt="RXJS" />
-          RXJS
+      <div class="currently-learning">
+        <img
+          class="cl-base"
+          src="assets/img/skills/Ellipse 25.png"
+          alt="Ellipse"
+        />
+        <img
+          class="cl-hover"
+          src="assets/img/skills/Ellipse 25-hover.png"
+          alt="Ellipse Hover"
+        />
+
+        <div class="learning">
+          {{ "skills.currentlyLearningLabel" | translate }}
+
+          <div class="learning-icons">
+            <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
+            <img src="assets/img/skills/rxjs.png" alt="RXJS" />
+          </div>
+
+          {{ "skills.currentlyLearningText" | translate }}
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="skills">
-  <img
-    class="skill-set-img"
-    src="assets/img/skills/Skill set (1).png"
-    alt=""
-  />
-
-  <div class="currently-learning">
-    <img class="cl-base" src="assets/img/skills/Ellipse 25.png" alt="Ellipse" />
-    <img
-      class="cl-hover"
-      src="assets/img/skills/Ellipse 25-hover.png"
-      alt="Ellipse Hover"
-    />
-
-    <div class="learning">
-      {{ "skills.currentlyLearningLabel" | translate }}
-
-      <div class="learning-icons">
-        <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
-        <img src="assets/img/skills/rxjs.png" alt="RXJS" />
-      </div>
-
-      {{ "skills.currentlyLearningText" | translate }}
-    </div>
-  </div>
-</div>
+</section>

@@ -1,43 +1,49 @@
 <section class="why">
-  <h1 class="blue">{{ "why.title" | translate }}</h1>
+  <div class="why-wrapper">
+    <h1 class="blue">{{ "why.title" | translate }}</h1>
 
-  <div class="why-grid">
-    <div class="why-left">
-      <div class="open-to">
-        <img class="why-icon" src="assets/img/why-me/icon.png" alt="" />
-        <h3 class="why-headline">
-          <span>{{ "why.item1.prefix" | translate }}</span>
-          {{ "why.item1.text" | translate }}
-          <span>{{ "why.item1.suffix" | translate }}</span>
-        </h3>
+    <div class="why-grid">
+      <div class="why-left">
+        <div class="open-to">
+          <img class="why-icon" src="assets/img/why-me/icon.png" alt="" />
+          <h3 class="why-headline">
+            <span>{{ "why.item1.prefix" | translate }}</span>
+            {{ "why.item1.text" | translate }}
+            <span>{{ "why.item1.suffix" | translate }}</span>
+          </h3>
+        </div>
+
+        <div class="open-to">
+          <img
+            class="why-icon"
+            src="assets/img/why-me/Icon Remote.png"
+            alt=""
+          />
+          <h3 class="why-headline">
+            <span>{{ "why.item2.prefix" | translate }}</span>
+            {{ "why.item2.text" | translate }}
+            <span>{{ "why.item2.suffix" | translate }}</span>
+          </h3>
+        </div>
       </div>
 
-      <div class="open-to">
-        <img class="why-icon" src="assets/img/why-me/Icon Remote.png" alt="" />
-        <h3 class="why-headline">
-          <span>{{ "why.item2.prefix" | translate }}</span>
-          {{ "why.item2.text" | translate }}
-          <span>{{ "why.item2.suffix" | translate }}</span>
-        </h3>
-      </div>
-    </div>
+      <div class="why-right">
+        <div class="why-text">
+          {{ "why.text" | translate }}
 
-    <div class="why-right">
-      <div class="why-text">
-        {{ "why.text" | translate }}
-
-        <a href="#contact" class="lets-talk">
-          <img
-            class="lt-base"
-            src="assets/img/why-me/lets talk button.png"
-            alt="Let's talk"
-          />
-          <img
-            class="lt-hover"
-            src="assets/img/why-me/lets talk button-hover.png"
-            alt="Let's talk hover"
-          />
-        </a>
+          <a href="#contact" class="lets-talk">
+            <img
+              class="lt-base"
+              src="assets/img/why-me/lets talk button.png"
+              alt="Let's talk"
+            />
+            <img
+              class="lt-hover"
+              src="assets/img/why-me/lets talk button-hover.png"
+              alt="Let's talk hover"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>

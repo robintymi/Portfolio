@@ -3,6 +3,11 @@ h1 {
   font-size: 60px;
 }
 
+.why-wrapper {
+  max-width: 1440px;
+  margin:0 auto;
+}
+
 .why-headline {
   font-size: clamp(
     19px,
