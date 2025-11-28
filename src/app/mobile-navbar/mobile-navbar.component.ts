@@ -1,8 +1,10 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { ScrollService } from '../shared/scroll.service';
+import { LanguageService } from '../shared/language.service';
+import { Subject, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
@@ -10,17 +12,23 @@ import { ScrollService } from '../shared/scroll.service';
   templateUrl: './mobile-navbar.component.html',
   styleUrls: ['./mobile-navbar.component.scss'],
 })
-export class MobileNavbarComponent {
+export class MobileNavbarComponent implements OnInit, OnDestroy {
   @Output() menuOpenChange = new EventEmitter<boolean>();
   isMenuOpen = false;
   currentLang: 'de' | 'en' = 'en';
-
+  private destroy$ = new Subject<void>()
   constructor(
     private router: Router,
-    private translate: TranslateService,
-    private scrollService: ScrollService
-  ) {
-    if (!this.translate.currentLang) this.translate.use(this.currentLang);
+    private scrollService: ScrollService,
+    private languageService: LanguageService
+  ) { }
+
+  ngOnInit(): void {
+    this.currentLang = this.languageService.currentLang;
+    this.languageService
+      .langChanges()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((lang) => (this.currentLang = lang));
   }
 
   /** Toggles the mobile menu state */
@@ -39,8 +47,7 @@ export class MobileNavbarComponent {
 
   /** Switches application language */
   switchLang(lang: 'de' | 'en') {
-    this.currentLang = lang;
-    this.translate.use(lang);
+    this.languageService.setLanguage(lang);
   }
 
   /** Navigates to a section and closes the menu */
@@ -58,5 +65,10 @@ export class MobileNavbarComponent {
     setTimeout(() => {
       this.scrollService.scrollToSection(section);
     }, 0);
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

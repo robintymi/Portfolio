@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslatePipe } from '@ngx-translate/core';
-import { Router, RouterModule } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core'; import { Router, RouterModule } from '@angular/router';
 import { ScrollService } from '../shared/scroll.service';
+import { LanguageService } from '../shared/language.service';
+import { Subject, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -10,16 +11,22 @@ import { ScrollService } from '../shared/scroll.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   active = '';
   currentLang: 'de' | 'en' = 'en';
+  private destroy$ = new Subject<void>();
 
   constructor(
-    private translate: TranslateService,
-    private scrollService: ScrollService,
-    private router: Router
-  ) {
-    this.translate.use('en');
+    private router: Router,
+    private languageService: LanguageService
+  ) { }
+
+  ngOnInit(): void {
+    this.currentLang = this.languageService.currentLang;
+    this.languageService
+      .langChanges()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((lang) => (this.currentLang = lang));
   }
 
   /**
@@ -68,7 +75,11 @@ export class NavbarComponent {
    * @param lang Target language code ('de' or 'en').
    */
   switchLang(lang: 'de' | 'en') {
-    this.currentLang = lang;
-    this.translate.use(lang);
+    this.languageService.setLanguage(lang);
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
