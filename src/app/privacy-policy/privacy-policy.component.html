@@ -1,0 +1,114 @@
+<app-navbar class="desktop"></app-navbar>
+<app-mobile-navbar></app-mobile-navbar>
+
+<section class="legal-page">
+  <div class="legal-container">
+    <img
+      class="mobile"
+      src="assets/img/legal-notice/Arrow Up (1).png"
+      alt="Back"
+      (click)="goBack()"
+    />
+
+    <h1 class="legal-title">{{ "privacy.title" | translate }}</h1>
+
+    <!-- Controller / Verantwortlicher -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.controller.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.controller.body' | translate"></p>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="legal-section">
+      <h2 class="section-heading">{{ "privacy.contact.title" | translate }}</h2>
+      <p [innerHTML]="'privacy.contact.body' | translate"></p>
+    </section>
+
+    <!-- Verarbeitungszwecke & Rechtsgrundlagen -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.purposes.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.purposes.body' | translate"></p>
+    </section>
+
+    <!-- Kategorien personenbezogener Daten -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.categories.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.categories.body' | translate"></p>
+    </section>
+
+    <!-- Cookies & ähnliche Technologien -->
+    <section class="legal-section">
+      <h2 class="section-heading">{{ "privacy.cookies.title" | translate }}</h2>
+      <p [innerHTML]="'privacy.cookies.body' | translate"></p>
+    </section>
+
+    <!-- Drittanbieter / Empfänger -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.recipients.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.recipients.body' | translate"></p>
+    </section>
+
+    <!-- Internationaler Datentransfer -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.transfers.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.transfers.body' | translate"></p>
+    </section>
+
+    <!-- Speicherdauer -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.retention.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.retention.body' | translate"></p>
+    </section>
+
+    <!-- Deine Rechte -->
+    <section class="legal-section">
+      <h2 class="section-heading">{{ "privacy.rights.title" | translate }}</h2>
+      <p [innerHTML]="'privacy.rights.body' | translate"></p>
+    </section>
+
+    <!-- Sicherheit -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.security.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.security.body' | translate"></p>
+    </section>
+
+    <!-- Kinder/Jugendliche -->
+    <section class="legal-section">
+      <h2 class="section-heading">
+        {{ "privacy.children.title" | translate }}
+      </h2>
+      <p [innerHTML]="'privacy.children.body' | translate"></p>
+    </section>
+
+    <!-- Änderungen -->
+    <section class="legal-section">
+      <h2 class="section-heading">{{ "privacy.changes.title" | translate }}</h2>
+      <p [innerHTML]="'privacy.changes.body' | translate"></p>
+    </section>
+
+    <!-- Fragen & Datum -->
+    <section class="legal-section">
+      <p class="questions" [innerHTML]="'privacy.questions' | translate"></p>
+      <p class="date-line">
+        {{ "privacy.dateLabel" | translate }}
+        {{ "privacy.dateValue" | translate }}
+      </p>
+    </section>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -197,5 +197,60 @@
     "questions": "For any questions or notices, please contact us at robinerike@gmail.com .",
     "dateLabel": "Date:",
     "dateValue": "July 06, 2025"
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "controller": {
+      "title": "Data Controller",
+      "body": "This website (the \"Portfolio\"/the \"Product\") is developed as part of a student project at the <a class='devakademie-link' href='https://developerakademie.com' target='_blank' rel='noopener'>Developer Akademie GmbH</a>. The listed students (see imprint) act as data controllers under the GDPR."
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "Email: <a href='mailto:[Email]'>[Email]</a>"
+    },
+    "purposes": {
+      "title": "Purposes & Legal Bases",
+      "body": "We process personal data to provide and improve the Product, for troubleshooting, security, and communication based on Art. 6(1)(b) GDPR (contract/steps prior) and Art. 6(1)(f) GDPR (legitimate interests). Where consent is required (e.g., optional cookies), processing is based on Art. 6(1)(a) GDPR."
+    },
+    "categories": {
+      "title": "Categories of Personal Data",
+      "body": "Technical data (IP address, access time, user agent), usage data (pages visited, interactions), communication data (email contents), and—if provided by you—profile data. Live demos may involve additional processing by third-party providers (see below)."
+    },
+    "cookies": {
+      "title": "Cookies & Similar Technologies",
+      "body": "We only use strictly necessary cookies where required for the site to function. Optional analytics or marketing cookies are used only with your consent, which you can withdraw at any time."
+    },
+    "recipients": {
+      "title": "Recipients / Third Parties",
+      "body": "Depending on the projects, services such as <strong>Firebase</strong> (hosting/DB/auth), <strong>GitHub Pages</strong> (hosting), or similar providers may be used. Usage and metadata may be processed. See each provider’s privacy notice for details."
+    },
+    "transfers": {
+      "title": "International Data Transfers",
+      "body": "If services outside the EU/EEA are used (e.g., US), transfers rely on appropriate safeguards (e.g., Standard Contractual Clauses) or adequacy decisions."
+    },
+    "retention": {
+      "title": "Retention",
+      "body": "We retain personal data only as long as necessary for the purposes outlined or as required by law. Log data is typically retained for a short period."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "body": "You have the right to access, rectification, erasure, restriction, data portability, and to object to processing (Art. 15–21 GDPR). You can also lodge a complaint with a supervisory authority."
+    },
+    "security": {
+      "title": "Security",
+      "body": "We implement appropriate technical and organizational measures to protect your data against loss, misuse, and unauthorized access."
+    },
+    "children": {
+      "title": "Children",
+      "body": "This Product is not intended for children under 16. We do not knowingly collect data from children."
+    },
+    "changes": {
+      "title": "Changes to this Privacy Policy",
+      "body": "We may update these notices periodically to reflect legal or technical changes. The current version is available here."
+    },
+    "questions": "For any questions, contact: <a href='mailto:[Email]'>[Email]</a>.",
+    "dateLabel": "Date:",
+    "dateValue": "July 26, 2025"
   }
 }

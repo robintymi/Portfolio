@@ -25,7 +25,7 @@
             <span class="dot"></span>
             <img src="assets/img/skills/bullet points.png" alt="" />
             {{ "projects.sections.about" | translate }}
-            <span class="muted mobile" *ngIf="proj.hasDuration">
+            <span class="muted desktop" *ngIf="proj.hasDuration">
               {{ "projects.sections.duration" | translate }}:
               {{ "projects.items." + proj.key + ".duration" | translate }}
             </span>
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <span class="muted" *ngIf="proj.hasDuration">
+        <span class="muted mobile" *ngIf="proj.hasDuration">
           {{ "projects.sections.duration" | translate }}:
           {{ "projects.items." + proj.key + ".duration" | translate }}
         </span>
@@ -81,11 +81,21 @@
         </div>
 
         <div class="cta desktop" *ngIf="proj.live || proj.github">
-          <button *ngIf="proj.live" type="button" class="livetest-btn primary">
+          <button
+            *ngIf="proj.live"
+            type="button"
+            class="livetest-btn primary"
+            (click)="openLink(proj.live)"
+          >
             Live Test
           </button>
 
-          <button *ngIf="proj.github" type="button" class="github-btn primary">
+          <button
+            *ngIf="proj.github"
+            type="button"
+            class="github-btn primary"
+            (click)="openLink(proj.github)"
+          >
             GitHub
           </button>
         </div>
@@ -93,9 +103,23 @@
     </div>
 
     <div class="cta mobile" *ngIf="proj.live || proj.github">
-      <button *ngIf="proj.live" type="button" class="livetest-btn primary">Live Test</button>
+      <button
+        *ngIf="proj.live"
+        type="button"
+        class="livetest-btn primary"
+        (click)="openLink(proj.live)"
+      >
+        Live Test
+      </button>
 
-      <button *ngIf="proj.github" type="button" class="github-btn primary">GitHub</button>
+      <button
+        *ngIf="proj.github"
+        type="button"
+        class="github-btn primary"
+        (click)="openLink(proj.github)"
+      >
+        GitHub
+      </button>
     </div>
   </div>
 </section>

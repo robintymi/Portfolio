@@ -1,0 +1,92 @@
+.legal-page {
+  background-color: #262e34;
+  color: #f5f5f5;
+  padding: 48px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile {
+  display: none;
+}
+
+img {
+  cursor: pointer;
+}
+h2 {
+  text-align: start;
+  color: #89bcd9 !important;
+}
+
+h1 {
+  color: #89bcd9;
+}
+
+.devakademie-link,
+.devakademie-link:visited {
+  color: #89bcd9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.legal-container {
+  max-width: 900px;
+  width: 100%;
+  font-family: "Josefin Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.legal-title {
+  font-size: 40px;
+  margin-bottom: 32px;
+  color: #89bcd9;
+  font-weight: 600;
+}
+
+.legal-section {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.imprint-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 8px 0;
+  color: #d5dde5;
+}
+
+.questions {
+  margin-top: 16px;
+}
+
+.date-line {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #9ba7b5;
+}
+
+.desktop {
+  display: unset;
+}
+
+@media (max-width: 1000px) {
+  .mobile {
+    display: unset;
+  }
+
+  .desktop {
+    display: none;
+  }
+}

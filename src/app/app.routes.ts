@@ -13,5 +13,13 @@ export const routes: Routes = [
                 (m) => m.LegalNoticeComponent
             ),
     },
+    {
+        path: 'privacy-policy',
+        loadComponent: () =>
+            import('./privacy-policy/privacy-policy.component').then(
+                (m) => m.PrivacyPolicyComponent
+            ),
+    },
     { path: '**', redirectTo: '' },
+
 ];

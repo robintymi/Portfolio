@@ -12,6 +12,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class ProjectsComponent {
   active = 0;
 
+  openLink(url: string | null) {
+    if (!url) return;
+    window.open(url, "_blank", "noopener");
+  }
+
   projects = [
     {
       key: 'join',

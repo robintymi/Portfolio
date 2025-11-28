@@ -24,19 +24,9 @@ export class ReferencesComponent {
    */
   references: Reference[] = [
     {
-      key: 'comingSoon1',
-      image: 'assets/img/references/Ellipse 02.png',
-      linkedin: ''
-    },
-    {
       key: 'adrianBieber',
       image: 'assets/img/references/Ellipse 02.png',
       linkedin: 'https://www.linkedin.com/in/adrian-bieber-6a6a111ba/'
     },
-    {
-      key: 'comingSoon2',
-      image: 'assets/img/references/Ellipse 02.png',
-      linkedin: '#'
-    }
   ];
 }

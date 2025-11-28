@@ -91,10 +91,6 @@ h1 {
   font-size: 0.9em;
 }
 
-.muted {
-  margin-bottom: 40px;
-}
-
 .dot {
   width: 12px;
   height: 12px;
@@ -122,6 +118,7 @@ h1 {
   gap: 18px;
   color: var(--muted);
   flex-direction: column;
+  margin-bottom:3%;
 }
 
 .tech .icons {
@@ -152,8 +149,8 @@ h1 {
 }
 
 .cta {
-  display: flex;
-  gap: 12px;
+  display: flex !important;
+  gap: 3%;
   justify-content: center;
   margin-top: 10%;
 }
@@ -229,7 +226,7 @@ p {
 }
 
 .mobile {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 1000px) {
@@ -271,8 +268,18 @@ p {
   }
 
   .mobile {
-    display: unset;
+    display: flex !important;
     align-self: center;
+  }
+
+  .livetest-btn{
+    width:150px;
+    height:50px;
+  }
+
+  .github-btn {
+    width:120px;
+    height:50px;
   }
 
   .right {

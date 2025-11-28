@@ -196,5 +196,60 @@
     "questions": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter robinerike@gmail.com .",
     "dateLabel": "Datum:",
     "dateValue": "26.11.2025"
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "controller": {
+      "title": "Verantwortlicher",
+      "body": "Diese Website (\"Portfolio\"/das \"Produkt\") wird im Rahmen eines Studentenprojekts der <a class='devakademie-link' href='https://developerakademie.com' target='_blank' rel='noopener'>Developer Akademie GmbH</a> gestaltet. Verantwortlich im Sinne der DSGVO sind die genannten Studierenden (siehe Impressum)."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "body": "E-Mail: <a href='mailto:[Email]'>[Email]</a>"
+    },
+    "purposes": {
+      "title": "Zwecke und Rechtsgrundlagen der Verarbeitung",
+      "body": "Wir verarbeiten personenbezogene Daten zur Bereitstellung und Verbesserung des Produkts, zur Fehleranalyse, für Sicherheitszwecke und zur Kommunikation auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anbahnung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Soweit eine Einwilligung erforderlich ist (z. B. optionale Cookies), erfolgt die Verarbeitung auf Art. 6 Abs. 1 lit. a DSGVO."
+    },
+    "categories": {
+      "title": "Kategorien personenbezogener Daten",
+      "body": "Technische Daten (IP-Adresse, Zugriffszeit, User-Agent), Nutzungsdaten (aufgerufene Seiten, Interaktionen), Kommunikationsdaten (E-Mail-Inhalte), sowie – falls von dir angegeben – Profildaten. Im Rahmen der Live-Demos können zusätzliche Daten durch Drittanbieter verarbeitet werden (siehe unten)."
+    },
+    "cookies": {
+      "title": "Cookies & ähnliche Technologien",
+      "body": "Wir verwenden nur technisch notwendige Cookies, soweit für die Funktion der Seite erforderlich. Optionale Analyse- oder Marketing-Cookies werden nur nach deiner Einwilligung gesetzt, die du jederzeit widerrufen kannst."
+    },
+    "recipients": {
+      "title": "Empfänger / Drittanbieter",
+      "body": "Abhängig von den Projekten können Dienste wie <strong>Firebase</strong> (Hosting/DB/Auth), <strong>GitHub Pages</strong> (Hosting) oder ähnliche Anbieter genutzt werden. Dabei können Nutzungs- und Metadaten verarbeitet werden. Details findest du in den Datenschutzhinweisen der jeweiligen Anbieter."
+    },
+    "transfers": {
+      "title": "Datenübermittlung in Drittländer",
+      "body": "Sofern Dienste außerhalb der EU/EWR eingesetzt werden (z. B. USA), erfolgt die Übermittlung auf Grundlage geeigneter Garantien (z. B. Standardvertragsklauseln) oder Angemessenheitsbeschlüssen."
+    },
+    "retention": {
+      "title": "Speicherdauer",
+      "body": "Wir speichern personenbezogene Daten nur so lange, wie es für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Logdaten werden in der Regel kurzzeitig vorgehalten."
+    },
+    "rights": {
+      "title": "Deine Rechte",
+      "body": "Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung (Art. 15–21 DSGVO). Du kannst dich zudem bei einer Aufsichtsbehörde beschweren."
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "body": "Wir treffen angemessene technische und organisatorische Maßnahmen, um deine Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen."
+    },
+    "children": {
+      "title": "Kinder und Jugendliche",
+      "body": "Dieses Produkt richtet sich nicht an Kinder unter 16 Jahren. Wir erheben wissentlich keine Daten von Kindern."
+    },
+    "changes": {
+      "title": "Änderungen dieser Privacy Policy",
+      "body": "Wir können diese Hinweise gelegentlich aktualisieren, um rechtliche oder technische Änderungen zu berücksichtigen. Die jeweils aktuelle Fassung ist hier abrufbar."
+    },
+    "questions": "Bei Fragen wende dich bitte an: <a href='mailto:[Email]'>[Email]</a>.",
+    "dateLabel": "Datum:",
+    "dateValue": "26. Juli 2025"
   }
 }
