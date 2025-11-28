@@ -2,7 +2,7 @@
 <app-mobile-navbar></app-mobile-navbar>
 
 <section class="legal-page">
-  <div class="legal-container">
+  <div  id="top"class="legal-container">
     <img
       class="mobile"
       src="assets/img/legal-notice/Arrow Up (1).png"
@@ -23,7 +23,7 @@
     <!-- Kontakt -->
     <section class="legal-section">
       <h2 class="section-heading">{{ "privacy.contact.title" | translate }}</h2>
-      <p [innerHTML]="'privacy.contact.body' | translate"></p>
+      <p class="devakademie-link" [innerHTML]="'privacy.contact.body' | translate"></p>
     </section>
 
     <!-- Verarbeitungszwecke & Rechtsgrundlagen -->
@@ -97,7 +97,7 @@
     <!-- Änderungen -->
     <section class="legal-section">
       <h2 class="section-heading">{{ "privacy.changes.title" | translate }}</h2>
-      <p [innerHTML]="'privacy.changes.body' | translate"></p>
+      <p class="devakademie-link" [innerHTML]="'privacy.changes.body' | translate"></p>
     </section>
 
     <!-- Fragen & Datum -->

@@ -17,4 +17,7 @@ export class PrivacyPolicyComponent {
     if (history.length > 1) history.back();
     else window.location.href = '/';
   }
+  ngOnInit() {
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
 }

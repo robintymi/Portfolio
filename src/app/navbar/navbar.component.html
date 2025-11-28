@@ -8,59 +8,59 @@
 
     <div class="navs darkblue">
       <a
-        href="#why-me"
+        [routerLink]="['/']"
+        fragment="why-me"
         class="nav-link"
         [class.active]="active === 'why-me'"
-        (click)="setActive('why-me')"
+         (click)="scrollToSection($event, 'why-me')"
       >
         <img
           class="ellipse"
           src="assets/img/navbar/Ellipse-active-nav.png"
           alt=""
         />
-        <span>{{ 'nav.why' | translate }}</span>
+        <span>{{ "nav.why" | translate }}</span>
       </a>
 
       <a
-        href="#skills"
+        [routerLink]="['/']"
+        fragment="skills"
         class="nav-link"
         [class.active]="active === 'skills'"
-        (click)="setActive('skills')"
+         (click)="scrollToSection($event, 'skills')"
       >
         <img
           class="ellipse"
           src="assets/img/navbar/Ellipse-active-nav.png"
           alt=""
         />
-        <span>{{ 'nav.skills' | translate }}</span>
+        <span>{{ "nav.skills" | translate }}</span>
       </a>
 
       <a
-        href="#projects"
+        [routerLink]="['/']"
+        fragment="projects"
         class="nav-link"
         [class.active]="active === 'projects'"
-        (click)="setActive('projects')"
+         (click)="scrollToSection($event, 'projects')"
       >
         <img
           class="ellipse"
           src="assets/img/navbar/Ellipse-active-nav.png"
           alt=""
         />
-        <span>{{ 'nav.projects' | translate }}</span>
+        <span>{{ "nav.projects" | translate }}</span>
       </a>
 
       <a
-        href="#contact"
+        [routerLink]="['/']"
+        fragment="contact"
         class="nav-link"
         [class.active]="active === 'contact'"
-        (click)="setActive('contact')"
+          (click)="scrollToSection($event, 'contact')"
       >
-        <img
-          class="ellipse"
-          src="assets/img/navbar/Ellipse DE EN.png"
-          alt=""
-        />
-        <span>{{ 'nav.contact' | translate }}</span>
+        <img class="ellipse" src="assets/img/navbar/Ellipse DE EN.png" alt="" />
+        <span>{{ "nav.contact" | translate }}</span>
       </a>
     </div>
 
@@ -76,7 +76,7 @@
             src="assets/img/navbar/Ellipse DE EN.png"
             alt="DE Ellipse"
           />
-          <span>{{ 'lang.de' | translate }}</span>
+          <span>{{ "lang.de" | translate }}</span>
         </div>
 
         <div
@@ -89,7 +89,7 @@
             src="assets/img/navbar/Ellipse DE EN.png"
             alt="EN Ellipse"
           />
-          <span>{{ 'lang.en' | translate }}</span>
+          <span>{{ "lang.en" | translate }}</span>
         </div>
       </div>
     </div>

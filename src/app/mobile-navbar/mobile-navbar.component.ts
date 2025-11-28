@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-
+import { ScrollService } from '../shared/scroll.service';
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
@@ -15,7 +15,11 @@ export class MobileNavbarComponent {
   isMenuOpen = false;
   currentLang: 'de' | 'en' = 'en';
 
-  constructor(private router: Router, private translate: TranslateService) {
+  constructor(
+    private router: Router,
+    private translate: TranslateService,
+    private scrollService: ScrollService
+  ) {
     if (!this.translate.currentLang) this.translate.use(this.currentLang);
   }
 
@@ -42,18 +46,17 @@ export class MobileNavbarComponent {
   /** Navigates to a section and closes the menu */
   async goAndClose(
     event: Event,
-    section: 'why' | 'skills' | 'projects' | 'contact' | 'why-me'
+    section: 'why-me' | 'skills' | 'projects' | 'contact'
   ) {
     event.preventDefault();
     this.isMenuOpen = false;
     this.menuOpenChange.emit(false);
 
     await this.router.navigate(['/'], { fragment: section });
+    const target = section === 'why' ? 'why-me' : section;
 
     setTimeout(() => {
-      const el = document.getElementById(section);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      else window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.scrollService.scrollToSection(target);
     }, 0);
   }
 }
