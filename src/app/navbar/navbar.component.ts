@@ -6,7 +6,7 @@ import { ScrollService } from '../shared/scroll.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslatePipe, Router, ScrollService],
+  imports: [CommonModule, RouterModule, TranslatePipe,],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
@@ -16,7 +16,8 @@ export class NavbarComponent {
 
   constructor(
     private translate: TranslateService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private router: Router
   ) {
     this.translate.use('en');
   }

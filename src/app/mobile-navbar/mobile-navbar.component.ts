@@ -53,10 +53,10 @@ export class MobileNavbarComponent {
     this.menuOpenChange.emit(false);
 
     await this.router.navigate(['/'], { fragment: section });
-    const target = section === 'why' ? 'why-me' : section;
+
 
     setTimeout(() => {
-      this.scrollService.scrollToSection(target);
+      this.scrollService.scrollToSection(section);
     }, 0);
   }
 }

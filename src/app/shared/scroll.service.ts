@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ScrollService {
+    private readonly headerOffset = 120;
     private readonly bounceOffset = 28;
     private readonly settleDelay = 170;
     private readonly bounceDelay = 420;
@@ -12,10 +13,12 @@ export class ScrollService {
      */
     scrollToSection(sectionId: string) {
         const targetElement = document.getElementById(sectionId);
-        const targetPosition = targetElement
-            ? targetElement.getBoundingClientRect().top + window.scrollY
-            : 0;
+        if (!targetElement) return;
 
+        const targetPosition = Math.max(
+            targetElement.getBoundingClientRect().top + window.scrollY - this.headerOffset,
+            0
+        );
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
 
         window.setTimeout(() => {
