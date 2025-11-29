@@ -12,7 +12,7 @@
         fragment="why-me"
         class="nav-link"
         [class.active]="active === 'why-me'"
-         (click)="scrollToSection($event, 'why-me')"
+        (click)="navigateTo($event, 'why-me')"
       >
         <img
           class="ellipse"
@@ -27,7 +27,7 @@
         fragment="skills"
         class="nav-link"
         [class.active]="active === 'skills'"
-         (click)="scrollToSection($event, 'skills')"
+        (click)="navigateTo($event, 'skills')"
       >
         <img
           class="ellipse"
@@ -42,7 +42,7 @@
         fragment="projects"
         class="nav-link"
         [class.active]="active === 'projects'"
-         (click)="scrollToSection($event, 'projects')"
+        (click)="navigateTo($event, 'projects')"
       >
         <img
           class="ellipse"
@@ -57,7 +57,7 @@
         fragment="contact"
         class="nav-link"
         [class.active]="active === 'contact'"
-          (click)="scrollToSection($event, 'contact')"
+        (click)="navigateTo($event, 'contact')"
       >
         <img class="ellipse" src="assets/img/navbar/Ellipse DE EN.png" alt="" />
         <span>{{ "nav.contact" | translate }}</span>
