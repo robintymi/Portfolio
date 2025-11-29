@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-why-me',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslateModule],
   templateUrl: './why-me.component.html',
   styleUrl: './why-me.component.scss'
 })

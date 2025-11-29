@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core';
 import { MobileNavbarComponent } from '../mobile-navbar/mobile-navbar.component';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, MobileNavbarComponent],
+  imports: [CommonModule, TranslateModule, MobileNavbarComponent],
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })

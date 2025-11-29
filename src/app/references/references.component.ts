@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 /**
  * Represents a single reference entry.
@@ -14,7 +14,7 @@ interface Reference {
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss'],
 })

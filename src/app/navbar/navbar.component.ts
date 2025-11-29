@@ -1,13 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core'; import { Router, RouterModule } from '@angular/router';
 import { ScrollService } from '../shared/scroll.service';
 import { LanguageService } from '../shared/language.service';
 import { Subject, takeUntil } from 'rxjs';
+import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslatePipe,],
+  imports: [CommonModule, RouterModule, TranslateModule,],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
@@ -18,6 +19,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
+    private scrollService: ScrollService,
     private languageService: LanguageService
   ) { }
 
@@ -26,7 +28,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.languageService
       .langChanges()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((lang) => (this.currentLang = lang));
+      .subscribe((lang: 'de' | 'en') => (this.currentLang = lang));
   }
 
   /**

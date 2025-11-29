@@ -1,14 +1,14 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { ScrollService } from '../shared/scroll.service';
 import { LanguageService } from '../shared/language.service';
 import { Subject, takeUntil } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './mobile-navbar.component.html',
   styleUrls: ['./mobile-navbar.component.scss'],
 })
@@ -16,7 +16,7 @@ export class MobileNavbarComponent implements OnInit, OnDestroy {
   @Output() menuOpenChange = new EventEmitter<boolean>();
   isMenuOpen = false;
   currentLang: 'de' | 'en' = 'en';
-  private destroy$ = new Subject<void>()
+  private destroy$ = new Subject<void>();
   constructor(
     private router: Router,
     private scrollService: ScrollService,
@@ -28,7 +28,7 @@ export class MobileNavbarComponent implements OnInit, OnDestroy {
     this.languageService
       .langChanges()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((lang) => (this.currentLang = lang));
+      .subscribe((lang: 'de' | 'en') => (this.currentLang = lang));
   }
 
   /** Toggles the mobile menu state */
