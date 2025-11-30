@@ -5,7 +5,7 @@ h1 {
 
 .why-wrapper {
   max-width: 1440px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .why-headline {
@@ -123,6 +123,12 @@ span {
   }
 }
 
+@media (max-width: 700px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 500px) {
   .why-text {
     font-size: 18px;
@@ -130,5 +136,13 @@ span {
 
   .why-left {
     width: 80%;
+  }
+
+  .why-icon {
+    height:40px;
+  }
+
+  .open-to {
+    gap:20px;
   }
 }

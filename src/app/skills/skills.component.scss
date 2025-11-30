@@ -151,7 +151,15 @@
     gap: 10%;
   }
 }
+@media (max-width:700px) {
+  h1 {
+    font-size:40px;
+  }
 
+  .learning-by-doing {
+    font-size:20px;
+  }
+}
 @media (max-width: 650px) {
   .backend > img {
     width: 30px;
@@ -177,7 +185,18 @@
 
   .learning-text {
     width: 80%;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 4%;
+    text-align: center;
+  }
+
+  .what-learning {
+    font-size:20px;
+  }
+  .backend {
+    >img {
+      height:35px;
+      width:35px;
+    }
   }
 }
