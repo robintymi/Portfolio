@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ScrollService } from '../shared/scroll.service';
@@ -30,6 +30,15 @@ export class MobileNavbarComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((lang: 'de' | 'en') => (this.currentLang = lang));
   }
+
+  @HostListener('window:resize')
+  handleResize() {
+    if (window.innerWidth > 1000 && this.isMenuOpen) {
+      this.isMenuOpen = false;
+      this.menuOpenChange.emit(false);
+    }
+  }
+
 
   /** Toggles the mobile menu state */
   toggleMenu() {
