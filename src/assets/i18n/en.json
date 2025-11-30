@@ -42,7 +42,8 @@
     "title": "My Skills",
     "currentlyLearningLabel": "I am currently learning",
     "currentlyLearningMobile": "What I am currently learning",
-    "currentlyLearningText": "I am currently learning backend development, exploring technologies like databases, APIs, and server-side frameworks to build complete and scalable web applications."
+    "currentlyLearningText": "I am currently learning backend development, exploring technologies like databases, APIs, and server-side frameworks to build complete and scalable web applications.",
+    "cta": "Let's talk"
   },
   "projects": {
     "title": "My Projects",
