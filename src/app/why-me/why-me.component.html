@@ -29,20 +29,12 @@
 
       <div class="why-right">
         <div class="why-text">
-          {{ "why.text" | translate }}
-
-          <a href="#contact" class="lets-talk">
-            <img
-              class="lt-base"
-              src="assets/img/why-me/lets talk button.png"
-              alt="Let's talk"
-            />
-            <img
-              class="lt-hover"
-              src="assets/img/why-me/lets talk button-hover.png"
-              alt="Let's talk hover"
-            />
-          </a>
+          <p class="why-description">
+            {{ "why.text" | translate }}
+          </p>
+          <button type="button" class="lets-talk" (click)="navigateToContact()">
+            {{ "skills.cta" | translate }}
+          </button>
         </div>
       </div>
     </div>
