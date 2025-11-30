@@ -1,6 +1,6 @@
 .skills-wrapper {
-  max-width:1440px;
-  margin:0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .skills {
   color: white;
@@ -113,6 +113,27 @@
     gap: 3%;
   }
 
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .lets-talk {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    padding: 8px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    background: #a3d4ff;
+    color: #0d1b22;
+    border: none;
+  }
+
   .mobile-ellipse {
     position: relative;
     max-width: 280px;
@@ -151,13 +172,13 @@
     gap: 10%;
   }
 }
-@media (max-width:700px) {
+@media (max-width: 700px) {
   h1 {
-    font-size:40px;
+    font-size: 40px;
   }
 
   .learning-by-doing {
-    font-size:20px;
+    font-size: 20px;
   }
 }
 @media (max-width: 650px) {
@@ -191,12 +212,12 @@
   }
 
   .what-learning {
-    font-size:20px;
+    font-size: 20px;
   }
   .backend {
-    >img {
-      height:35px;
-      width:35px;
+    > img {
+      height: 35px;
+      width: 35px;
     }
   }
 }
