@@ -26,21 +26,30 @@ switch ($_SERVER['REQUEST_METHOD']) {
       exit;
     }
 
-    $to      = 'robinerike@gmail.com'; // wohin gesendet wird
-    $subject = 'Contact From <' . $email . '>';
+    $to       = 'robinerike@gmail.com';
+    $safeName = htmlspecialchars($name,  ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $safeEmail = htmlspecialchars($email, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
-    // HTML-Mail
-    $subject = 'Kontakt: '.$name.' <'.$email.'>';
-    $body  = 'From: ' . htmlspecialchars($name, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . '<br><br>';
+    // Betreff (sichtbar im Posteingang)
+    $subject = 'Kontakt: ' . $safeName . ' <' . $safeEmail . '>';
+
+    // Body korrekt zusammenbauen (nicht überschreiben!)
+    $body  = '';
+    $body .= 'Von: ' . $safeName . ' &lt;' . $safeEmail . '&gt;<br>';
+    $body .= 'E-Mail: ' . $safeEmail . '<br><br>';
     $body .= nl2br(htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
 
+    // Header (From = deine Domain; Reply-To = Absender)
     $headers   = [];
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-Type: text/html; charset=utf-8';
-    $headers[] = 'From: noreply@robin-erike.de';   // Absender = deine Domain!
-    $headers[] = 'Reply-To: ' . $email;            // auf den Absender antworten
+    $headers[] = 'From: noreply@robin-erike.de';
+    // saubere Formatierung von Reply-To
+    $replyToName = str_replace(['"', "\r", "\n"], ['\'', '', ''], $safeName);
+    $headers[] = 'Reply-To: "' . $replyToName . '" <' . $email . '>';
 
     $ok = @mail($to, $subject, $body, implode("\r\n", $headers));
+
     if ($ok) {
       echo json_encode(['ok' => true]);
     } else {
