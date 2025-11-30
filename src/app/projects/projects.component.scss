@@ -322,11 +322,20 @@ p {
   .muted {
     margin-left: 3%;
   }
+
+  .cta {
+    width: 500px;
+    justify-content: space-evenly !important;
+  }
 }
 
 @media (max-width: 750px) {
   .tab {
     font-size: 18px;
+  }
+
+  .cta {
+    width:300px;
   }
 }
 
