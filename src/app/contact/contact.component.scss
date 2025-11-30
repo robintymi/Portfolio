@@ -77,7 +77,21 @@ textarea {
   transform: translateX(-50%);
   width: 22px;
   height: 22px;
-  background-image: url("/projects/Portfolio/assets/img/contact/inputCorrect.png");
+  background-image: url("/assets/img/contact/inputCorrect.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+}
+
+.valid-indicator-ta {
+  position: absolute;
+  right: 18%;
+  top: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  background-image: url("/assets/img/contact/inputCorrect.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
