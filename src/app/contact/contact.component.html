@@ -180,9 +180,11 @@
           {{ "contact.privacy.error" | translate }}
         </p>
       </div>
-      <p *ngIf="sendSuccess" class="feedback-success" aria-live="polite">
-        {{ "contact.feedback.success" | translate }}
-      </p>
+      <div class="feedback-container" aria-live="polite" role="status">
+        <p class="feedback-success" [class.visible]="sendSuccess">
+          {{ "contact.feedback.success" | translate }}
+        </p>
+      </div>
       <div class="submit-btns">
         <button
           type="button"
