@@ -1,12 +1,23 @@
 <section>
   <div class="skills-wrapper">
-    <h1>{{ "skills.title" | translate }}</h1>
+    <h2>{{ "skills.title" | translate }}</h2>
     <div class="mobile">
-      <img
-        class="skill-set-img"
-        src="assets/img/skills/skills mobile.png"
-        alt=""
-      />
+      <div class="">
+        <ul class="">
+          <li class="" *ngFor="let s of skills">
+            <figure>
+              <img
+                [src]="s.src"
+                [alt]="s.alt || s.label"
+                loading="lazy"
+                width="64"
+                height="64"
+              />
+              <figcaption>{{ s.label }}</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
       <div class="what-learning">
         {{ "skills.currentlyLearningMobile" | translate }}
       </div>
@@ -36,11 +47,22 @@
       </div>
     </div>
     <div class="skills">
-      <img
-        class="skill-set-img"
-        src="assets/img/skills/Skill set (1).png"
-        alt=""
-      />
+      <div class="">
+        <ul class="">
+          <li class="" *ngFor="let s of skills">
+            <figure>
+              <img
+                [src]="s.src"
+                [alt]="s.alt || s.label"
+                loading="lazy"
+                width="64"
+                height="64"
+              />
+              <figcaption>{{ s.label }}</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
 
       <div class="currently-learning">
         <img

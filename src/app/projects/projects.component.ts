@@ -61,19 +61,19 @@ export class ProjectsComponent {
       live: 'https://robin-erike.de/projects/PokedexV2',
       github: 'https://github.com/robintymi/Pokedex-1',
     },
-    {
-      key: 'ongoing',
-      hasDuration: false,
-      hasProcess: false,
-      hasExperience: false,
-      tech: [
-        { name: 'Angular', icon: 'assets/img/projects/Angular.png' },
-        { name: 'TypeScript', icon: 'assets/img/projects/typescript.png' },
-        { name: 'Firebase', icon: 'assets/img/projects/Firebase.png' },
-      ],
-      image: 'assets/img/projects/ongoing-project.png',
-      live: null,
-      github: null,
-    },
+    // {
+    //   key: 'ongoing',
+    //   hasDuration: false,
+    //   hasProcess: false,
+    //   hasExperience: false,
+    //   tech: [
+    //     { name: 'Angular', icon: 'assets/img/projects/Angular.png' },
+    //     { name: 'TypeScript', icon: 'assets/img/projects/typescript.png' },
+    //     { name: 'Firebase', icon: 'assets/img/projects/Firebase.png' },
+    //   ],
+    //   image: 'assets/img/projects/ongoing-project.png',
+    //   live: null,
+    //   github: null,
+    // },
   ];
 }

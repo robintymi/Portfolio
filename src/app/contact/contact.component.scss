@@ -1,3 +1,6 @@
+section {
+  font-family:'Josefin Sans';
+}
 .contact {
   color: white;
   display: flex;
@@ -111,7 +114,7 @@ label {
   color: #e44c36;
 }
 
-h1 {
+h2 {
   font-size: 54px;
   margin: 50px 0 3%;
 }
@@ -353,7 +356,7 @@ textarea:-moz-autofill {
 }
 
 @media (max-width: 700px) {
-  h1 {
+  h2 {
     font-size: 40px;
   }
 }
@@ -364,5 +367,8 @@ textarea:-moz-autofill {
   }
   .work-together {
     display: none !important;
+  }
+  .contact-details {
+    font-size:20px;
   }
 }
