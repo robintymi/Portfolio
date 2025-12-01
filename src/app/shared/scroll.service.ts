@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ScrollService {
-    private readonly headerOffset = 120;   // Fixe Headerhöhe
-
+    private readonly headerOffset = 120;
+    private adjustTimeoutId?: number;
 
     scrollToSection(sectionId: string) {
         const el = document.getElementById(sectionId);
