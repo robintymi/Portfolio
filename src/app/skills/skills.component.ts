@@ -25,15 +25,15 @@ export class SkillsComponent {
   }
 
   skills: Skill[] = [
-    { src: 'assets/skills/angular.svg', label: 'Angular' },
-    { src: 'assets/skills/typescript.svg', label: 'TypeScript' },
-    { src: 'assets/skills/javascript.svg', label: 'JavaScript' },
-    { src: 'assets/skills/html.svg', label: 'HTML' },
-    { src: 'assets/skills/css.svg', label: 'CSS' },
-    { src: 'assets/skills/api.svg', label: 'REST-API' },
-    { src: 'assets/skills/firebase.svg', label: 'Firebase' },
-    { src: 'assets/skills/git.svg', label: 'Git' },
-    { src: 'assets/skills/material.svg', label: 'Material Design' },
-    { src: 'assets/skills/scrum.svg', label: 'Scrum' },
+    { src: 'assets/img/skills/mySkills/Angular.png', label: 'Angular' },
+    { src: 'assets/img/skills/mySkills/TypeScript.png', label: 'TypeScript' },
+    { src: 'assets/img/skills/mySkills/JavaScript.png', label: 'JavaScript' },
+    { src: 'assets/img/skills/mySkills/HTML.png', label: 'HTML' },
+    { src: 'assets/img/skills/mySkills/CSS.png', label: 'CSS' },
+    { src: 'assets/img/skills/mySkills/REST-API.png', label: 'REST-API' },
+    { src: 'assets/img/skills/mySkills/Firebase.png', label: 'Firebase' },
+    { src: 'assets/img/skills/mySkills/Git.png', label: 'Git' },
+    { src: 'assets/img/skills/mySkills/MaterialDesign.png', label: 'Material Design' },
+    { src: 'assets/img/skills/mySkills/Scrum.png', label: 'Scrum' },
   ];
 }

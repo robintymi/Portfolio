@@ -2,22 +2,20 @@
   <div class="skills-wrapper">
     <h2>{{ "skills.title" | translate }}</h2>
     <div class="mobile">
-      <div class="">
-        <ul class="">
-          <li class="" *ngFor="let s of skills">
-            <figure>
-              <img
-                [src]="s.src"
-                [alt]="s.alt || s.label"
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-              <figcaption>{{ s.label }}</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
+      <ul class="skills-list">
+        <li *ngFor="let s of skills">
+          <figure>
+            <img
+              [src]="s.src"
+              [alt]="s.alt || s.label"
+              loading="lazy"
+              width="64"
+              height="64"
+            />
+            <figcaption>{{ s.label }}</figcaption>
+          </figure>
+        </li>
+      </ul>
       <div class="what-learning">
         {{ "skills.currentlyLearningMobile" | translate }}
       </div>
@@ -47,23 +45,20 @@
       </div>
     </div>
     <div class="skills">
-      <div class="">
-        <ul class="">
-          <li class="" *ngFor="let s of skills">
-            <figure>
-              <img
-                [src]="s.src"
-                [alt]="s.alt || s.label"
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-              <figcaption>{{ s.label }}</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-
+      <ul class="skills-list">
+        <li *ngFor="let s of skills">
+          <figure>
+            <img
+              [src]="s.src"
+              [alt]="s.alt || s.label"
+              loading="lazy"
+              width="64"
+              height="64"
+            />
+            <figcaption>{{ s.label }}</figcaption>
+          </figure>
+        </li>
+      </ul>
       <div class="currently-learning">
         <img
           class="cl-base"
@@ -81,7 +76,9 @@
 
           <div class="learning-icons">
             <img src="assets/img/skills/postgreSQL.png" alt="PostgreSQL" />
+            PostgreSQL
             <img src="assets/img/skills/rxjs.png" alt="RXJS" />
+            RXJS
           </div>
 
           {{ "skills.currentlyLearningText" | translate }}

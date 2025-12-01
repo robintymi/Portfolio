@@ -1,15 +1,45 @@
 .skills-wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  margin-top:5%;
+  margin-top: 5%;
 }
 .skills {
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 60px;
   margin-top: 6%;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 32px 40px;
+  width: 100%;
+  max-width: 560px;
+  justify-items: center;
+}
+
+.skills-list figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  color: #e7eef3;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.skills-list img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .skill-set-img {
