@@ -25,15 +25,15 @@ export class SkillsComponent {
   }
 
   skills: Skill[] = [
-    { src: 'assets/img/skills/mySkills/Angular.png', label: 'Angular' },
-    { src: 'assets/img/skills/mySkills/TypeScript.png', label: 'TypeScript' },
-    { src: 'assets/img/skills/mySkills/JavaScript.png', label: 'JavaScript' },
-    { src: 'assets/img/skills/mySkills/HTML.png', label: 'HTML' },
-    { src: 'assets/img/skills/mySkills/CSS.png', label: 'CSS' },
-    { src: 'assets/img/skills/mySkills/REST-API.png', label: 'REST-API' },
-    { src: 'assets/img/skills/mySkills/Firebase.png', label: 'Firebase' },
-    { src: 'assets/img/skills/mySkills/Git.png', label: 'Git' },
-    { src: 'assets/img/skills/mySkills/MaterialDesign.png', label: 'Material Design' },
-    { src: 'assets/img/skills/mySkills/Scrum.png', label: 'Scrum' },
+    { src: 'assets/img/skills/mySkills/Angular.svg', label: 'Angular' },
+    { src: 'assets/img/skills/mySkills/TypeScript.svg', label: 'TypeScript' },
+    { src: 'assets/img/skills/mySkills/JavaScript.svg', label: 'JavaScript' },
+    { src: 'assets/img/skills/mySkills/HTML.svg', label: 'HTML' },
+    { src: 'assets/img/skills/mySkills/CSS.svg', label: 'CSS' },
+    { src: 'assets/img/skills/mySkills/REST-API.svg', label: 'REST-API' },
+    { src: 'assets/img/skills/mySkills/Firebase.svg', label: 'Firebase' },
+    { src: 'assets/img/skills/mySkills/Git.svg', label: 'Git' },
+    { src: 'assets/img/skills/mySkills/MateriaDesign.svg', label: 'Material Design' },
+    { src: 'assets/img/skills/mySkills/Scrum.svg', label: 'Scrum' },
   ];
 }
