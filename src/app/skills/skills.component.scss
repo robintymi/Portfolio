@@ -66,8 +66,6 @@
   }
 }
 
-
-
 .currently-learning .cl-hover {
   opacity: 0;
 }
@@ -146,6 +144,15 @@
     width: 50vw;
   }
 
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 24px 28px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
   .what-learning {
     color: #89bcd9;
     font-size: 22px;
@@ -237,13 +244,25 @@
     height: 30px;
     margin-bottom: 3px;
   }
+
+  .skills-list {
+    gap: 12px 12px;
+    width: 80%;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 @media (max-width: 500px) {
   .skill-set-img {
     width: 80vw;
   }
-
+  .skills-list {
+    gap: 5px 5px;
+  }
   .learning-by-doing {
     font-size: 18px;
     width: 90%;
