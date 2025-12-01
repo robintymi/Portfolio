@@ -70,12 +70,8 @@ export class MobileNavbarComponent implements OnInit, OnDestroy {
 
     await this.router.navigate(['/'], { fragment: section });
 
-
-    setTimeout(() => {
-      this.scrollService.scrollToSection(section);
-    }, 0);
+    requestAnimationFrame(() => this.scrollService.scrollToSection(section));
   }
-
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

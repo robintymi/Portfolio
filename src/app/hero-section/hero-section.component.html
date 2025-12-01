@@ -21,13 +21,14 @@
 
         <img
           class="mobile-bg mobile"
+          [ngClass]="{ 'hidden-img': hideHeroVisuals }"
           src="assets/img/hero-section/mobilebg.png"
           alt=""
         />
 
         <img
           class="my-picture"
-          [ngClass]="{ 'hidden-img': hidePicture }"
+          [ngClass]="{ 'hidden-img': hideHeroVisuals }"
           src="assets/img/hero-section/Robin-no-background.png"
           alt=""
         />

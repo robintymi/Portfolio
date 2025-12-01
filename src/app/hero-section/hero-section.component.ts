@@ -11,13 +11,13 @@ import { MobileNavbarComponent } from '../mobile-navbar/mobile-navbar.component'
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent {
-  hidePicture = false;
+  hideHeroVisuals = false;
 
   /**
    * Toggles the visibility of the hero image based on mobile menu state.
    * @param open Whether the mobile menu is currently open.
    */
   onMenuOpenChange(open: boolean) {
-    this.hidePicture = open;
+    this.hideHeroVisuals = open;
   }
 }
